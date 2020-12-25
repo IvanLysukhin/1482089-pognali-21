@@ -96,7 +96,7 @@
           </div>
         </fieldset>
 
-        <section class="plan-add">
+        <section class="generating-plan">
           <h2 class="visually-hidden">Формирование планов путешествий</h2>
           <div class="my-plans">
             <h3 class="my-plans__title">Мои планы</h3>
@@ -115,8 +115,7 @@
               </li>
             </ol>
           </div>
-
-          <fieldset class="generating-plan__step-1 stay-dates">
+          <fieldset class="generating-plan__step-one stay-dates">
             <legend class="stay-dates">Шаг 1.<br>Даты пребывания</legend>
             <p class="stay-dates__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в
               поездку, и ее предполагаемую длительность.</p>
@@ -338,7 +337,7 @@
             </table>
             <button class="button  generating-plan__button" type="button">Следующий шаг</button>
           </fieldset>
-          <fieldset class="generating-plan__step-2 route">
+          <fieldset class="generating-plan__step-two route">
             <legend class="route__title">Шаг 2.<br>Маршрут</legend>
             <p class="route__text">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу
               несколько.</p>
@@ -365,106 +364,108 @@
               </li>
               <li class="route__item">
                 <button class="route__choose-button" type="button">выберите страну</button>
-                <table class="route__table">
-                  <tr class="route__row">
-                    <td class="route__cell">
-                      <button class="route__filter-country" type="button">а</button>
-                    </td>
-                    <td class="route__cell">
-                      <button class="route__filter-country" type="button">б</button>
-                    </td>
-                    <td class="route__cell">
-                      <button class="route__filter-country" type="button">в</button>
-                    </td>
-                    <td class="route__cell">
-                      <button class="route__filter-country" type="button">г</button>
-                    </td>
-                    <td class="route__cell">
-                      <button class="route__filter-country" type="button">д</button>
-                    </td>
-                  </tr>
-                  <tr class="route__row">
-                    <td class="route__cell">
-                      <button class="route__filter-country" type="button">e</button>
-                    </td>
-                    <td class="route__cell">
-                      <button class="route__filter-country" type="button">з</button>
-                    </td>
-                    <td class="route__cell">
-                      <button class="route__filter-country" type="button">и</button>
-                    </td>
-                    <td class="route__cell">
-                      <button class="route__filter-country" type="button">к</button>
-                    </td>
-                    <td class="route__cell">
-                      <button class="route__filter-country" type="button">л</button>
-                    </td>
-                  </tr>
-                  <tr class="route__row">
-                    <td class="route__cell">
-                      <button class="route__filter-country" type="button">м</button>
-                    </td>
-                    <td class="route__cell">
-                      <button class="route__filter-country" type="button">н</button>
-                    </td>
-                    <td class="route__cell">
-                      <button class="route__filter-country" type="button">о</button>
-                    </td>
-                    <td class="route__cell">
-                      <button class="route__filter-country" type="button">п</button>
-                    </td>
-                    <td class="route__cell">
-                      <button class="route__filter-country" type="button">р</button>
-                    </td>
-                  </tr>
-                  <tr class="route__row">
-                    <td class="route__cell">
-                      <button class="route__filter-country" type="button">с</button>
-                    </td>
-                    <td class="route__cell">
-                      <button class="route__filter-country" type="button">т</button>
-                    </td>
-                    <td class="route__cell">
-                      <button class="route__filter-country" type="button">у</button>
-                    </td>
-                    <td class="route__cell">
-                      <button class="route__filter-country" type="button">ф</button>
-                    </td>
-                    <td class="route__cell">
-                      <button class="route__filter-country" type="button">х</button>
-                    </td>
-                  </tr>
-                  <tr class="route__row">
-                    <td class="route__cell">
-                      <button class="route__filter-country" type="button">ч</button>
-                    </td>
-                    <td class="route__cell">
-                      <button class="route__filter-country" type="button">ш</button>
-                    </td>
-                    <td class="route__cell">
-                      <button class="route__filter-country" type="button">э</button>
-                    </td>
-                    <td class="route__cell">
-                      <button class="route__filter-country" type="button">ю</button>
-                    </td>
-                    <td class="route__cell">
-                      <button class="route__filter-country" type="button">я</button>
-                    </td>
-                  </tr>
-                </table>
-                <ul class="route__countries-list">
-                  <li class="route__countries-item">Австралия</li>
-                  <li class="route__countries-item">Австрия</li>
-                  <li class="route__countries-item">Азербайджан</li>
-                  <li class="route__countries-item">Албания</li>
-                  <li class="route__countries-item">Алжир</li>
-                  <li class="route__countries-item">Ангола</li>
-                  <li class="route__countries-item">Андорра</li>
-                  <li class="route__countries-item">Антигуа и Барбуда</li>
-                  <li class="route__countries-item">Аргентина</li>
-                  <li class="route__countries-item">Армения</li>
-                  <li class="route__countries-item">Афганистан</li>
-                </ul>
+                <div class="country-choice">
+                  <table class="country-choice__table">
+                    <tr class="country-choice__row">
+                      <td class="country-choice__cell">
+                        <button class="country-choice__button" type="button">а</button>
+                      </td>
+                      <td class="country-choice__cell">
+                        <button class="country-choice__button" type="button">б</button>
+                      </td>
+                      <td class="country-choice__cell">
+                        <button class="country-choice__button" type="button">в</button>
+                      </td>
+                      <td class="country-choice__cell">
+                        <button class="country-choice__button" type="button">г</button>
+                      </td>
+                      <td class="country-choice__cell">
+                        <button class="country-choice__button" type="button">д</button>
+                      </td>
+                    </tr>
+                    <tr class="country-choice__row">
+                      <td class="country-choice__cell">
+                        <button class="country-choice__button" type="button">e</button>
+                      </td>
+                      <td class="country-choice__cell">
+                        <button class="country-choice__button" type="button">з</button>
+                      </td>
+                      <td class="country-choice__cell">
+                        <button class="country-choice__button" type="button">и</button>
+                      </td>
+                      <td class="country-choice__cell">
+                        <button class="country-choice__button" type="button">к</button>
+                      </td>
+                      <td class="country-choice__cell">
+                        <button class="country-choice__button" type="button">л</button>
+                      </td>
+                    </tr>
+                    <tr class="country-choice__row">
+                      <td class="country-choice__cell">
+                        <button class="country-choice__button" type="button">м</button>
+                      </td>
+                      <td class="country-choice__cell">
+                        <button class="country-choice__button" type="button">н</button>
+                      </td>
+                      <td class="country-choice__cell">
+                        <button class="country-choice__button" type="button">о</button>
+                      </td>
+                      <td class="country-choice__cell">
+                        <button class="country-choice__button" type="button">п</button>
+                      </td>
+                      <td class="country-choice__cell">
+                        <button class="country-choice__button" type="button">р</button>
+                      </td>
+                    </tr>
+                    <tr class="country-choice__row">
+                      <td class="country-choice__cell">
+                        <button class="country-choice__button" type="button">с</button>
+                      </td>
+                      <td class="country-choice__cell">
+                        <button class="country-choice__button" type="button">т</button>
+                      </td>
+                      <td class="country-choice__cell">
+                        <button class="country-choice__button" type="button">у</button>
+                      </td>
+                      <td class="country-choice__cell">
+                        <button class="country-choice__button" type="button">ф</button>
+                      </td>
+                      <td class="country-choice__cell">
+                        <button class="country-choice__button" type="button">х</button>
+                      </td>
+                    </tr>
+                    <tr class="country-choice__row">
+                      <td class="country-choice__cell">
+                        <button class="country-choice__button" type="button">ч</button>
+                      </td>
+                      <td class="country-choice__cell">
+                        <button class="country-choice__button" type="button">ш</button>
+                      </td>
+                      <td class="country-choice__cell">
+                        <button class="country-choice__button" type="button">э</button>
+                      </td>
+                      <td class="country-choice__cell">
+                        <button class="country-choice__button" type="button">ю</button>
+                      </td>
+                      <td class="country-choice__cell">
+                        <button class="country-choice__button" type="button">я</button>
+                      </td>
+                    </tr>
+                  </table>
+                  <ul class="country-choice__countries-list">
+                    <li class="country-choice__countries-item">Австралия</li>
+                    <li class="country-choice__countries-item">Австрия</li>
+                    <li class="country-choice__countries-item">Азербайджан</li>
+                    <li class="country-choice__countries-item">Албания</li>
+                    <li class="country-choice__countries-item">Алжир</li>
+                    <li class="country-choice__countries-item">Ангола</li>
+                    <li class="country-choice__countries-item">Андорра</li>
+                    <li class="country-choice__countries-item">Антигуа и Барбуда</li>
+                    <li class="country-choice__countries-item">Аргентина</li>
+                    <li class="country-choice__countries-item">Армения</li>
+                    <li class="country-choice__countries-item">Афганистан</li>
+                  </ul>
+                </div>
               </li>
               <li class="route__item">
                 <button class="route__add-button" type="button">Добавить страну</button>
@@ -474,7 +475,7 @@
             <button class="button generating-plan__button generating-plan__button--back" type="button">на шаг назад
             </button>
           </fieldset>
-          <fieldset class="generating-plan__step-3 plans">
+          <fieldset class="generating-plan__step-three plans">
             <legend class="plans__title">Шаг 3.<br>Развлечения</legend>
             <p class="plans__description">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной
               форме и ставить тэги.</p>
