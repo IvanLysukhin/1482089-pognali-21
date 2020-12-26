@@ -1,0 +1,62 @@
+.preview {
+  background-color: @basic-blue;
+  color: @basic-white;
+}
+
+.preview__text {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.preview__links-list {
+  .reset-list;
+}
+
+.preview__quote-text {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.preview__quote-author {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.preview__list {
+  color: @basic-blue;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  .reset-list;
+  counter-reset: item;
+}
+
+.preview__item {
+  &--dark-orange {
+    background-color: @dark-orange;
+  }
+
+  &--orange {
+    background-color: @basic-orange;
+  }
+
+  &--dark-yellow {
+    background-color: @dark-yellow;
+  }
+
+  &--yellow {
+    background-color: @basic-yellow;
+  }
+
+  &::after {
+    counter-increment: item;
+    content: counter(item);
+    color: @basic-white;
+    font-weight: bold;
+    font-size: 18px;
+  }
+}

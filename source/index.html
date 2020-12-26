@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Погнали</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -58,15 +59,26 @@
       <section class="preview">
         <h2 class="visually-hidden">Промо блок</h2>
         <p class="preview__text">В путешествие с крутыми попутчиками!</p>
+        <ul class="preview__links-list">
+          <li class="preview__links-item">
+            <a class="preview__link preview__link--tel" href="tel:+78005558628" aria-label="Позвоните нам"></a>
+          </li>
+          <li class="preview__links-item">
+            <a class="preview__link preview__link--mail" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам"></a>
+          </li>
+          <li class="preview__links-item">
+            <button class="button main-nav__button" type="button">авторизация</button>
+          </li>
+        </ul>
         <blockquote class="preview__quote">
           <p class="preview__quote-text">«Лучшее приложение, что я видел в жизни!»</p>
           <cite class="preview__quote-author">Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite>
         </blockquote>
         <ol class="preview__list">
-          <li class="preview__item">Выберите направление</li>
-          <li class="preview__item">Изучите идеи путешественников</li>
-          <li class="preview__item">Находите тех, кто похож на вас</li>
-          <li class="preview__item">Путешествуйте вместе!</li>
+          <li class="preview__item preview__item--dark-orange">Выберите направление</li>
+          <li class="preview__item preview__item--orange">Изучите идеи путешественников</li>
+          <li class="preview__item preview__item--dark-yellow">Находите тех, кто похож на вас</li>
+          <li class="preview__item preview__item--yellow">Путешествуйте вместе!</li>
         </ol>
       </section>
       <section class="about">
