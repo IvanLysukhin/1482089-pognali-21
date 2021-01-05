@@ -1,0 +1,57 @@
+.country-choice__table {
+  border-collapse: collapse;
+}
+
+.country-choice__cell {
+  text-align: center;
+  vertical-align: middle;
+  box-sizing: border-box;
+  width: 44px;
+  height: 41px;
+  padding: 0;
+  border: 1px solid @light-grey-2;
+}
+
+.country-choice__button {
+  .main-font;
+  border: none;
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  color: @basic-blue-light;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+
+  &:active {
+    color: @basic-white;
+    background-color: @basic-blue-light;
+  }
+}
+
+.country-choice__cell:hover .country-choice__button {
+  border: 1px solid @hover-border;
+}
+
+.country-choice__countries-list {
+  .reset-list;
+}
+
+.country-choice__country-button {
+  background: transparent;
+  border: none;
+  .main-font;
+  font-weight: normal;
+  font-size: 16px;
+  color: @special_grey;
+  cursor: pointer;
+
+  &:hover {
+    color: @basic-blue-light;
+  }
+
+  &:active {
+    color: fade(@basic-blue-light, 30%);
+  }
+}

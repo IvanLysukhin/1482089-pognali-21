@@ -1,9 +1,17 @@
 .level-circle {
   background-color: fade(@basic-black, 60%);
+  color: @basic-white;
   border-radius: 50%;
   width: 60px;
   height: 60px;
   text-align: center;
+
+  &--transparent {
+    background-color: transparent;
+    color: @basic-blue;
+    width: 100px;
+    height: 100px;
+  }
 }
 
 .level-circle__text {
@@ -15,5 +23,14 @@
     font-size: 24px;
     line-height: 24px;
     margin: 0;
+  }
+
+  &--big-number {
+    font-size: 38px;
+  }
+
+  &--big-text {
+    font-size: 18px;
+    color: @special_grey;
   }
 }
