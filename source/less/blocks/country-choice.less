@@ -1,5 +1,9 @@
 .country-choice__table {
   border-collapse: collapse;
+
+  &--white {
+    background-color: @basic-white;
+  }
 }
 
 .country-choice__cell {
@@ -10,6 +14,10 @@
   height: 41px;
   padding: 0;
   border: 1px solid @light-grey-2;
+
+  &--active {
+    background-color: @basic-blue-light;
+  }
 }
 
 .country-choice__button {
@@ -23,6 +31,10 @@
   width: 100%;
   height: 100%;
   padding: 0;
+
+  &--active {
+    color: @basic-white;
+  }
 
   &:active {
     color: @basic-white;

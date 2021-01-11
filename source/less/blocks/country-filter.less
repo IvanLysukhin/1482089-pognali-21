@@ -1,0 +1,46 @@
+.country-filter {
+  background-color: @special-blue-light-3;
+  border-radius: 0 0 30px 30px;
+}
+
+.country-filter__title {
+  font-weight: bold;
+  font-size: 16px;
+  color: @dark-blue;
+  text-transform: uppercase;
+}
+
+.country-filter__list {
+  .reset-list;
+}
+
+.country-filter__world-list {
+  .reset-list;
+}
+
+.country-filter__world-button {
+  .main-font;
+  background-color: transparent;
+  border: none;
+  color: fade(@dark-blue, 30%);
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+
+  &--active {
+    color: @dark-blue;
+  }
+}
+
+.country-filter__button {
+  .main-font;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: @dark-blue;
+  background-color: @button-background;
+  padding: 12px;
+}

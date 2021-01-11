@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html class="page page--background" lang="ru">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Погнали</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -54,7 +55,9 @@
       </nav>
     </header>
     <main class="page-main">
-      <h1 class="page-main__title">Попутчики</h1>
+      <div class="page-main__title-box">
+        <h1 class="page-main__title page-main__title--white">Попутчики</h1>
+      </div>
       <section class="country-filter">
         <h2 class="country-filter__title">Фильтрация по странам:</h2>
         <ul class="country-filter__list">
@@ -76,10 +79,10 @@
           </li>
           <li class="country-filter__item">
             <div class="country-choice">
-              <table class="country-choice__table">
+              <table class="country-choice__table country-choice__table--white">
                 <tr class="country-choice__row">
-                  <td class="country-choice__cell">
-                    <button class="country-choice__button" type="button">а</button>
+                  <td class="country-choice__cell country-choice__cell--active">
+                    <button class="country-choice__button country-choice__button--active" type="button">а</button>
                   </td>
                   <td class="country-choice__cell">
                     <button class="country-choice__button" type="button">б</button>
@@ -164,17 +167,39 @@
                 </tr>
               </table>
               <ul class="country-choice__countries-list">
-                <li class="country-choice__countries-item">Австралия</li>
-                <li class="country-choice__countries-item">Австрия</li>
-                <li class="country-choice__countries-item">Азербайджан</li>
-                <li class="country-choice__countries-item">Албания</li>
-                <li class="country-choice__countries-item">Алжир</li>
-                <li class="country-choice__countries-item">Ангола</li>
-                <li class="country-choice__countries-item">Андорра</li>
-                <li class="country-choice__countries-item">Антигуа и Барбуда</li>
-                <li class="country-choice__countries-item">Аргентина</li>
-                <li class="country-choice__countries-item">Армения</li>
-                <li class="country-choice__countries-item">Афганистан</li>
+                <li class="country-choice__countries-item">
+                  <button class="country-choice__country-button" type="button">Австралия</button>
+                </li>
+                <li class="country-choice__countries-item">
+                  <button class="country-choice__country-button" type="button">Австрия</button>
+                </li>
+                <li class="country-choice__countries-item">
+                  <button class="country-choice__country-button" type="button">Азербайджан</button>
+                </li>
+                <li class="country-choice__countries-item">
+                  <button class="country-choice__country-button" type="button">Албания</button>
+                </li>
+                <li class="country-choice__countries-item">
+                  <button class="country-choice__country-button" type="button">Алжир</button>
+                </li>
+                <li class="country-choice__countries-item">
+                  <button class="country-choice__country-button" type="button">Ангола</button>
+                </li>
+                <li class="country-choice__countries-item">
+                  <button class="country-choice__country-button" type="button">Андорра</button>
+                </li>
+                <li class="country-choice__countries-item">
+                  <button class="country-choice__country-button" type="button">Антигуа и Барбуда</button>
+                </li>
+                <li class="country-choice__countries-item">
+                  <button class="country-choice__country-button" type="button">Аргентина</button>
+                </li>
+                <li class="country-choice__countries-item">
+                  <button class="country-choice__country-button" type="button">Армения</button>
+                </li>
+                <li class="country-choice__countries-item">
+                  <button class="country-choice__country-button" type="button">Афганистан</button>
+                </li>
               </ul>
             </div>
           </li>
@@ -189,51 +214,51 @@
           <ul class="partners-filter__list">
             <li class="partners-filter__item">
               <h3 class="partners-filter__title">Хобби:</h3>
-              <ul class="partners-filter__hobbies-list">
-                <li class="partners-filter__hobbies-item">
-                  <label class="partners-filter__hobbies-name" for="gym">Спортзал</label>
+              <ul class="partners-filter__check-list">
+                <li class="partners-filter__check-item">
+                  <label class="partners-filter__check-name" for="gym">Спортзал</label>
                   <input class="visually-hidden" type="checkbox" id="gym" name="gym">
                 </li>
-                <li class="partners-filter__hobbies-item">
-                  <label class="partners-filter__hobbies-name" for="hookah">Кальян</label>
+                <li class="partners-filter__check-item">
+                  <label class="partners-filter__check-name" for="hookah">Кальян</label>
                   <input class="visually-hidden" type="checkbox" id="hookah" name="hookah">
                 </li>
-                <li class="partners-filter__hobbies-item">
-                  <label class="partners-filter__hobbies-name" for="sofa">Диван</label>
+                <li class="partners-filter__check-item">
+                  <label class="partners-filter__check-name" for="sofa">Диван</label>
                   <input class="visually-hidden" type="checkbox" id="sofa" name="sofa">
                 </li>
               </ul>
             </li>
             <li class="partners-filter__item">
               <h3 class="partners-filter__title">Музыка:</h3>
-              <ul class="partners-filter__music-list">
-                <li class="partners-filter__music-item">
-                  <label class="partners-filter__music-name" for="rock">Тяжелый рок</label>
+              <ul class="partners-filter__check-list">
+                <li class="partners-filter__check-item">
+                  <label class="partners-filter__check-name" for="rock">Тяжелый рок</label>
                   <input class="visually-hidden" type="checkbox" id="rock" name="rock">
                 </li>
-                <li class="partners-filter__music-item">
-                  <label class="partners-filter__music-name" for="rap">Русский рэп</label>
+                <li class="partners-filter__check-item">
+                  <label class="partners-filter__check-name" for="rap">Русский рэп</label>
                   <input class="visually-hidden" type="checkbox" id="rap" name="rap">
                 </li>
-                <li class="partners-filter__music-item">
-                  <label class="partners-filter__music-name" for="dance">Евроденс</label>
+                <li class="partners-filter__check-item">
+                  <label class="partners-filter__check-name" for="dance">Евроденс</label>
                   <input class="visually-hidden" type="checkbox" id="dance" name="dance">
                 </li>
               </ul>
             </li>
             <li class="partners-filter__item">
               <h3 class="partners-filter__title">Еда:</h3>
-              <ul class="partners-filter__food-list">
-                <li class="partners-filter__food-item">
-                  <label class="partners-filter__food-name" for="meat">Мясоед</label>
+              <ul class="partners-filter__check-list">
+                <li class="partners-filter__check-item">
+                  <label class="partners-filter__check-name" for="meat">Мясоед</label>
                   <input class="visually-hidden" type="checkbox" id="meat" name="meat">
                 </li>
-                <li class="partners-filter__food-item">
-                  <label class="partners-filter__food-name" for="healthy-food">Сидит на ПП</label>
+                <li class="partners-filter__check-item">
+                  <label class="partners-filter__check-name" for="healthy-food">Сидит на ПП</label>
                   <input class="visually-hidden" type="checkbox" id="healthy-food" name="healthy-food">
                 </li>
-                <li class="partners-filter__food-item">
-                  <label class="partners-filter__food-name" for="vegan">Веган-сыроед</label>
+                <li class="partners-filter__check-item">
+                  <label class="partners-filter__check-name" for="vegan">Веган-сыроед</label>
                   <input class="visually-hidden" type="checkbox" id="vegan" name="vegan">
                 </li>
               </ul>
@@ -283,174 +308,182 @@
         <h2 class="visually-hidden">Карточки попутчиков</h2>
         <ul class="partners-cards__list">
           <li class="partners-cards__item card">
-            <h3 class="card__name">Таня<br>Фирсова</h3>
-            <picture>
-              <img src="https://via.placeholder.com/70x70" width="70" height="70" alt="фото попутчика">
-            </picture>
-            <button class="card__like-button card__like-button--pressed">1.5 м</button>
-            <p class="card__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-            <div class="card__countries">
-              <h4 class="card__countries-title">хочет посетить:</h4>
-              <ul class="card__countries-list">
-                <li class="card__countries-item">
-                  <p class="card__countries-text">Шри-ланка</p>
-                </li>
-                <li class="card__countries-item">
-                  <p class="card__countries-text">Таиланд</p>
-                </li>
-                <li class="card__countries-item">
-                  <p class="card__countries-text">Сейшелы</p>
-                </li>
-              </ul>
+            <div class="card__wrapper">
+              <h3 class="card__name">Таня<br>Фирсова</h3>
+              <picture>
+                <img src="https://via.placeholder.com/70x70" width="70" height="70" alt="фото попутчика">
+              </picture>
+              <button class="card__like-button card__like-button--pressed">1.5 м</button>
+              <p class="card__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+              <div class="card__countries">
+                <h4 class="card__countries-title">хочет посетить:</h4>
+                <ul class="card__countries-list">
+                  <li class="card__countries-item">
+                    <p class="card__countries-text">Шри-ланка</p>
+                  </li>
+                  <li class="card__countries-item">
+                    <p class="card__countries-text">Таиланд</p>
+                  </li>
+                  <li class="card__countries-item">
+                    <p class="card__countries-text">Сейшелы</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="card__transport">
+                <h4 class="card__countries-title">транспорт:</h4>
+                <ul class="card__icons-list">
+                  <li class="card__icons-item">
+                    <img src="https://via.placeholder.com/20x20" width="20" height="20" alt="самалёт">
+                  </li>
+                  <li class="card__icons-item">
+                    <img src="https://via.placeholder.com/20x20" width="20" height="20" alt="автобус">
+                  </li>
+                  <li class="card__icons-item">
+                    <img src="https://via.placeholder.com/20x20" width="20" height="20" alt="велосипед">
+                  </li>
+                  <li class="card__icons-item">
+                    <img src="https://via.placeholder.com/20x20" width="20" height="20" alt="пешком">
+                  </li>
+                </ul>
+              </div>
+              <div class="level-circle">
+                <p class="level-circle__number">99</p>
+                <p class="level-circle__text">level</p>
+              </div>
+              <button class="button card__button">Позвать!</button>
             </div>
-            <div class="card__transport">
-              <h4 class="card__countries-title">транспорт:</h4>
-              <ul class="card__icons-list">
-                <li class="card__icons-item">
-                  <img src="https://via.placeholder.com/20x20" width="20" height="20" alt="самалёт">
-                </li>
-                <li class="card__icons-item">
-                  <img src="https://via.placeholder.com/20x20" width="20" height="20" alt="автобус">
-                </li>
-                <li class="card__icons-item">
-                  <img src="https://via.placeholder.com/20x20" width="20" height="20" alt="велосипед">
-                </li>
-                <li class="card__icons-item">
-                  <img src="https://via.placeholder.com/20x20" width="20" height="20" alt="пешком">
-                </li>
-              </ul>
-            </div>
-            <div class="level-circle">
-              <p class="level-circle__number">99</p>
-              <p class="level-circle__text">level</p>
-            </div>
-            <button class="button card__button">Позвать!</button>
           </li>
           <li class="partners-cards__item card">
-            <h3 class="card__name">Петя<br>Демин</h3>
-            <picture>
-              <img src="https://via.placeholder.com/70x70" width="70" height="70" alt="фото попутчика">
-            </picture>
-            <button class="card__like-button">1500</button>
-            <p class="card__tags">#бургер #бар #футбол #концерт #крафт</p>
-            <div class="card__countries">
-              <h4 class="card__countries-title">хочет посетить:</h4>
-              <ul class="card__countries-list">
-                <li class="card__countries-item">
-                  <p class="card__countries-text">Бельгия</p>
-                </li>
-                <li class="card__countries-item">
-                  <p class="card__countries-text">Чехия</p>
-                </li>
-              </ul>
+            <div class="card__wrapper">
+              <h3 class="card__name">Петя<br>Демин</h3>
+              <picture>
+                <img src="https://via.placeholder.com/70x70" width="70" height="70" alt="фото попутчика">
+              </picture>
+              <button class="card__like-button">1500</button>
+              <p class="card__tags">#бургер #бар #футбол #концерт #крафт</p>
+              <div class="card__countries">
+                <h4 class="card__countries-title">хочет посетить:</h4>
+                <ul class="card__countries-list">
+                  <li class="card__countries-item">
+                    <p class="card__countries-text">Бельгия</p>
+                  </li>
+                  <li class="card__countries-item">
+                    <p class="card__countries-text">Чехия</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="card__transport">
+                <h4 class="card__countries-title">транспорт:</h4>
+                <ul class="card__icons-list">
+                  <li class="card__icons-item">
+                    <img src="https://via.placeholder.com/20x20" width="20" height="20" alt="самалёт">
+                  </li>
+                  <li class="card__icons-item">
+                    <img src="https://via.placeholder.com/20x20" width="20" height="20" alt="автобус">
+                  </li>
+                  <li class="card__icons-item">
+                    <img src="https://via.placeholder.com/20x20" width="20" height="20" alt="велосипед">
+                  </li>
+                  <li class="card__icons-item">
+                    <img src="https://via.placeholder.com/20x20" width="20" height="20" alt="пешком">
+                  </li>
+                </ul>
+              </div>
+              <div class="level-circle">
+                <p class="level-circle__number">80</p>
+                <p class="level-circle__text">level</p>
+              </div>
+              <button class="button card__button">Позвать!</button>
             </div>
-            <div class="card__transport">
-              <h4 class="card__countries-title">транспорт:</h4>
-              <ul class="card__icons-list">
-                <li class="card__icons-item">
-                  <img src="https://via.placeholder.com/20x20" width="20" height="20" alt="самалёт">
-                </li>
-                <li class="card__icons-item">
-                  <img src="https://via.placeholder.com/20x20" width="20" height="20" alt="автобус">
-                </li>
-                <li class="card__icons-item">
-                  <img src="https://via.placeholder.com/20x20" width="20" height="20" alt="велосипед">
-                </li>
-                <li class="card__icons-item">
-                  <img src="https://via.placeholder.com/20x20" width="20" height="20" alt="пешком">
-                </li>
-              </ul>
-            </div>
-            <div class="level-circle">
-              <p class="level-circle__number">80</p>
-              <p class="level-circle__text">level</p>
-            </div>
-            <button class="button card__button">Позвать!</button>
           </li>
           <li class="partners-cards__item card">
-            <h3 class="card__name">Марк<br>Смолов</h3>
-            <picture>
-              <img src="https://via.placeholder.com/70x70" width="70" height="70" alt="фото попутчика">
-            </picture>
-            <button class="card__like-button">170</button>
-            <p class="card__tags">#рэп #тату #хайпбист #кроссовки #суприм</p>
-            <div class="card__countries">
-              <h4 class="card__countries-title">хочет посетить:</h4>
-              <ul class="card__countries-list">
-                <li class="card__countries-item">
-                  <p class="card__countries-text">CША</p>
-                </li>
-                <li class="card__countries-item">
-                  <p class="card__countries-text">Австралия</p>
-                </li>
-                <li class="card__countries-item">
-                  <p class="card__countries-text">Доминикана</p>
-                </li>
-              </ul>
+            <div class="card__wrapper">
+              <h3 class="card__name">Марк<br>Смолов</h3>
+              <picture>
+                <img src="https://via.placeholder.com/70x70" width="70" height="70" alt="фото попутчика">
+              </picture>
+              <button class="card__like-button">170</button>
+              <p class="card__tags">#рэп #тату #хайпбист #кроссовки #суприм</p>
+              <div class="card__countries">
+                <h4 class="card__countries-title">хочет посетить:</h4>
+                <ul class="card__countries-list">
+                  <li class="card__countries-item">
+                    <p class="card__countries-text">CША</p>
+                  </li>
+                  <li class="card__countries-item">
+                    <p class="card__countries-text">Австралия</p>
+                  </li>
+                  <li class="card__countries-item">
+                    <p class="card__countries-text">Доминикана</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="card__transport">
+                <h4 class="card__countries-title">транспорт:</h4>
+                <ul class="card__icons-list">
+                  <li class="card__icons-item">
+                    <img src="https://via.placeholder.com/20x20" width="20" height="20" alt="самалёт">
+                  </li>
+                  <li class="card__icons-item">
+                    <img src="https://via.placeholder.com/20x20" width="20" height="20" alt="автобус">
+                  </li>
+                  <li class="card__icons-item">
+                    <img src="https://via.placeholder.com/20x20" width="20" height="20" alt="велосипед">
+                  </li>
+                  <li class="card__icons-item">
+                    <img src="https://via.placeholder.com/20x20" width="20" height="20" alt="пешком">
+                  </li>
+                </ul>
+              </div>
+              <div class="level-circle">
+                <p class="level-circle__number">25</p>
+                <p class="level-circle__text">level</p>
+              </div>
+              <button class="button card__button">Позвать!</button>
             </div>
-            <div class="card__transport">
-              <h4 class="card__countries-title">транспорт:</h4>
-              <ul class="card__icons-list">
-                <li class="card__icons-item">
-                  <img src="https://via.placeholder.com/20x20" width="20" height="20" alt="самалёт">
-                </li>
-                <li class="card__icons-item">
-                  <img src="https://via.placeholder.com/20x20" width="20" height="20" alt="автобус">
-                </li>
-                <li class="card__icons-item">
-                  <img src="https://via.placeholder.com/20x20" width="20" height="20" alt="велосипед">
-                </li>
-                <li class="card__icons-item">
-                  <img src="https://via.placeholder.com/20x20" width="20" height="20" alt="пешком">
-                </li>
-              </ul>
-            </div>
-            <div class="level-circle">
-              <p class="level-circle__number">25</p>
-              <p class="level-circle__text">level</p>
-            </div>
-            <button class="button card__button">Позвать!</button>
           </li>
           <li class="partners-cards__item card">
-            <h3 class="card__name">Лариса<br>Роговая</h3>
-            <picture>
-              <img src="https://via.placeholder.com/70x70" width="70" height="70" alt="фото попутчика">
-            </picture>
-            <button class="card__like-button">23</button>
-            <p class="card__tags">#образование #карьера #учеба #линкедин</p>
-            <div class="card__countries">
-              <h4 class="card__countries-title">хочет посетить:</h4>
-              <ul class="card__countries-list">
-                <li class="card__countries-item">
-                  <p class="card__countries-text">Великобритания</p>
-                </li>
-                <li class="card__countries-item">
-                  <p class="card__countries-text">Германия</p>
-                </li>
-              </ul>
+            <div class="card__wrapper">
+              <h3 class="card__name">Лариса<br>Роговая</h3>
+              <picture>
+                <img src="https://via.placeholder.com/70x70" width="70" height="70" alt="фото попутчика">
+              </picture>
+              <button class="card__like-button">23</button>
+              <p class="card__tags">#образование #карьера #учеба #линкедин</p>
+              <div class="card__countries">
+                <h4 class="card__countries-title">хочет посетить:</h4>
+                <ul class="card__countries-list">
+                  <li class="card__countries-item">
+                    <p class="card__countries-text">Великобритания</p>
+                  </li>
+                  <li class="card__countries-item">
+                    <p class="card__countries-text">Германия</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="card__transport">
+                <h4 class="card__countries-title">транспорт:</h4>
+                <ul class="card__icons-list">
+                  <li class="card__icons-item">
+                    <img src="https://via.placeholder.com/20x20" width="20" height="20" alt="самалёт">
+                  </li>
+                  <li class="card__icons-item">
+                    <img src="https://via.placeholder.com/20x20" width="20" height="20" alt="автобус">
+                  </li>
+                  <li class="card__icons-item">
+                    <img src="https://via.placeholder.com/20x20" width="20" height="20" alt="велосипед">
+                  </li>
+                  <li class="card__icons-item">
+                    <img src="https://via.placeholder.com/20x20" width="20" height="20" alt="пешком">
+                  </li>
+                </ul>
+              </div>
+              <div class="level-circle">
+                <p class="level-circle__number">80</p>
+                <p class="level-circle__text">level</p>
+              </div>
+              <button class="button card__button">Позвать!</button>
             </div>
-            <div class="card__transport">
-              <h4 class="card__countries-title">транспорт:</h4>
-              <ul class="card__icons-list">
-                <li class="card__icons-item">
-                  <img src="https://via.placeholder.com/20x20" width="20" height="20" alt="самалёт">
-                </li>
-                <li class="card__icons-item">
-                  <img src="https://via.placeholder.com/20x20" width="20" height="20" alt="автобус">
-                </li>
-                <li class="card__icons-item">
-                  <img src="https://via.placeholder.com/20x20" width="20" height="20" alt="велосипед">
-                </li>
-                <li class="card__icons-item">
-                  <img src="https://via.placeholder.com/20x20" width="20" height="20" alt="пешком">
-                </li>
-              </ul>
-            </div>
-            <div class="level-circle">
-              <p class="level-circle__number">80</p>
-              <p class="level-circle__text">level</p>
-            </div>
-            <button class="button card__button">Позвать!</button>
           </li>
           <li class="partners-cards__item card card--show-more">
             <button class="button card__button card__button--show-more">Показать еще</button>
