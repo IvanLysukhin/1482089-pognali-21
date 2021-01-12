@@ -1,7 +1,7 @@
 .level-circle {
-  background-color: fade(@basic-black, 60%);
-  color: @basic-white;
-  border-radius: 50%;
+  //background-color: fade(@basic-black, 60%);
+  //color: @basic-white;
+  //border-radius: 50%;
   width: 60px;
   height: 60px;
   text-align: center;
@@ -17,12 +17,15 @@
 .level-circle__text {
   font-weight: normal;
   font-size: 14px;
+  margin: 0;
+  position: relative;
+  z-index: 2;
 
   &--number {
     font-weight: bold;
     font-size: 24px;
     line-height: 24px;
-    margin: 0;
+    margin-top: 13px;
   }
 
   &--big-number {
@@ -32,5 +35,26 @@
   &--big-text {
     font-size: 18px;
     color: @special_grey;
+  }
+}
+
+.level-circle__pic {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  transform: rotate(-85deg);
+}
+
+.level-circle__ellipse {
+  fill: fade(@basic-black, 60%);
+  stroke: @dark-orange;
+  stroke-width: 4px;
+  stroke-linecap: round;
+  stroke-dasharray: 166;
+
+  &--eighty {
+    stroke-dasharray: 138;
   }
 }

@@ -67,7 +67,7 @@
             <a class="preview__link preview__link--mail" href="mailto:mail@htmlacademy.ru" aria-label="Напишите нам"></a>
           </li>
           <li class="preview__links-item">
-            <button class="button main-nav__button" type="button">авторизация</button>
+            <button class="button preview__button" type="button">авторизация</button>
           </li>
         </ul>
         <blockquote class="preview__quote">
@@ -77,22 +77,26 @@
         <ol class="preview__list">
           <li class="preview__item preview__item--dark-orange">Выберите направление</li>
           <li class="preview__item preview__item--orange">Изучите идеи путешественников</li>
-          <li class="preview__item preview__item--dark-yellow">Находите тех, кто похож на вас</li>
-          <li class="preview__item preview__item--yellow">Путешествуйте вместе!</li>
+          <li class="preview__item preview__item--dark-yellow">Находите тех,<br>кто похож на вас</li>
+          <li class="preview__item preview__item--yellow">Путешествуйте<br>вместе!</li>
         </ol>
       </section>
       <section class="about">
-        <h2 class="page-main__title about__title">О сервисе</h2>
-        <p class="about__text">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
-        <p class="about__text about__text--bold">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
+        <div class="about__wrapper">
+          <h2 class="page-main__title about__title">О сервисе</h2>
+          <p class="about__text">Любое путешествие веселее с&nbsp;попутчиками, которые на одной волне с&nbsp;тобой! Делитесь своими идеями путешествий и черпайте вдохновение в&nbsp;чужих.</p>
+          <p class="about__text about__text--bold">А если найдете кого-то близкого по духу &mdash; скорее зовите в совместный трип!</p>
+        </div>
       </section>
       <section class="direction">
-        <h2 class="page-main__title direction__title">Направления</h2>
-        <p class="direction__text">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
+        <div class="direction__wrapper">
+          <h2 class="page-main__title direction__title">Направления</h2>
+          <p class="direction__text">Мы не продаем туры и&nbsp;ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
+        </div>
         <ul class="direction__list">
           <li class="direction__item">
             <picture>
-              <img src="https://via.placeholder.com/270x110" width="270" height="110" alt="Таиланд">
+              <img class="direction__pic" src="https://via.placeholder.com/270x110" width="270" height="110" alt="Таиланд">
             </picture>
             <div class="direction__text-box direction__text-box--thailand">
               <h3 class="direction__country-name">Таиланд</h3>
@@ -102,7 +106,7 @@
           </li>
           <li class="direction__item">
             <picture>
-              <img src="https://via.placeholder.com/270x110" width="270" height="110" alt="Таиланд">
+              <img class="direction__pic" src="https://via.placeholder.com/270x110" width="270" height="110" alt="Таиланд">
             </picture>
             <div class="direction__text-box direction__text-box--france">
               <h3 class="direction__country-name">Франция</h3>
@@ -112,7 +116,7 @@
           </li>
           <li class="direction__item">
             <picture>
-              <img src="https://via.placeholder.com/270x110" width="270" height="110" alt="Таиланд">
+              <img class="direction__pic" src="https://via.placeholder.com/270x110" width="270" height="110" alt="Таиланд">
             </picture>
             <div class="direction__text-box direction__text-box--czech">
               <h3 class="direction__country-name">Чехия</h3>
@@ -124,17 +128,22 @@
         <button class="button direction__button" type="button">Показать все</button>
       </section>
       <section class="companion">
-        <h2 class="page-main__title companion__title">Попутчики</h2>
-        <p class="companion__text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
-        <p class="companion__text companion__text--bold">Теперь можно легко найти единомышленников!</p>
+        <div class="companion__wrapper">
+          <h2 class="page-main__title companion__title">Попутчики</h2>
+          <p class="companion__text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
+          <p class="companion__text companion__text--bold">Теперь можно легко найти единомышленников!</p>
+        </div>
         <ul class="companion__list">
           <li class="companion__item">
-            <div class="level-circle">
+            <div class="level-circle companion__level">
+              <svg class="level-circle__pic">
+                <circle class="level-circle__ellipse" r="28" cx="50%" cy="50%"></circle>
+              </svg>
               <p class="level-circle__text level-circle__text--number">99</p>
               <p class="level-circle__text">level</p>
             </div>
             <picture>
-              <img src="https://via.placeholder.com/270x270" width="270" height="270" alt="Таня Фирсова">
+              <img class="companion__pic" src="https://via.placeholder.com/270x270" width="270" height="270" alt="Таня Фирсова">
             </picture>
             <ul class="companion__flags-list">
               <li class="companion__flags-item">
@@ -167,12 +176,15 @@
             </div>
           </li>
           <li class="companion__item">
-            <div class="level-circle">
+            <div class="level-circle companion__level">
+              <svg class="level-circle__pic">
+                <circle class="level-circle__ellipse level-circle__ellipse--eighty" r="28" cx="50%" cy="50%"></circle>
+              </svg>
               <p class="level-circle__text level-circle__text--number">80</p>
               <p class="level-circle__text">level</p>
             </div>
             <picture>
-              <img src="https://via.placeholder.com/270x270" width="270" height="270" alt="Таня Фирсова">
+              <img class="companion__pic" src="https://via.placeholder.com/270x270" width="270" height="270" alt="Петя Демин">
             </picture>
             <ul class="companion__flags-list">
               <li class="companion__flags-item">
@@ -205,48 +217,50 @@
         <button class="button companion__button" type="button">Показать всех</button>
       </section>
       <section class="profile">
-        <h2 class="page-main__title profile__title">Добавьте свой профиль</h2>
-        <ol class="profile__list">
-          <li class="profile__item">
-            <p class="profile__type">Базовое размещение</p>
-            <p class="profile__price">Бесплатно</p>
-          </li>
-          <li class="profile__item">
-            <p class="profile__type">Вывод на первых позициях</p>
-            <p class="profile__price">99 руб./мес</p>
-          </li>
-          <li class="profile__item">
-            <p class="profile__type">Кастомный цвет карточки</p>
-            <p class="profile__price">59 руб./мес</p>
-          </li>
-        </ol>
-        <button class="button profile__button" type="button">Показать тарифы для бизнеса</button>
-        <div class="profile__business-rates">
-          <h3 class="page-main__title profile__title profile__title--business">Бизнес-тарифы</h3>
-          <ul class="profile__business-list">
-            <li class="profile__business-item">
-              <p class="profile__type">Реклама у блоггера</p>
-              <p class="profile__price">300 000 руб./пост</p>
+        <div class="profile__wrapper">
+          <h2 class="page-main__title profile__title">Добавьте свой профиль</h2>
+          <ol class="profile__list">
+            <li class="profile__item">
+              <p class="profile__type">Базовое размещение</p>
+              <p class="profile__price">Бесплатно</p>
             </li>
-            <li class="profile__business-item">
-              <p class="profile__type">Накрутка подписчиков</p>
-              <p class="profile__price">от 1 руб./шт</p>
+            <li class="profile__item">
+              <p class="profile__type">Вывод на первых позициях</p>
+              <p class="profile__price">99 руб./мес</p>
             </li>
-            <li class="profile__business-item">
-              <p class="profile__type">Лайки от ботов</p>
-              <p class="profile__price">от 20 коп./лайк</p>
+            <li class="profile__item">
+              <p class="profile__type">Кастомный цвет карточки</p>
+              <p class="profile__price">59 руб./мес</p>
             </li>
-            <li class="profile__business-item">
-              <p class="profile__type">Ваш продакт-плейсмент</p>
-              <p class="profile__price">Индивидуально</p>
-            </li>
-          </ul>
-          <button class="profile__business-button">Закрыть окно</button>
+          </ol>
+          <button class="button profile__button" type="button">Показать тарифы для бизнеса</button>
         </div>
       </section>
+      <div class="business-rates">
+        <h3 class="page-main__title business-rates__title">Бизнес-тарифы</h3>
+        <ul class="business-rates__list">
+          <li class="business-rates__item">
+            <p class="business-rates__type">Реклама у блоггера</p>
+            <p class="business-rates__price">300 000 руб./пост</p>
+          </li>
+          <li class="business-rates__item">
+            <p class="business-rates__type">Накрутка подписчиков</p>
+            <p class="business-rates__price">от 1 руб./шт</p>
+          </li>
+          <li class="business-rates__item">
+            <p class="business-rates__type">Лайки от ботов</p>
+            <p class="business-rates__price">от 20 коп./лайк</p>
+          </li>
+          <li class="business-rates__item">
+            <p class="business-rates__type">Ваш продакт-плейсмент</p>
+            <p class="business-rates__price">Индивидуально</p>
+          </li>
+        </ul>
+        <button class="business-rates__button">Закрыть окно</button>
+      </div>
       <section class="registration">
         <h2 class="page-main__title registration__title">Заинтересовались?</h2>
-        <p class="registration__text">Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a class="registration__link" href="#">авторизуйтесь</a>.</p>
+        <p class="registration__text">Зарегистрируйтесь,<br> это быстро и бесплатно! Уже&nbsp;зарегистрированы? Тогда<br> скорее <a class="registration__link" href="#">авторизуйтесь</a>.</p>
         <form class="registration__from" action="https://echo.htmlacademy.ru" method="post">
           <label class="visually-hidden" for="email">E-mail</label>
           <input class="registration__input" type="email" name="email" id="email" placeholder="E-mail">
@@ -265,7 +279,7 @@
       <section class="contacts">
         <h2 class="visually-hidden">Контакты</h2>
         <div class="contacts__box">
-          <p class="contacts__text">ул. Большая Конюшенная, 19/8</p>
+          <p class="contacts__text">ул. Большая<br>Конюшенная, 19/8</p>
           <a class="contacts__link" href="#">Проложить маршрут</a>
         </div>
         <picture>
