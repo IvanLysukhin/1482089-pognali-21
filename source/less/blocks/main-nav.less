@@ -52,6 +52,7 @@
   font-size: 30px;
   line-height: 35px;
   text-transform: uppercase;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
@@ -87,6 +88,18 @@
   line-height: 18px;
   text-transform: uppercase;
   padding-left: 62px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: @basic-yellow;
+    top: 0;
+    left: 0;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 28px;
