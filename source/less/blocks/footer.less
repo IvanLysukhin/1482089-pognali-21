@@ -3,6 +3,13 @@
   background-color: @basic-white;
   margin-top: -169px;
   padding-top: 38px;
+  z-index: 1;
+
+  @media (min-width: @tablet-width) {
+    border-radius: 60px 60px 0 0;
+    margin-top: -136px;
+    padding-top: 61px;
+  }
 }
 
 .footer__list {
@@ -10,6 +17,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    .wrapper(90%);
+  }
 }
 
 .footer__item {
@@ -20,5 +33,15 @@
   &:last-of-type {
     display: flex;
     justify-content: space-between;
+  }
+}
+
+.footer__text {
+  text-decoration: none;
+  color: @special_grey;
+  font-size: 16px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
   }
 }

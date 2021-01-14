@@ -6,15 +6,31 @@
   padding-top: 71px;
   padding-bottom: 36px;
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -60px;
+    padding-top: 92px;
+    padding-bottom: 84px;
+    border-radius: 0 0 60px 60px;
+  }
 }
 
 .profile__wrapper {
   .wrapper(84%);
+
+  @media (min-width: @tablet-width) {
+    .wrapper(90%);
+  }
 }
 
 .profile__title {
   padding-right: 120px;
   padding-left: 25px;
+
+  @media (min-width: @tablet-width) {
+    text-align: center;
+    padding: 0;
+  }
 }
 
 .profile__list {
@@ -26,6 +42,13 @@
   line-height: 16px;
   counter-reset: item;
   margin-top: 42px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 28px;
+    line-height: 28px;
+    .wrapper(89%);
+    margin-top: 76px;
+  }
 }
 
 .profile__item {
@@ -34,9 +57,31 @@
   border-top: 1px solid @border-grey-2;
   padding-top: 4px;
 
+  @media (min-width: @tablet-width) {
+    margin-left: 53px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 13px;
+    padding-bottom: 4px;
+  }
+
   &:last-of-type {
     border-bottom: 1px solid @border-grey-2;
     padding-bottom: 12px;
+  }
+
+  @media (min-width: @tablet-width) {
+    &:first-of-type::before {
+      content: "";
+      position: absolute;
+      width: 198px;
+      height: 285px;
+      border-radius: 20px;
+      background-color: @special-blue-light-3;
+      top: -41px;
+      right: -36px;
+      z-index: 1;
+    }
   }
 
   &::after {
@@ -53,6 +98,16 @@
     height: 25px;
     text-align: center;
     padding-top: 8px;
+
+    @media (min-width: @tablet-width) {
+      font-size: 28px;
+      left: -90px;
+      top: 0;
+      width: 70px;
+      height: 48px;
+      text-align: center;
+      padding-top: 18px;
+    }
   }
 
   &:nth-of-type(1) {
@@ -77,11 +132,19 @@
 .profile__type {
   margin-bottom: 0;
   margin-top: 9px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 5px;
+  }
 }
 
 .profile__price {
   margin-top: 6px;
   margin-bottom: 0;
+
+  @media (min-width: @tablet-width) {
+    z-index: 1;
+  }
 }
 
 .profile__button {
@@ -91,4 +154,11 @@
   color: @special-blue;
   cursor: pointer;
   margin-top: 15px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    text-align: left;
+    padding-left: 91px;
+    margin-top: 48px;
+  }
 }
