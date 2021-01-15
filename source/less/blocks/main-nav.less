@@ -12,6 +12,12 @@
     align-items: center;
     padding-bottom: 96px;
   }
+
+  @media (min-width: @desktop-width) {
+    .wrapper(1322px);
+    padding-bottom: 0;
+    padding-top: 38px;
+  }
 }
 
 .main-nav__logo-box {
@@ -22,6 +28,16 @@
   @media (min-width: @tablet-width) {
     order: 1;
     flex-basis: 353px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-basis: 200px;
+  }
+}
+
+.main-nav__menu-button {
+  @media (min-width: @desktop-width) {
+    display: none;
   }
 }
 
@@ -34,6 +50,16 @@
     flex-basis: 100%;
     margin-top: 87px;
     padding-left: 58px;
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 2;
+    display: flex;
+    justify-content: space-between;
+    flex-basis: auto;
+    margin-top: 0;
+    padding-left: 146px;
+    gap: 34px;
   }
 }
 
@@ -58,6 +84,11 @@
     font-size: 60px;
     line-height: 71px;
   }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    color: @basic-white;
+  }
 }
 
 .main-nav__contact-list {
@@ -70,6 +101,15 @@
     flex-basis: 100%;
     margin-top: 156px;
   }
+
+  @media (min-width: @desktop-width) {
+    order: 3;
+    display: flex;
+    justify-content: space-between;
+    flex-basis: auto;
+    margin-top: 0;
+    margin-left: auto;
+  }
 }
 
 .main-nav__contact-item {
@@ -77,6 +117,10 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 38px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
   }
 }
 
@@ -106,6 +150,14 @@
     line-height: 28px;
     padding-left: 150px;
   }
+
+  @media (min-width: @desktop-width) {
+    font-size: 0;
+    padding-left: 0;
+    display: block;
+    height: 50px;
+    width: 50px;
+  }
 }
 
 .main-nav__social-list {
@@ -119,6 +171,10 @@
     order: 5;
     margin-top: 115px;
     padding-left: 85px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
   }
 }
 
@@ -135,5 +191,11 @@
     margin-left: auto;
     font-weight: normal;
     font-size: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-weight: bold;
+    order: 4;
+    margin-left: 0;
   }
 }
