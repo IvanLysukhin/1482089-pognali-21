@@ -13,6 +13,11 @@
     padding-bottom: 84px;
     border-radius: 0 0 60px 60px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 126px;
+    padding-bottom: 187px;
+  }
 }
 
 .profile__wrapper {
@@ -20,6 +25,10 @@
 
   @media (min-width: @tablet-width) {
     .wrapper(90%);
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrapper(1322px);
   }
 }
 
@@ -48,6 +57,11 @@
     line-height: 28px;
     .wrapper(89%);
     margin-top: 76px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+    margin: 135px 344px 0 110px;
   }
 }
 
@@ -81,6 +95,13 @@
       top: -41px;
       right: -36px;
       z-index: 1;
+
+      @media (min-width: @desktop-width) {
+        width: 446px;
+        height: 304px;
+        top: -50px;
+        right: -159px;
+      }
     }
   }
 
@@ -160,5 +181,10 @@
     text-align: left;
     padding-left: 91px;
     margin-top: 48px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+    margin-left: 70px;
   }
 }
