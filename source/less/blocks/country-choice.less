@@ -1,3 +1,16 @@
+.country-choice {
+  margin-top: -1px;
+  position: absolute;
+  top: 41px;
+  background-color: @basic-white;
+  z-index: 1;
+  display: none;
+
+  &--opened {
+    display: block;
+  }
+}
+
 .country-choice__table {
   border-collapse: collapse;
 
@@ -48,6 +61,13 @@
 
 .country-choice__countries-list {
   .reset-list;
+  padding: 16px 12px;
+  border: 1px solid @border-grey;
+  border-radius: 0 0 4px 4px;
+}
+
+.country-choice__countries-item {
+  margin-bottom: 5px;
 }
 
 .country-choice__country-button {

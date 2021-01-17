@@ -1,3 +1,15 @@
+.stay-dates {
+  margin-top: 29px;
+  padding-top: 24px;
+  padding-bottom: 23px;
+}
+
+.stay-dates__wrapper {
+  .wrapper(82%);
+  display: flex;
+  flex-direction: column;
+}
+
 .stay-dates__text {
   font-weight: normal;
   font-size: 16px;
@@ -11,10 +23,19 @@
   font-size: 16px;
   letter-spacing: 0.09em;
   text-transform: uppercase;
+  margin-bottom: 7px;
+}
+
+.stay-dates__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
 }
 
 .stay-dates__name {
-  text-align: justify;
+  display: flex;
+  justify-content: space-between;
 
   &--opacity {
     opacity: 0.3;
@@ -28,14 +49,50 @@
   text-transform: uppercase;
   color: @basic-blue-light;
   text-align: center;
-  border: none;
+  border: 1px solid @border-grey;
+  border-radius: 4px;
+  margin-top: 9px;
+  padding: 12px;
 }
 
 .stay-dates__child-label {
   font-size: 15px;
+  padding-left: 39px;
+}
+
+.stay-dates__month {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 35px;
+  border-bottom: 1px solid @border-grey;
+  border-top: 1px solid @border-grey;
+  padding: 10px 0;
+  margin-bottom: 12px;
 }
 
 .stay-dates__choose-month {
   font-weight: bold;
   font-size: 20px;
+  margin: 0;
+}
+
+.stay-dates__calendar {
+  margin-bottom: 21px;
+}
+
+.stay-dates__button {
+  position: absolute;
+  top: 47px;
+
+  &--less {
+    left: 0;
+    margin-left: 16px;
+  }
+
+
+  &--more {
+    right: 0;
+    margin-right: 16px;
+  }
 }

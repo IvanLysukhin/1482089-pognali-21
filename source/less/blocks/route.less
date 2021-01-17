@@ -1,16 +1,41 @@
+.route {
+  padding-top: 23px;
+  padding-bottom: 7px;
+  display: flex;
+  flex-direction: column;
+}
+
+.route__wrapper {
+  .wrapper(82%);
+}
+
 .route__text {
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
   color: @special_grey;
+  margin-top: 13px;
 }
 
 .route__list {
   .reset-list;
+  .wrapper(82%);
+  margin-top: 2px;
+  margin-bottom: 8px;
 }
 
-.route__countries,
-.route__choose-button {
+.route__item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 16px;
+
+  &--choice {
+    flex-direction: column;
+  }
+}
+
+.route__input {
   .main-font;
   text-transform: uppercase;
   font-weight: 500;
@@ -20,12 +45,33 @@
   border: 1px solid @border-grey;
   border-radius: 4px;
   background-color: transparent;
-  padding: 11px 10px;
+  padding: 11px 5px;
   box-sizing: border-box;
+  width: 76%;
+  flex-grow: 1;
+
+  &--choose-button {
+    width: 100%;
+    text-align: left;
+    padding: 11px 10px;
+  }
+}
+
+.route__delete-button {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .route__option {
   padding: 0;
+}
+
+.route__flag {
+  padding: 8px;
+  border: 1px solid @border-grey;
+  border-radius: 4px;
+  margin-top: 4px;
 }
 
 .route__add-button {
@@ -38,4 +84,8 @@
   letter-spacing: 0.1em;
   border: none;
   border-radius: 4px;
+  width: 100%;
+  padding: 13px 12px;
+  margin-top: 8px;
+  text-align: left;
 }

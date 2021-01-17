@@ -1,22 +1,29 @@
 .my-plans {
   background-color: @special-blue-light;
   border-radius: 30px 30px 0 0;
+  padding-top: 27px;
+  padding-bottom: 80px;
 }
 
 .my-plans__title {
   font-weight: bold;
   font-size: 24px;
   line-height: 24px;
+  .wrapper(84%);
 }
 
 .my-plans__list {
   .reset-list;
   counter-reset: item;
+  .wrapper(84%);
+  margin-top: 31px;
 }
 
 .my-plans__item {
   background-color: @basic-white;
   border-radius: 10px;
+  padding: 1px 23px;
+  margin-bottom: 10px;
 }
 
 .my-plans__plan-name {
@@ -27,6 +34,7 @@
   &::before {
     counter-increment: item;
     content: counter(item) ".";
+    margin-right: 4px;
   }
 }
 
@@ -36,6 +44,11 @@
   line-height: 14px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  margin-bottom: 0;
+
+  &--dates {
+    margin-top: 5px;
+  }
 }
 
 .my-plans__button {
@@ -47,4 +60,8 @@
   font-size: 14px;
   color: @basic-black;
   opacity: 0.3;
+  letter-spacing: 0.03em;
+  padding: 0;
+  margin-top: 22px;
+  margin-bottom: 22px;
 }

@@ -7,10 +7,13 @@
   text-align: center;
 
   &--transparent {
-    background-color: transparent;
-    color: @basic-blue;
+    //background-color: transparent;
+    //color: @basic-blue;
     width: 100px;
     height: 100px;
+    margin-left: 17px;
+    margin-top: 10px;
+    position: relative;
   }
 }
 
@@ -30,6 +33,7 @@
 
   &--big-number {
     font-size: 38px;
+    margin-bottom: 14px;
   }
 
   &--big-text {
@@ -45,6 +49,14 @@
   left: 0;
   z-index: 1;
   transform: rotate(-85deg);
+
+  &--transparent {
+    left: -3px;
+    top: -12px;
+    width: 105px;
+    height: 105px;
+    transform: rotate(-88deg);
+  }
 }
 
 .level-circle__ellipse {
@@ -53,6 +65,12 @@
   stroke-width: 4px;
   stroke-linecap: round;
   stroke-dasharray: 166;
+
+  &--transparent {
+    r: 48px;
+    stroke-dasharray: 247;
+    fill: transparent;
+  }
 
   &--eighty {
     stroke-dasharray: 138;

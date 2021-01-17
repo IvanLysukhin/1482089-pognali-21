@@ -61,7 +61,10 @@
       <form class="direction-form" action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data">
         <fieldset class="first-data">
           <legend class="visually-hidden">Первичные данные</legend>
-          <div class="level-circle level-circle--transparent">
+          <div class="level-circle level-circle--transparent first-data__level">
+            <svg class="level-circle__pic level-circle__pic--transparent">
+              <circle class="level-circle__ellipse level-circle__ellipse--transparent" r="28" cx="50%" cy="50%"></circle>
+            </svg>
             <p class="level-circle__text level-circle__text--number level-circle__text--big-number">80</p>
             <p class="level-circle__text level-circle__text--big-text">level</p>
           </div>
@@ -74,7 +77,7 @@
           </div>
           <div class="first-data__tags">
             <label class="first-data__title" for="tags">тэги</label>
-            <textarea class="first-data__tags-input" id="tags" name="tags" cols="10" rows="5"
+            <textarea class="first-data__tags-input" id="tags" name="tags" cols="10" rows="2"
                       placeholder="#бургер #бар #футбол #концерт #крафт"></textarea>
           </div>
           <div class="first-data__transport">
@@ -108,7 +111,7 @@
               <li class="my-plans__item">
                 <h4 class="my-plans__plan-name">Франция, Италия</h4>
                 <p class="my-plans__text my-plans__text--partners">3 попутчика</p>
-                <p class="my-plans__text my-plans__text--dates">26 мар — 29 мар</p>
+                <p class="my-plans__text my-plans__text--dates">26 мар &mdash; 29 мар</p>
                 <button class="my-plans__button" type="button">Изменить</button>
               </li>
               <li class="my-plans__item">
@@ -122,256 +125,261 @@
           <div class="generating-plan__plan-add">
             <h3 class="generating-plan__title">Добавить план:</h3>
             <fieldset class="generating-plan__box generating-plan__box--step-one stay-dates">
-              <legend class="generating-plan__step-name stay-dates">Шаг 1.<br>Даты пребывания</legend>
-              <p class="stay-dates__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в
-                поездку, и ее предполагаемую длительность.</p>
-              <ul class="stay-dates__list">
-                <li class="stay-dates__item">
-                  <label class="stay-dates__name" for="partners">ищу попутчиков:<span
-                    class="stay-dates__name stay-dates__name--opacity">чел</span></label>
-                  <button class="stay-dates__button stay-dates__button--less" aria-label="меньше"></button>
-                  <input class="stay-dates__data" type="number" id="partners" name="partners" value="1">
-                  <button class="stay-dates__button stay-dates__button--more" aria-label="больше"></button>
-                </li>
-                <li class="stay-dates__item">
-                  <label class="stay-dates__name" for="duration">длительность:<span
-                    class="stay-dates__name stay-dates__name--opacity">дн.</span></label>
-                  <button class="stay-dates__button stay-dates__button--less" aria-label="меньше"></button>
-                  <input class="stay-dates__data" type="number" id="duration" name="duration" value="1">
-                  <button class="stay-dates__button stay-dates__button--more" aria-label="больше"></button>
-                </li>
-              </ul>
-              <div class="stay-dates__child">
-                <input class="visually-hidden" type="checkbox" id="child" name="child">
-                <label class="stay-dates__child-label" for="child">Можно с детьми</label>
+              <div class="stay-dates__wrapper">
+                <legend class="generating-plan__step-name stay-dates__title">Шаг 1.<br>Даты пребывания</legend>
+                <p class="stay-dates__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать
+                  в
+                  поездку, и ее предполагаемую длительность.</p>
+                <ul class="stay-dates__list">
+                  <li class="stay-dates__item">
+                    <label class="stay-dates__name" for="partners">ищу попутчиков:<span
+                      class="stay-dates__name stay-dates__name--opacity">чел.</span></label>
+                    <button class="stay-dates__button stay-dates__button--less" aria-label="меньше"></button>
+                    <input class="stay-dates__data" type="number" id="partners" name="partners" value="1">
+                    <button class="stay-dates__button stay-dates__button--more" aria-label="больше"></button>
+                  </li>
+                  <li class="stay-dates__item">
+                    <label class="stay-dates__name" for="duration">длительность:<span
+                      class="stay-dates__name stay-dates__name--opacity">дн.</span></label>
+                    <button class="stay-dates__button stay-dates__button--less" aria-label="меньше"></button>
+                    <input class="stay-dates__data" type="number" id="duration" name="duration" value="1">
+                    <button class="stay-dates__button stay-dates__button--more" aria-label="больше"></button>
+                  </li>
+                </ul>
+                <div class="stay-dates__child">
+                  <input class="visually-hidden" type="checkbox" id="child" name="child">
+                  <label class="stay-dates__child-label" for="child">Можно с детьми</label>
+                </div>
+                <div class="stay-dates__month">
+                  <button class="stay-dates__month-button stay-dates__month-button--back" type="button"
+                          aria-label="предыдущий"></button>
+                  <p class="stay-dates__choose-month">Март 2019</p>
+                  <button class="stay-dates__month-button stay-dates__month-button--next" type="button"
+                          aria-label="следующий"></button>
+                </div>
+                <table class="stay-dates__calendar calendar">
+                  <tr class="calendar__row">
+                    <th class="calendar__cell calendar__cell--head">п</th>
+                    <th class="calendar__cell calendar__cell--head">в</th>
+                    <th class="calendar__cell calendar__cell--head">с</th>
+                    <th class="calendar__cell calendar__cell--head">ч</th>
+                    <th class="calendar__cell calendar__cell--head">п</th>
+                    <th class="calendar__cell calendar__cell--head calendar__cell--weekend">с</th>
+                    <th class="calendar__cell calendar__cell--head calendar__cell--weekend">в</th>
+                  </tr>
+                  <tr class="calendar__row">
+                    <td class="calendar__cell">
+                      <input class="calendar__input visually-hidden" type="checkbox" id="23.02" name="23.02" disabled>
+                      <label class="calendar__date" for="23.02">23</label>
+                    </td>
+                    <td class="calendar__cell">
+                      <input class="calendar__input visually-hidden" type="checkbox" id="24.02" name="24.02" disabled>
+                      <label class="calendar__date" for="24.02">24</label>
+                    </td>
+                    <td class="calendar__cell">
+                      <input class="calendar__input visually-hidden" type="checkbox" id="25.02" name="25.02" disabled>
+                      <label class="calendar__date" for="25.02">25</label>
+                    </td>
+                    <td class="calendar__cell">
+                      <input class="calendar__input visually-hidden" type="checkbox" id="26.02" name="26.02" disabled>
+                      <label class="calendar__date" for="26.02">26</label>
+                    </td>
+                    <td class="calendar__cell">
+                      <input class="calendar__input visually-hidden" type="checkbox" id="27.02" name="27.02" disabled>
+                      <label class="calendar__date" for="27.02">27</label>
+                    </td>
+                    <td class="calendar__cell">
+                      <input class="calendar__input visually-hidden" type="checkbox" id="28.02" name="28.02" disabled>
+                      <label class="calendar__date" for="28.02">28</label>
+                    </td>
+                    <td class="calendar__cell">
+                      <input class="calendar__input visually-hidden" type="checkbox" id="1.03" name="1.03" disabled>
+                      <label class="calendar__date" for="1.03">1</label>
+                    </td>
+                  </tr>
+                  <tr class="calendar__row">
+                    <td class="calendar__cell">
+                      <input class="calendar__input visually-hidden" type="checkbox" id="2.03" name="2.03" disabled>
+                      <label class="calendar__date" for="2.03">2</label>
+                    </td>
+                    <td class="calendar__cell">
+                      <input class="calendar__input visually-hidden" type="checkbox" id="3.03" name="3.03" disabled>
+                      <label class="calendar__date" for="3.03">3</label>
+                    </td>
+                    <td class="calendar__cell">
+                      <input class="calendar__input visually-hidden" type="checkbox" id="4.03" name="4.03" disabled>
+                      <label class="calendar__date" for="4.03">4</label>
+                    </td>
+                    <td class="calendar__cell">
+                      <input class="calendar__input visually-hidden" type="checkbox" id="5.03" name="5.03" disabled>
+                      <label class="calendar__date" for="5.03">5</label>
+                    </td>
+                    <td class="calendar__cell">
+                      <input class="calendar__input visually-hidden" type="checkbox" id="6.03" name="6.03" disabled>
+                      <label class="calendar__date" for="6.03">6</label>
+                    </td>
+                    <td class="calendar__cell">
+                      <input class="calendar__input visually-hidden" type="checkbox" id="7.03" name="7.03" disabled>
+                      <label class="calendar__date" for="7.03">7</label>
+                    </td>
+                    <td class="calendar__cell">
+                      <input class="calendar__input visually-hidden" type="checkbox" id="8.03" name="8.03" disabled>
+                      <label class="calendar__date" for="8.03">8</label>
+                    </td>
+                  </tr>
+                  <tr class="calendar__row">
+                    <td class="calendar__cell">
+                      <input class="calendar__input visually-hidden" type="checkbox" id="9.03" name="9.03" disabled>
+                      <label class="calendar__date" for="9.03">9</label>
+                    </td>
+                    <td class="calendar__cell">
+                      <input class="calendar__input visually-hidden" type="checkbox" id="10.03" name="10.03" disabled>
+                      <label class="calendar__date" for="10.03">10</label>
+                    </td>
+                    <td class="calendar__cell">
+                      <input class="calendar__input visually-hidden" type="checkbox" id="11.03" name="11.03" disabled>
+                      <label class="calendar__date" for="11.03">11</label>
+                    </td>
+                    <td class="calendar__cell">
+                      <input class="calendar__input visually-hidden" type="checkbox" id="12.03" name="12.03" disabled>
+                      <label class="calendar__date" for="12.03">12</label>
+                    </td>
+                    <td class="calendar__cell">
+                      <input class="calendar__input visually-hidden" type="checkbox" id="13.03" name="13.03" disabled>
+                      <label class="calendar__date" for="13.03">13</label>
+                    </td>
+                    <td class="calendar__cell">
+                      <input class="calendar__input visually-hidden" type="checkbox" id="14.03" name="14.03" disabled>
+                      <label class="calendar__date" for="14.03">14</label>
+                    </td>
+                    <td class="calendar__cell">
+                      <input class="calendar__input visually-hidden" type="checkbox" id="15.03" name="15.03" disabled>
+                      <label class="calendar__date" for="15.03">15</label>
+                    </td>
+                  </tr>
+                  <tr class="calendar__row">
+                    <td class="calendar__cell">
+                      <input class="calendar__input visually-hidden" type="checkbox" id="16.03" name="16.03" disabled>
+                      <label class="calendar__date" for="16.03">16</label>
+                    </td>
+                    <td class="calendar__cell">
+                      <input class="calendar__input visually-hidden" type="checkbox" id="17.03" name="17.03" disabled>
+                      <label class="calendar__date" for="17.03">17</label>
+                    </td>
+                    <td class="calendar__cell">
+                      <input class="calendar__input visually-hidden" type="checkbox" id="18.03" name="18.03" disabled>
+                      <label class="calendar__date" for="18.03">18</label>
+                    </td>
+                    <td class="calendar__cell">
+                      <input class="calendar__input visually-hidden" type="checkbox" id="19.03" name="19.03" disabled>
+                      <label class="calendar__date" for="19.03">19</label>
+                    </td>
+                    <td class="calendar__cell">
+                      <input class="calendar__input visually-hidden" type="checkbox" id="20.03" name="20.03" disabled>
+                      <label class="calendar__date" for="20.03">20</label>
+                    </td>
+                    <td class="calendar__cell">
+                      <input class="calendar__input visually-hidden" type="checkbox" id="21.03" name="21.03" disabled>
+                      <label class="calendar__date" for="21.03">21</label>
+                    </td>
+                    <td class="calendar__cell">
+                      <input class="calendar__input visually-hidden" type="checkbox" id="22.03" name="22.03" disabled>
+                      <label class="calendar__date" for="22.03">22</label>
+                    </td>
+                  </tr>
+                  <tr class="calendar__row">
+                    <td class="calendar__cell">
+                      <input class="calendar__input visually-hidden" type="checkbox" id="23.03" name="23.03" disabled>
+                      <label class="calendar__date" for="23.03">23</label>
+                    </td>
+                    <td class="calendar__cell">
+                      <input class="calendar__input visually-hidden" type="checkbox" id="24.03" name="24.03" disabled>
+                      <label class="calendar__date" for="24.03">24</label>
+                    </td>
+                    <td class="calendar__cell">
+                      <input class="calendar__input visually-hidden" type="checkbox" id="25.03" name="25.03" disabled>
+                      <label class="calendar__date" for="25.03">25</label>
+                    </td>
+                    <td class="calendar__cell">
+                      <input class="calendar__input visually-hidden" type="checkbox" id="26.03" name="26.03" checked>
+                      <label class="calendar__date" for="26.03">26</label>
+                    </td>
+                    <td class="calendar__cell">
+                      <input class="calendar__input visually-hidden" type="checkbox" id="27.03" name="27.03" checked>
+                      <label class="calendar__date" for="27.03">27</label>
+                    </td>
+                    <td class="calendar__cell">
+                      <input class="calendar__input visually-hidden" type="checkbox" id="28.03" name="28.03" checked>
+                      <label class="calendar__date" for="28.03">28</label>
+                    </td>
+                    <td class="calendar__cell">
+                      <input class="calendar__input visually-hidden" type="checkbox" id="29.03" name="29.03">
+                      <label class="calendar__date" for="29.03">29</label>
+                    </td>
+                  </tr>
+                  <tr class="calendar__row">
+                    <td class="calendar__cell">
+                      <input class="calendar__input visually-hidden" type="checkbox" id="30.03" name="30.03">
+                      <label class="calendar__date" for="30.03">30</label>
+                    </td>
+                    <td class="calendar__cell">
+                      <input class="calendar__input visually-hidden" type="checkbox" id="31.03" name="31.03">
+                      <label class="calendar__date" for="31.03">31</label>
+                    </td>
+                    <td class="calendar__cell">
+                      <input class="calendar__input visually-hidden" type="checkbox" id="1.04" name="1.04">
+                      <label class="calendar__date" for="1.04">1</label>
+                    </td>
+                    <td class="calendar__cell">
+                      <input class="calendar__input visually-hidden" type="checkbox" id="2.04" name="2.04">
+                      <label class="calendar__date" for="2.04">2</label>
+                    </td>
+                    <td class="calendar__cell">
+                      <input class="calendar__input visually-hidden" type="checkbox" id="3.04" name="3.04">
+                      <label class="calendar__date" for="3.04">3</label>
+                    </td>
+                    <td class="calendar__cell">
+                      <input class="calendar__input visually-hidden" type="checkbox" id="4.04" name="4.04">
+                      <label class="calendar__date" for="4.04">4</label>
+                    </td>
+                    <td class="calendar__cell">
+                      <input class="calendar__input visually-hidden" type="checkbox" id="5.05" name="5.05">
+                      <label class="calendar__date" for="5.05">5</label>
+                    </td>
+                  </tr>
+                </table>
+                <button class="button  generating-plan__button generating-plan__button--width" type="button">Следующий шаг</button>
               </div>
-              <div class="stay-dates__month">
-                <button class="stay-dates__month-button stay-dates__month-button--back" type="button"
-                        aria-label="предыдущий"></button>
-                <p class="stay-dates__choose-month">Март 2019</p>
-                <button class="stay-dates__month-button stay-dates__month-button--next" type="button"
-                        aria-label="следующий"></button>
-              </div>
-              <table class="stay-dates__calendar calendar">
-                <tr class="calendar__row">
-                  <th class="calendar__cell calendar__cell--head">п</th>
-                  <th class="calendar__cell calendar__cell--head">в</th>
-                  <th class="calendar__cell calendar__cell--head">с</th>
-                  <th class="calendar__cell calendar__cell--head">ч</th>
-                  <th class="calendar__cell calendar__cell--head">п</th>
-                  <th class="calendar__cell calendar__cell--head calendar__cell--weekend">с</th>
-                  <th class="calendar__cell calendar__cell--head calendar__cell--weekend">в</th>
-                </tr>
-                <tr class="calendar__row">
-                  <td class="calendar__cell">
-                    <input class="calendar__input visually-hidden" type="checkbox" id="23.02" name="23.02" disabled>
-                    <label class="calendar__date" for="23.02">23</label>
-                  </td>
-                  <td class="calendar__cell">
-                    <input class="calendar__input visually-hidden" type="checkbox" id="24.02" name="24.02" disabled>
-                    <label class="calendar__date" for="24.02">24</label>
-                  </td>
-                  <td class="calendar__cell">
-                    <input class="calendar__input visually-hidden" type="checkbox" id="25.02" name="25.02" disabled>
-                    <label class="calendar__date" for="25.02">25</label>
-                  </td>
-                  <td class="calendar__cell">
-                    <input class="calendar__input visually-hidden" type="checkbox" id="26.02" name="26.02" disabled>
-                    <label class="calendar__date" for="26.02">26</label>
-                  </td>
-                  <td class="calendar__cell">
-                    <input class="calendar__input visually-hidden" type="checkbox" id="27.02" name="27.02" disabled>
-                    <label class="calendar__date" for="27.02">27</label>
-                  </td>
-                  <td class="calendar__cell">
-                    <input class="calendar__input visually-hidden" type="checkbox" id="28.02" name="28.02" disabled>
-                    <label class="calendar__date" for="28.02">28</label>
-                  </td>
-                  <td class="calendar__cell">
-                    <input class="calendar__input visually-hidden" type="checkbox" id="1.03" name="1.03" disabled>
-                    <label class="calendar__date" for="1.03">1</label>
-                  </td>
-                </tr>
-                <tr class="calendar__row">
-                  <td class="calendar__cell">
-                    <input class="calendar__input visually-hidden" type="checkbox" id="2.03" name="2.03" disabled>
-                    <label class="calendar__date" for="2.03">2</label>
-                  </td>
-                  <td class="calendar__cell">
-                    <input class="calendar__input visually-hidden" type="checkbox" id="3.03" name="3.03" disabled>
-                    <label class="calendar__date" for="3.03">3</label>
-                  </td>
-                  <td class="calendar__cell">
-                    <input class="calendar__input visually-hidden" type="checkbox" id="4.03" name="4.03" disabled>
-                    <label class="calendar__date" for="4.03">4</label>
-                  </td>
-                  <td class="calendar__cell">
-                    <input class="calendar__input visually-hidden" type="checkbox" id="5.03" name="5.03" disabled>
-                    <label class="calendar__date" for="5.03">5</label>
-                  </td>
-                  <td class="calendar__cell">
-                    <input class="calendar__input visually-hidden" type="checkbox" id="6.03" name="6.03" disabled>
-                    <label class="calendar__date" for="6.03">6</label>
-                  </td>
-                  <td class="calendar__cell">
-                    <input class="calendar__input visually-hidden" type="checkbox" id="7.03" name="7.03" disabled>
-                    <label class="calendar__date" for="7.03">7</label>
-                  </td>
-                  <td class="calendar__cell">
-                    <input class="calendar__input visually-hidden" type="checkbox" id="8.03" name="8.03" disabled>
-                    <label class="calendar__date" for="8.03">8</label>
-                  </td>
-                </tr>
-                <tr class="calendar__row">
-                  <td class="calendar__cell">
-                    <input class="calendar__input visually-hidden" type="checkbox" id="9.03" name="9.03" disabled>
-                    <label class="calendar__date" for="9.03">9</label>
-                  </td>
-                  <td class="calendar__cell">
-                    <input class="calendar__input visually-hidden" type="checkbox" id="10.03" name="10.03" disabled>
-                    <label class="calendar__date" for="10.03">10</label>
-                  </td>
-                  <td class="calendar__cell">
-                    <input class="calendar__input visually-hidden" type="checkbox" id="11.03" name="11.03" disabled>
-                    <label class="calendar__date" for="11.03">11</label>
-                  </td>
-                  <td class="calendar__cell">
-                    <input class="calendar__input visually-hidden" type="checkbox" id="12.03" name="12.03" disabled>
-                    <label class="calendar__date" for="12.03">12</label>
-                  </td>
-                  <td class="calendar__cell">
-                    <input class="calendar__input visually-hidden" type="checkbox" id="13.03" name="13.03" disabled>
-                    <label class="calendar__date" for="13.03">13</label>
-                  </td>
-                  <td class="calendar__cell">
-                    <input class="calendar__input visually-hidden" type="checkbox" id="14.03" name="14.03" disabled>
-                    <label class="calendar__date" for="14.03">14</label>
-                  </td>
-                  <td class="calendar__cell">
-                    <input class="calendar__input visually-hidden" type="checkbox" id="15.03" name="15.03" disabled>
-                    <label class="calendar__date" for="15.03">15</label>
-                  </td>
-                </tr>
-                <tr class="calendar__row">
-                  <td class="calendar__cell">
-                    <input class="calendar__input visually-hidden" type="checkbox" id="16.03" name="16.03" disabled>
-                    <label class="calendar__date" for="16.03">16</label>
-                  </td>
-                  <td class="calendar__cell">
-                    <input class="calendar__input visually-hidden" type="checkbox" id="17.03" name="17.03" disabled>
-                    <label class="calendar__date" for="17.03">17</label>
-                  </td>
-                  <td class="calendar__cell">
-                    <input class="calendar__input visually-hidden" type="checkbox" id="18.03" name="18.03" disabled>
-                    <label class="calendar__date" for="18.03">18</label>
-                  </td>
-                  <td class="calendar__cell">
-                    <input class="calendar__input visually-hidden" type="checkbox" id="19.03" name="19.03" disabled>
-                    <label class="calendar__date" for="19.03">19</label>
-                  </td>
-                  <td class="calendar__cell">
-                    <input class="calendar__input visually-hidden" type="checkbox" id="20.03" name="20.03" disabled>
-                    <label class="calendar__date" for="20.03">20</label>
-                  </td>
-                  <td class="calendar__cell">
-                    <input class="calendar__input visually-hidden" type="checkbox" id="21.03" name="21.03" disabled>
-                    <label class="calendar__date" for="21.03">21</label>
-                  </td>
-                  <td class="calendar__cell">
-                    <input class="calendar__input visually-hidden" type="checkbox" id="22.03" name="22.03" disabled>
-                    <label class="calendar__date" for="22.03">22</label>
-                  </td>
-                </tr>
-                <tr class="calendar__row">
-                  <td class="calendar__cell">
-                    <input class="calendar__input visually-hidden" type="checkbox" id="23.03" name="23.03" disabled>
-                    <label class="calendar__date" for="23.03">23</label>
-                  </td>
-                  <td class="calendar__cell">
-                    <input class="calendar__input visually-hidden" type="checkbox" id="24.03" name="24.03" disabled>
-                    <label class="calendar__date" for="24.03">24</label>
-                  </td>
-                  <td class="calendar__cell">
-                    <input class="calendar__input visually-hidden" type="checkbox" id="25.03" name="25.03" disabled>
-                    <label class="calendar__date" for="25.03">25</label>
-                  </td>
-                  <td class="calendar__cell">
-                    <input class="calendar__input visually-hidden" type="checkbox" id="26.03" name="26.03" checked>
-                    <label class="calendar__date" for="26.03">26</label>
-                  </td>
-                  <td class="calendar__cell">
-                    <input class="calendar__input visually-hidden" type="checkbox" id="27.03" name="27.03" checked>
-                    <label class="calendar__date" for="27.03">27</label>
-                  </td>
-                  <td class="calendar__cell">
-                    <input class="calendar__input visually-hidden" type="checkbox" id="28.03" name="28.03" checked>
-                    <label class="calendar__date" for="28.03">28</label>
-                  </td>
-                  <td class="calendar__cell">
-                    <input class="calendar__input visually-hidden" type="checkbox" id="29.03" name="29.03">
-                    <label class="calendar__date" for="29.03">29</label>
-                  </td>
-                </tr>
-                <tr class="calendar__row">
-                  <td class="calendar__cell">
-                    <input class="calendar__input visually-hidden" type="checkbox" id="30.03" name="30.03">
-                    <label class="calendar__date" for="30.03">30</label>
-                  </td>
-                  <td class="calendar__cell">
-                    <input class="calendar__input visually-hidden" type="checkbox" id="31.03" name="31.03">
-                    <label class="calendar__date" for="31.03">31</label>
-                  </td>
-                  <td class="calendar__cell">
-                    <input class="calendar__input visually-hidden" type="checkbox" id="1.04" name="1.04">
-                    <label class="calendar__date" for="1.04">1</label>
-                  </td>
-                  <td class="calendar__cell">
-                    <input class="calendar__input visually-hidden" type="checkbox" id="2.04" name="2.04">
-                    <label class="calendar__date" for="2.04">2</label>
-                  </td>
-                  <td class="calendar__cell">
-                    <input class="calendar__input visually-hidden" type="checkbox" id="3.04" name="3.04">
-                    <label class="calendar__date" for="3.04">3</label>
-                  </td>
-                  <td class="calendar__cell">
-                    <input class="calendar__input visually-hidden" type="checkbox" id="4.04" name="4.04">
-                    <label class="calendar__date" for="4.04">4</label>
-                  </td>
-                  <td class="calendar__cell">
-                    <input class="calendar__input visually-hidden" type="checkbox" id="5.05" name="5.05">
-                    <label class="calendar__date" for="5.05">5</label>
-                  </td>
-                </tr>
-              </table>
-              <button class="button  generating-plan__button" type="button">Следующий шаг</button>
             </fieldset>
             <fieldset class="generating-plan__box generating-plan__box--step-two route">
-              <legend class="generating-plan__step-name route__title">Шаг 2.<br>Маршрут</legend>
-              <p class="route__text">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу
-                несколько.</p>
+              <div class="route__wrapper">
+                <legend class="generating-plan__step-name route__title">Шаг 2.<br>Маршрут</legend>
+                <p class="route__text">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу
+                  несколько.</p>
+              </div>
               <ul class="route__list">
                 <li class="route__item">
                   <label class="visually-hidden" for="first-point">Первая точка маршрута</label>
-                  <select class="route__countries" id="first-point" name="first-point">
+                  <select class="route__input" id="first-point" name="first-point">
                     <option class="route__option" value="Bosnia and Herzegovina">Босния и герцеговина</option>
                   </select>
                   <picture>
-                    <img src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг страны">
+                    <img class="route__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг страны">
                   </picture>
                   <button class="route__delete-button" aria-label="Удалить точку маршрута"></button>
                 </li>
                 <li class="route__item">
                   <label class="visually-hidden" for="second-point">Вторая точка маршрута</label>
-                  <select class="route__countries" id="second-point" name="second-point">
+                  <select class="route__input" id="second-point" name="second-point">
                     <option class="route__option" value="Czech">Чехия</option>
                   </select>
                   <picture>
-                    <img src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг страны">
+                    <img class="route__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг страны">
                   </picture>
                   <button class="route__delete-button" aria-label="Удалить точку маршрута"></button>
                 </li>
-                <li class="route__item">
-                  <button class="route__choose-button" type="button">выберите страну</button>
+                <li class="route__item route__item--choice">
+                  <button class="route__input route__input--choose-button" type="button">выберите страну</button>
                   <div class="country-choice">
                     <table class="country-choice__table">
                       <tr class="country-choice__row">
@@ -496,6 +504,7 @@
                       </li>
                     </ul>
                   </div>
+                  <button class="route__delete-button" aria-label="Удалить точку маршрута"></button>
                 </li>
                 <li class="route__item">
                   <button class="route__add-button" type="button">Добавить страну</button>
@@ -506,31 +515,33 @@
               </button>
             </fieldset>
             <fieldset class="generating-plan__box generating-plan__box--step-three plans">
-              <legend class="generating-plan__step-name plans__title">Шаг 3.<br>Развлечения</legend>
-              <p class="plans__description">Наконец, расскажите о своих планах времяпровождения. Можно писать в
-                свободной
-                форме и ставить тэги.</p>
-              <ul class="plans__list">
-                <li class="plans__item">
-                  <label class="plans__name" for="plan-1">Босния и Герцеговина</label>
-                  <textarea class="plans__text" id="plan-1" rows="5" cols="10" name="plan-1"
-                            placeholder="План действий"></textarea>
-                </li>
-                <li class="plans__item">
-                  <label class="plans__name" for="plan-2">Чехия</label>
-                  <textarea class="plans__text" id="plan-2" rows="5" cols="10" name="plan-2"
-                            placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
-                </li>
-              </ul>
-              <button class="button generating-plan__button">Отправить</button>
-              <button class="button generating-plan__button generating-plan__button--back" type="button">на шаг назад
-              </button>
+              <div class="plans__wrapper">
+                <legend class="generating-plan__step-name plans__title">Шаг 3.<br>Развлечения</legend>
+                <p class="plans__description">Наконец, расскажите о своих планах времяпровождения. Можно писать в
+                  свободной
+                  форме и ставить тэги.</p>
+                <ul class="plans__list">
+                  <li class="plans__item">
+                    <label class="plans__name" for="plan-1">Босния и Герцеговина</label>
+                    <textarea class="plans__text" id="plan-1" rows="5" cols="10" name="plan-1"
+                              placeholder="План действий"></textarea>
+                  </li>
+                  <li class="plans__item">
+                    <label class="plans__name" for="plan-2">Чехия</label>
+                    <textarea class="plans__text" id="plan-2" rows="5" cols="10" name="plan-2"
+                              placeholder="План действий">Пить пиво и лазить по&nbsp;старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                  </li>
+                </ul>
+                <button class="button generating-plan__button plans__button">Отправить</button>
+                <button class="button generating-plan__button generating-plan__button--back" type="button">на шаг назад
+                </button>
+              </div>
             </fieldset>
           </div>
         </section>
       </form>
     </main>
-    <footer class="page-footer footer">
+    <footer class="page-footer footer footer--form">
       <ul class="footer__list">
         <li class="footer__item">
           <picture>
