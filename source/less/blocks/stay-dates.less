@@ -8,6 +8,11 @@
   .wrapper(82%);
   display: flex;
   flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    .wrapper(86%);
+    padding-top: 20px;
+  }
 }
 
 .stay-dates__text {
@@ -15,6 +20,14 @@
   font-size: 16px;
   line-height: 22px;
   color: @special_grey;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: normal;
+    margin-top: 38px;
+    padding-right: 10px;
+  }
 }
 
 .stay-dates__list {
@@ -24,6 +37,14 @@
   letter-spacing: 0.09em;
   text-transform: uppercase;
   margin-bottom: 7px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 18px;
+    margin-top: 19px;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .stay-dates__item {
@@ -31,6 +52,33 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 16px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 20px;
+    padding-top: 24px;
+    border-top: 1px solid @border-grey;
+  }
+
+  &--companion {
+    @media (min-width: @tablet-width) {
+      order: 1;
+      margin-bottom: 4px;
+    }
+  }
+
+  &--time {
+    @media (min-width: @tablet-width) {
+      order: 3;
+    }
+  }
+
+  &--child {
+    @media (min-width: @tablet-width) {
+      order: 2;
+      border-top: none;
+      padding-top: 0;
+    }
+  }
 }
 
 .stay-dates__name {
@@ -53,18 +101,36 @@
   border-radius: 4px;
   margin-top: 9px;
   padding: 12px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 25px;
+    padding: 25px;
+  }
+}
+
+.stay-dates__child {
+  margin-top: 9px;
 }
 
 .stay-dates__child-label {
   font-size: 15px;
   padding-left: 39px;
+  text-transform: none;
+  letter-spacing: normal;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding-left: 56px;
+  }
 }
 
 .stay-dates__month {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 35px;
+  margin-top: 1px;
   border-bottom: 1px solid @border-grey;
   border-top: 1px solid @border-grey;
   padding: 10px 0;
@@ -84,6 +150,10 @@
 .stay-dates__button {
   position: absolute;
   top: 47px;
+
+  @media (min-width: @tablet-width) {
+    top: 101px;
+  }
 
   &--less {
     left: 0;

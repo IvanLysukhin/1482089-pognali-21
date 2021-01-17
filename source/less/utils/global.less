@@ -34,6 +34,10 @@
 .page-main__title-box {
   background-color: @dark-blue-2;
   border-radius: 0 0 20px 20px;
+
+  @media (min-width: @tablet-width) {
+    border-radius: 0 0 60px 60px;
+  }
 }
 
 .page-main__title {
@@ -54,5 +58,12 @@
     font-weight: bold;
     font-size: 36px;
     color: @basic-white;
+
+    @media (min-width: @tablet-width) {
+      font-size: 60px;
+      margin-bottom: 79px;
+      margin-top: 71px;
+      margin-left: 75px;
+    }
   }
 }

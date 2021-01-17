@@ -116,7 +116,7 @@
               </li>
               <li class="my-plans__item">
                 <h4 class="my-plans__plan-name">Таиланд, Индонезия</h4>
-                <p class="my-plans__text my-plans__text--partners">1 попутчик</p>
+                <p class="my-plans__text my-plans__text--partners my-plans__text--one">1 попутчик</p>
                 <p class="my-plans__text my-plans__text--dates">1 июл — 15 июл</p>
                 <button class="my-plans__button" type="button">Изменить</button>
               </li>
@@ -131,25 +131,27 @@
                   в
                   поездку, и ее предполагаемую длительность.</p>
                 <ul class="stay-dates__list">
-                  <li class="stay-dates__item">
+                  <li class="stay-dates__item stay-dates__item--companion">
                     <label class="stay-dates__name" for="partners">ищу попутчиков:<span
                       class="stay-dates__name stay-dates__name--opacity">чел.</span></label>
                     <button class="stay-dates__button stay-dates__button--less" aria-label="меньше"></button>
                     <input class="stay-dates__data" type="number" id="partners" name="partners" value="1">
                     <button class="stay-dates__button stay-dates__button--more" aria-label="больше"></button>
                   </li>
-                  <li class="stay-dates__item">
+                  <li class="stay-dates__item stay-dates__item--time">
                     <label class="stay-dates__name" for="duration">длительность:<span
                       class="stay-dates__name stay-dates__name--opacity">дн.</span></label>
                     <button class="stay-dates__button stay-dates__button--less" aria-label="меньше"></button>
                     <input class="stay-dates__data" type="number" id="duration" name="duration" value="1">
                     <button class="stay-dates__button stay-dates__button--more" aria-label="больше"></button>
                   </li>
+                  <li class="stay-dates__item stay-dates__item--child">
+                    <div class="stay-dates__child">
+                      <input class="visually-hidden" type="checkbox" id="child" name="child">
+                      <label class="stay-dates__child-label" for="child">Можно с детьми</label>
+                    </div>
+                  </li>
                 </ul>
-                <div class="stay-dates__child">
-                  <input class="visually-hidden" type="checkbox" id="child" name="child">
-                  <label class="stay-dates__child-label" for="child">Можно с детьми</label>
-                </div>
                 <div class="stay-dates__month">
                   <button class="stay-dates__month-button stay-dates__month-button--back" type="button"
                           aria-label="предыдущий"></button>

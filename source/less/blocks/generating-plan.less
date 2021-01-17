@@ -9,12 +9,23 @@
   margin-top: -61px;
   padding-top: 25px;
   padding-bottom: 80px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -33px;
+  }
 }
 
 .generating-plan__title {
   font-weight: bold;
   font-size: 24px;
   .wrapper(84%);
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    .wrapper(81%);
+    margin-top: 21px;
+    margin-bottom: 57px;
+  }
 }
 
 .generating-plan__box {
@@ -24,6 +35,11 @@
   padding: 0;
   .wrapper(84%);
   margin-bottom: 10px;
+
+  @media (min-width: @tablet-width) {
+    .wrapper(81%);
+    border-radius: 30px;
+  }
 }
 
 .generating-plan__step-name {
@@ -32,6 +48,11 @@
   line-height: 20px;
   display: contents;
   margin-top: 4px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .generating-plan__button {
