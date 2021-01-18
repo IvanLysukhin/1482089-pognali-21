@@ -6,13 +6,31 @@
   z-index: 1;
   display: none;
 
+  @media (min-width: @tablet-width) {
+    width: 104%;
+    padding: 35px 0 30px 26px;
+    box-shadow: 0 8px 16px rgba(54, 80, 148, 0.18);
+    top: 67px;
+    left: 0;
+    display: none;
+    border-radius: 5px;
+  }
+
   &--opened {
     display: block;
+
+    @media (min-width: @tablet-width) {
+      display: flex;
+    }
   }
 }
 
 .country-choice__table {
   border-collapse: collapse;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 87px;
+  }
 
   &--white {
     background-color: @basic-white;
@@ -27,6 +45,11 @@
   height: 41px;
   padding: 0;
   border: 1px solid @light-grey-2;
+
+  @media (min-width: @tablet-width) {
+    width: 52px;
+    height: 69px;
+  }
 
   &--active {
     background-color: @basic-blue-light;
@@ -44,6 +67,11 @@
   width: 100%;
   height: 100%;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 
   &--active {
     color: @basic-white;
@@ -64,10 +92,19 @@
   padding: 16px 12px;
   border: 1px solid @border-grey;
   border-radius: 0 0 4px 4px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 12px;
+    border: none;
+  }
 }
 
 .country-choice__countries-item {
   margin-bottom: 5px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 8px;
+  }
 }
 
 .country-choice__country-button {
@@ -78,6 +115,11 @@
   font-size: 16px;
   color: @special_grey;
   cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 
   &:hover {
     color: @basic-blue-light;

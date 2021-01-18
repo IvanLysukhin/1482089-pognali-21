@@ -18,6 +18,12 @@
     @media (min-width: @tablet-width) {
       margin-left: 0;
     }
+
+    @media (min-width: @desktop-width) {
+      position: absolute;
+      top: -150px;
+      right: 330px;
+    }
   }
 }
 
@@ -43,11 +49,19 @@
       margin-bottom: 13px;
       margin-top: 16px;
     }
+
+    @media (min-width: @desktop-width) {
+      color: @basic-white;
+    }
   }
 
   &--big-text {
     font-size: 18px;
     color: @special_grey;
+
+    @media (min-width: @desktop-width) {
+      color: @basic-white;
+    }
   }
 }
 

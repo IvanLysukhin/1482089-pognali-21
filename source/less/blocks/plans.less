@@ -6,6 +6,12 @@
     padding-top: 44px;
     padding-bottom: 52px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 97px;
+    padding-bottom: 102px;
+    margin-bottom: 10px;
+  }
 }
 
 .plans__wrapper {
@@ -15,6 +21,10 @@
 
   @media (min-width: @tablet-width) {
     .wrapper(86%);
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrapper(1000px);
   }
 }
 
@@ -30,6 +40,10 @@
     margin-top: 36px;
     padding-right: 20px;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 500px;
+  }
 }
 
 .plans__list {
@@ -40,11 +54,21 @@
     margin-top: 13px;
     padding-top: 35px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 34px;
+    padding-top: 79px;
+  }
 }
 
 .plans__item {
   &:not(:last-of-type) {
     margin-bottom: 21px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -84,6 +108,11 @@
     height: 142px;
     margin-bottom: 24px;
   }
+
+  @media (min-width: @tablet-width) {
+    width: 730px;
+    padding: 25px 11px 19px 20px;
+  }
 }
 
 .plans__button {
@@ -93,5 +122,9 @@
   @media (min-width: @tablet-width) {
     width: 54%;
     margin-top: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 286px;
   }
 }

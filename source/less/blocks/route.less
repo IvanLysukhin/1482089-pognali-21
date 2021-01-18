@@ -9,6 +9,12 @@
     padding-bottom: 53px;
     margin-bottom: 52px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 94px;
+    padding-bottom: 105px;
+    margin-bottom: 44px;
+  }
 }
 
 .route__wrapper {
@@ -16,6 +22,10 @@
 
   @media (min-width: @tablet-width) {
     .wrapper(85%);
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrapper(1000px);
   }
 }
 
@@ -32,6 +42,10 @@
     margin-top: 36px;
     padding-right: 98px;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 417px;
+  }
 }
 
 .route__list {
@@ -45,6 +59,12 @@
     margin-top: 13px;
     border-top: 1px solid @border-grey;
     padding-top: 42px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrapper(1000px);
+    margin-top: 34px;
+    padding-top: 66px;
   }
 }
 
@@ -84,6 +104,11 @@
     margin-right: 46px;
   }
 
+  @media (min-width: @desktop-width) {
+    width: 730px;
+    margin-right: 76px;
+  }
+
   &--choose-button {
     width: 100%;
     text-align: left;
@@ -94,6 +119,10 @@
       margin-right: 0;
       width: 69%;
       align-self: flex-start;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 730px;
     }
   }
 }
@@ -147,5 +176,9 @@
     padding: 24px 23px;
     margin-top: -1px;
     width: 69%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 730px;
   }
 }

@@ -72,7 +72,7 @@
             <img class="first-data__picture" src="https://via.placeholder.com/100x100" width="100" height="100" alt="Текущее фото профиля">
           </picture>
           <div class="first-data__photo-button">
-            <label class="first-data__label" for="photo"><span>Сменить</span> фото</label>
+            <label class="first-data__label" for="photo"><span class="first-data__word">Сменить</span> фото</label>
             <input class="visually-hidden" type="file" name="photo" id="photo" accept="image/jpeg">
           </div>
           <div class="first-data__tags">
@@ -126,21 +126,21 @@
             <h3 class="generating-plan__title">Добавить план:</h3>
             <fieldset class="generating-plan__box generating-plan__box--step-one stay-dates">
               <div class="stay-dates__wrapper">
-                <h4 class="generating-plan__step-name stay-dates__title">Шаг 1.<br>Даты пребывания</h4>
-                <p class="stay-dates__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать
+                <h4 class="generating-plan__step-name stay-dates__title">Шаг 1.<br class="generating-plan__shift"> Даты пребывания</h4>
+                <p class="stay-dates__text">Укажите предпочтительное количество попутчиков, которых вы&nbsp;хотели бы позвать
                   в
                   поездку, и ее предполагаемую длительность.</p>
                 <ul class="stay-dates__list">
                   <li class="stay-dates__item stay-dates__item--companion">
-                    <label class="stay-dates__name" for="partners">ищу попутчиков:<span
-                      class="stay-dates__name stay-dates__name--opacity">чел.</span></label>
+                    <label class="stay-dates__name" for="partners">ищу попутчиков:</label>
+                    <p class="stay-dates__name stay-dates__name--opacity">чел.</p>
                     <button class="stay-dates__button stay-dates__button--less" aria-label="меньше"></button>
                     <input class="stay-dates__data" type="number" id="partners" name="partners" value="1">
                     <button class="stay-dates__button stay-dates__button--more" aria-label="больше"></button>
                   </li>
                   <li class="stay-dates__item stay-dates__item--time">
-                    <label class="stay-dates__name" for="duration">длительность:<span
-                      class="stay-dates__name stay-dates__name--opacity">дн.</span></label>
+                    <label class="stay-dates__name" for="duration">длительность:</label>
+                    <p class="stay-dates__name stay-dates__name--opacity">дн.</p>
                     <button class="stay-dates__button stay-dates__button--less" aria-label="меньше"></button>
                     <input class="stay-dates__data" type="number" id="duration" name="duration" value="1">
                     <button class="stay-dates__button stay-dates__button--more" aria-label="больше"></button>
@@ -196,7 +196,7 @@
                     </td>
                     <td class="calendar__cell">
                       <input class="calendar__input visually-hidden" type="checkbox" id="1.03" name="1.03" disabled>
-                      <label class="calendar__date" for="1.03">1</label>
+                      <label class="calendar__date" for="1.03">1 <span class="calendar__first-day">мар</span></label>
                     </td>
                   </tr>
                   <tr class="calendar__row">
@@ -304,7 +304,7 @@
                     </td>
                     <td class="calendar__cell">
                       <input class="calendar__input visually-hidden" type="checkbox" id="26.03" name="26.03" checked>
-                      <label class="calendar__date" for="26.03">26</label>
+                      <label class="calendar__date" for="26.03">26<p class="calendar__in-out">Заезд</p></label>
                     </td>
                     <td class="calendar__cell">
                       <input class="calendar__input visually-hidden" type="checkbox" id="27.03" name="27.03" checked>
@@ -312,7 +312,7 @@
                     </td>
                     <td class="calendar__cell">
                       <input class="calendar__input visually-hidden" type="checkbox" id="28.03" name="28.03" checked>
-                      <label class="calendar__date" for="28.03">28</label>
+                      <label class="calendar__date" for="28.03">28<p class="calendar__in-out">Выезд</p></label>
                     </td>
                     <td class="calendar__cell">
                       <input class="calendar__input visually-hidden" type="checkbox" id="29.03" name="29.03">
@@ -330,7 +330,7 @@
                     </td>
                     <td class="calendar__cell">
                       <input class="calendar__input visually-hidden" type="checkbox" id="1.04" name="1.04">
-                      <label class="calendar__date" for="1.04">1</label>
+                      <label class="calendar__date" for="1.04">1 <span class="calendar__first-day">апр</span></label>
                     </td>
                     <td class="calendar__cell">
                       <input class="calendar__input visually-hidden" type="checkbox" id="2.04" name="2.04">
@@ -355,7 +355,7 @@
             </fieldset>
             <fieldset class="generating-plan__box generating-plan__box--step-two route">
               <div class="route__wrapper">
-                <h4 class="generating-plan__step-name route__title">Шаг 2.<br>Маршрут</h4>
+                <h4 class="generating-plan__step-name route__title">Шаг 2.<br class="generating-plan__shift"> Маршрут</h4>
                 <p class="route__text">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу
                   несколько.</p>
               </div>
@@ -519,7 +519,7 @@
             </fieldset>
             <fieldset class="generating-plan__box generating-plan__box--step-three plans">
               <div class="plans__wrapper">
-                <h4 class="generating-plan__step-name plans__title">Шаг 3.<br>Развлечения</h4>
+                <h4 class="generating-plan__step-name plans__title">Шаг 3.<br class="generating-plan__shift"> Развлечения</h4>
                 <p class="plans__description">Наконец, расскажите о своих планах времяпровождения. Можно писать в
                   свободной
                   форме и ставить тэги.</p>
