@@ -1,5 +1,10 @@
 .calendar {
   border-collapse: collapse;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 19px;
+    margin-bottom: 42px;
+  }
 }
 
 .calendar__cell {
@@ -13,11 +18,17 @@
   border: 1px solid @light-grey-2;
   padding: 0;
 
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: normal;
+    height: 70px;
+  }
+
   &--head {
     font-weight: normal;
     color: @special_grey;
     border: none;
-    text-transform: uppercase;
     height: 33px;
   }
 
@@ -34,6 +45,10 @@
   height: 100%;
   top: 50%;
   padding-top: 7px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 24px;
+  }
 }
 
 .calendar__input:checked + .calendar__date {
@@ -44,4 +59,12 @@
 .calendar__input:disabled + .calendar__date {
   background-color: @basic-white;
   color: fade(@special_grey, 30%);
+}
+
+.calendar__letter {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline;
+  }
 }

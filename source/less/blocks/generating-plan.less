@@ -12,6 +12,7 @@
 
   @media (min-width: @tablet-width) {
     margin-top: -33px;
+    padding-bottom: 150px;
   }
 }
 
@@ -46,8 +47,8 @@
   font-weight: bold;
   font-size: 20px;
   line-height: 20px;
-  display: contents;
-  margin-top: 4px;
+  margin-top: 0;
+  margin-bottom: 0;
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
@@ -55,14 +56,50 @@
   }
 }
 
+.generating-plan__button-box {
+  .wrapper(82%);
+  display: flex;
+  flex-direction: column;
+
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    .wrapper(86%);
+    margin-top: 35px;
+  }
+
+  &--send {
+    @media (min-width: @tablet-width) {
+      width: 100%;
+      margin: 18px 0 0 0;
+    }
+  }
+}
+
 .generating-plan__button {
   text-transform: uppercase;
   padding: 10px;
-  .wrapper(81%);
+
+  @media (min-width: @tablet-width) {
+    width: 286px;
+    margin: 0;
+    padding: 28px 33px;
+    text-align: left;
+    text-transform: none;
+    border-radius: 20px;
+  }
 
   &--back {
     background-color: transparent;
     margin-top: 6px;
+
+    @media (min-width: @tablet-width) {
+      width: 200px;
+      padding: 0;
+      text-align: right;
+      margin-top: 0;
+    }
   }
 
   &--width {

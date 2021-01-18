@@ -126,7 +126,7 @@
             <h3 class="generating-plan__title">Добавить план:</h3>
             <fieldset class="generating-plan__box generating-plan__box--step-one stay-dates">
               <div class="stay-dates__wrapper">
-                <legend class="generating-plan__step-name stay-dates__title">Шаг 1.<br>Даты пребывания</legend>
+                <h4 class="generating-plan__step-name stay-dates__title">Шаг 1.<br>Даты пребывания</h4>
                 <p class="stay-dates__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать
                   в
                   поездку, и ее предполагаемую длительность.</p>
@@ -161,13 +161,13 @@
                 </div>
                 <table class="stay-dates__calendar calendar">
                   <tr class="calendar__row">
-                    <th class="calendar__cell calendar__cell--head">п</th>
-                    <th class="calendar__cell calendar__cell--head">в</th>
-                    <th class="calendar__cell calendar__cell--head">с</th>
-                    <th class="calendar__cell calendar__cell--head">ч</th>
-                    <th class="calendar__cell calendar__cell--head">п</th>
-                    <th class="calendar__cell calendar__cell--head calendar__cell--weekend">с</th>
-                    <th class="calendar__cell calendar__cell--head calendar__cell--weekend">в</th>
+                    <th class="calendar__cell calendar__cell--head">П<span class="calendar__letter">н</span></th>
+                    <th class="calendar__cell calendar__cell--head">В<span class="calendar__letter">т</span></th>
+                    <th class="calendar__cell calendar__cell--head">С<span class="calendar__letter">р</span></th>
+                    <th class="calendar__cell calendar__cell--head">Ч<span class="calendar__letter">т</span></th>
+                    <th class="calendar__cell calendar__cell--head">П<span class="calendar__letter">т</span></th>
+                    <th class="calendar__cell calendar__cell--head calendar__cell--weekend">С<span class="calendar__letter">б</span></th>
+                    <th class="calendar__cell calendar__cell--head calendar__cell--weekend">В<span class="calendar__letter">с</span></th>
                   </tr>
                   <tr class="calendar__row">
                     <td class="calendar__cell">
@@ -355,7 +355,7 @@
             </fieldset>
             <fieldset class="generating-plan__box generating-plan__box--step-two route">
               <div class="route__wrapper">
-                <legend class="generating-plan__step-name route__title">Шаг 2.<br>Маршрут</legend>
+                <h4 class="generating-plan__step-name route__title">Шаг 2.<br>Маршрут</h4>
                 <p class="route__text">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу
                   несколько.</p>
               </div>
@@ -512,13 +512,14 @@
                   <button class="route__add-button" type="button">Добавить страну</button>
                 </li>
               </ul>
-              <button class="button generating-plan__button" type="button">Следующий шаг</button>
-              <button class="button generating-plan__button generating-plan__button--back" type="button">на шаг назад
-              </button>
+              <div class="generating-plan__button-box">
+                <button class="button generating-plan__button" type="button">Следующий шаг</button>
+                <button class="button generating-plan__button generating-plan__button--back" type="button">На шаг назад</button>
+              </div>
             </fieldset>
             <fieldset class="generating-plan__box generating-plan__box--step-three plans">
               <div class="plans__wrapper">
-                <legend class="generating-plan__step-name plans__title">Шаг 3.<br>Развлечения</legend>
+                <h4 class="generating-plan__step-name plans__title">Шаг 3.<br>Развлечения</h4>
                 <p class="plans__description">Наконец, расскажите о своих планах времяпровождения. Можно писать в
                   свободной
                   форме и ставить тэги.</p>
@@ -534,9 +535,10 @@
                               placeholder="План действий">Пить пиво и лазить по&nbsp;старым замкам, наслаждаться архитектурой и вот это все.</textarea>
                   </li>
                 </ul>
-                <button class="button generating-plan__button plans__button">Отправить</button>
-                <button class="button generating-plan__button generating-plan__button--back" type="button">на шаг назад
-                </button>
+                <div class="generating-plan__button-box generating-plan__button-box--send">
+                  <button class="button generating-plan__button plans__button">Отправить</button>
+                  <button class="button generating-plan__button generating-plan__button--back" type="button">На шаг назад</button>
+                </div>
               </div>
             </fieldset>
           </div>
