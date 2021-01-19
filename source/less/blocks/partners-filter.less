@@ -1,11 +1,28 @@
+.partners-filter {
+  .wrapper(82%);
+}
+
 .partners-filter__list {
   .reset-list;
 }
 
+.partners-filter__item {
+  padding-top: 12px;
+  padding-bottom: 9px;
+  border-top: 1px solid @border-yellow;
+}
+
 .partners-filter__title {
+  .main-font;
+  color: @basic-blue-light;
+  border: none;
+  background-color: transparent;
   font-weight: bold;
   font-size: 16px;
   text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
 }
 
 .partners-filter__check-list {
@@ -13,10 +30,62 @@
   font-weight: normal;
   font-size: 15px;
   color: @basic-black;
+
+  &--opened {
+    display: flex;
+    flex-direction: column;
+    margin-top: 13px;
+  }
+
+  &--closed {
+    display: none;
+  }
+
+  &--transport {
+    height: 43px;
+  }
+}
+
+.partners-filter__check-item {
+  margin-bottom: 12px;
+}
+
+.partners-filter__check-name {
+  padding-left: 27px;
 }
 
 .partners-filter__level-list {
   .reset-list;
+  display: flex;
+  margin-top: 11px;
+  border: 1px solid @border-grey;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: @basic-white;
+}
+
+.partners-filter__level-item {
+  display: flex;
+}
+
+.partners-filter__level {
+  width: 100%;
+  border: none;
+  padding: 8px 9px;
+  text-align: center;
+  .main-font;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 13px;
+  color: @basic-blue-light;
+
+  &--min {
+    border-radius: 4px 0 0 4px;
+  }
+
+  &--max {
+    border-radius: 0 4px 4px 0;
+  }
 }
 
 .partners-filter__button {
@@ -28,4 +97,56 @@
   text-transform: uppercase;
   border: none;
   border-radius: 25px;
+  margin-top: 17px;
+  width: 100%;
+  padding: 10px;
+}
+
+.partners-filter__level-box {
+  &--opened {
+    display: block;
+  }
+
+  &--closed {
+    display: none;
+  }
+}
+
+
+.partners-filter__level-bar {
+  width: 100%;
+  height: 2px;
+  background-color: fade(@basic-blue-light, 20%);
+  margin-top: 23px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.partners-filter__level-scroll {
+  width: 67%;
+  height: 100%;
+  background-color: @basic-blue-light;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: @basic-blue-light;
+    left: -6px;
+    top: -4px;
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: @basic-blue-light;
+    right: -6px;
+    top: -4px;
+    border-radius: 50%;
+  }
 }

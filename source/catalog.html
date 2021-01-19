@@ -54,13 +54,14 @@
         </ul>
       </nav>
     </header>
-    <main class="page-main">
+    <main class="page-main page-main--catalog">
       <div class="page-main__title-box">
         <h1 class="page-main__title page-main__title--white">Попутчики</h1>
       </div>
-      <section class="country-filter">
-        <h2 class="country-filter__title">Фильтрация по странам:</h2>
-        <ul class="country-filter__list">
+      <section class="country-filter country-filter--closed">
+        <h2 class="visually-hidden">Фильтры</h2>
+        <button class="country-filter__filter-button" type="button">Фильтрация по странам:</button>
+        <ul class="country-filter__list country-filter__list--closed">
           <li class="country-filter__item">
             <ul class="country-filter__world-list">
               <li class="country-filter__world-item">
@@ -78,11 +79,11 @@
             </ul>
           </li>
           <li class="country-filter__item">
-            <div class="country-choice">
-              <table class="country-choice__table country-choice__table--white">
+            <div class="country-choice country-choice--catalog">
+              <table class="country-choice__table country-choice__table--white country-choice__table--catalog">
                 <tr class="country-choice__row">
-                  <td class="country-choice__cell country-choice__cell--active">
-                    <button class="country-choice__button country-choice__button--active" type="button">а</button>
+                  <td class="country-choice__cell">
+                    <button class="country-choice__button" type="button">а</button>
                   </td>
                   <td class="country-choice__cell">
                     <button class="country-choice__button" type="button">б</button>
@@ -166,55 +167,53 @@
                   </td>
                 </tr>
               </table>
-              <ul class="country-choice__countries-list">
-                <li class="country-choice__countries-item">
+              <ul class="country-choice__countries-list country-choice__countries-list--catalog">
+                <li class="country-choice__countries-item country-choice__countries-item--catalog">
                   <button class="country-choice__country-button" type="button">Австралия</button>
                 </li>
-                <li class="country-choice__countries-item">
+                <li class="country-choice__countries-item country-choice__countries-item--catalog">
                   <button class="country-choice__country-button" type="button">Австрия</button>
                 </li>
-                <li class="country-choice__countries-item">
+                <li class="country-choice__countries-item country-choice__countries-item--catalog">
                   <button class="country-choice__country-button" type="button">Азербайджан</button>
                 </li>
-                <li class="country-choice__countries-item">
+                <li class="country-choice__countries-item country-choice__countries-item--catalog">
                   <button class="country-choice__country-button" type="button">Албания</button>
                 </li>
-                <li class="country-choice__countries-item">
+                <li class="country-choice__countries-item country-choice__countries-item--catalog">
                   <button class="country-choice__country-button" type="button">Алжир</button>
                 </li>
-                <li class="country-choice__countries-item">
+                <li class="country-choice__countries-item country-choice__countries-item--catalog">
                   <button class="country-choice__country-button" type="button">Ангола</button>
                 </li>
-                <li class="country-choice__countries-item">
+                <li class="country-choice__countries-item country-choice__countries-item--catalog">
                   <button class="country-choice__country-button" type="button">Андорра</button>
                 </li>
-                <li class="country-choice__countries-item">
+                <li class="country-choice__countries-item country-choice__countries-item--catalog">
                   <button class="country-choice__country-button" type="button">Антигуа и Барбуда</button>
                 </li>
-                <li class="country-choice__countries-item">
+                <li class="country-choice__countries-item country-choice__countries-item--catalog">
                   <button class="country-choice__country-button" type="button">Аргентина</button>
                 </li>
-                <li class="country-choice__countries-item">
+                <li class="country-choice__countries-item country-choice__countries-item--catalog">
                   <button class="country-choice__country-button" type="button">Армения</button>
                 </li>
-                <li class="country-choice__countries-item">
+                <li class="country-choice__countries-item country-choice__countries-item--catalog">
                   <button class="country-choice__country-button" type="button">Афганистан</button>
                 </li>
               </ul>
             </div>
           </li>
-          <li class="country-filter__item">
-            <button class="country-filter__button">свернуть</button>
-          </li>
         </ul>
+        <button class="country-filter__button country-filter__button--closed">свернуть</button>
       </section>
-      <section class="form-box">
+      <section class="form-box form-box--filter-closed">
         <h2 class="form-box__title">Подберите идеального попутчика</h2>
-        <form class="form-box partners-filter" action="https://echo.htmlacademy.ru" method="post">
+        <form class="form-box__container partners-filter" action="https://echo.htmlacademy.ru" method="post">
           <ul class="partners-filter__list">
             <li class="partners-filter__item">
-              <h3 class="partners-filter__title">Хобби:</h3>
-              <ul class="partners-filter__check-list">
+              <button class="partners-filter__title partners-filter__title--hobby" type="button">Хобби:</button>
+              <ul class="partners-filter__check-list partners-filter__check-list--hobby partners-filter__check-list--closed">
                 <li class="partners-filter__check-item">
                   <label class="partners-filter__check-name" for="gym">Спортзал</label>
                   <input class="visually-hidden" type="checkbox" id="gym" name="gym">
@@ -230,8 +229,8 @@
               </ul>
             </li>
             <li class="partners-filter__item">
-              <h3 class="partners-filter__title">Музыка:</h3>
-              <ul class="partners-filter__check-list">
+              <button class="partners-filter__title partners-filter__title--music" type="button">Музыка:</button>
+              <ul class="partners-filter__check-list partners-filter__check-list--music partners-filter__check-list--opened">
                 <li class="partners-filter__check-item">
                   <label class="partners-filter__check-name" for="rock">Тяжелый рок</label>
                   <input class="visually-hidden" type="checkbox" id="rock" name="rock">
@@ -247,8 +246,8 @@
               </ul>
             </li>
             <li class="partners-filter__item">
-              <h3 class="partners-filter__title">Еда:</h3>
-              <ul class="partners-filter__check-list">
+              <button class="partners-filter__title partners-filter__title--food" type="button">Еда:</button>
+              <ul class="partners-filter__check-list partners-filter__check-list--food partners-filter__check-list--closed">
                 <li class="partners-filter__check-item">
                   <label class="partners-filter__check-name" for="meat">Мясоед</label>
                   <input class="visually-hidden" type="checkbox" id="meat" name="meat">
@@ -264,8 +263,8 @@
               </ul>
             </li>
             <li class="partners-filter__item">
-              <h3 class="partners-filter__title">Транспорт:</h3>
-              <ul class="transport-icons">
+              <button class="partners-filter__title partners-filter__title--transport" type="button">Транспорт:</button>
+              <ul class="partners-filter__check-list partners-filter__check-list--opened partners-filter__check-list--transport transport-icons">
                 <li class="transport-icons__item">
                   <input class="visually-hidden" type="checkbox" id="airplane" name="airplane">
                   <label class="transport-icons__icon" for="airplane" aria-label="самолёт"></label>
@@ -285,20 +284,22 @@
               </ul>
             </li>
             <li class="partners-filter__item">
-              <h3 class="partners-filter__title">Левел:</h3>
-              <div class="partners-filter__level-bar">
-                <div class="partners-filter__level-scroll"></div>
+              <button class="partners-filter__title partners-filter__title--level" type="button">Левел:</button>
+              <div class="partners-filter__level-box partners-filter__level-box--opened">
+                <ul class="partners-filter__level-list">
+                  <li class="partners-filter__level-item">
+                    <label class="visually-hidden" for="min-level">Минимальный уровень</label>
+                    <input class="partners-filter__level partners-filter__level--min" type="number" id="min-level" name="min-level" value="30">
+                  </li>
+                  <li class="partners-filter__level-item">
+                    <label class="visually-hidden" for="max-level">Максимальный уровень</label>
+                    <input class="partners-filter__level partners-filter__level--max" type="number" id="max-level" name="max-level" value="100">
+                  </li>
+                </ul>
+                <div class="partners-filter__level-bar">
+                  <div class="partners-filter__level-scroll"></div>
+                </div>
               </div>
-              <ul class="partners-filter__level-list">
-                <li class="partners-filter__level-item">
-                  <label class="visually-hidden" for="min-level">Минимальный уровень</label>
-                  <input class="partners-filter__level" type="number" id="min-level" name="min-level">
-                </li>
-                <li class="partners-filter__level-item">
-                  <label class="visually-hidden" for="max-level">Максимальный уровень</label>
-                  <input class="partners-filter__level" type="number" id="max-level" name="max-level">
-                </li>
-              </ul>
             </li>
           </ul>
           <button class="partners-filter__button">Показать</button>
@@ -310,8 +311,8 @@
           <li class="partners-cards__item card">
             <div class="card__wrapper">
               <h3 class="card__name">Таня<br>Фирсова</h3>
-              <picture>
-                <img src="https://via.placeholder.com/70x70" width="70" height="70" alt="фото попутчика">
+              <picture class="card__pic-container">
+                <img class="card__pic" src="https://via.placeholder.com/70x70" width="70" height="70" alt="фото попутчика">
               </picture>
               <button class="card__like-button card__like-button--pressed">1.5 м</button>
               <p class="card__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
@@ -346,9 +347,15 @@
                   </li>
                 </ul>
               </div>
-              <div class="level-circle">
-                <p class="level-circle__number">99</p>
-                <p class="level-circle__text">level</p>
+              <div class="card__level-box">
+                <h4 class="card__countries-title card__countries-title--level">левел:</h4>
+                <div class="level-circle">
+                  <svg class="level-circle__pic level-circle__pic--catalog">
+                    <circle class="level-circle__ellipse level-circle__ellipse--catalog" r="28" cx="50%" cy="50%"></circle>
+                  </svg>
+                  <p class="level-circle__text level-circle__text--number level-circle__text--number-catalog">99</p>
+                  <p class="level-circle__text level-circle__text--catalog">level</p>
+                </div>
               </div>
               <button class="button card__button">Позвать!</button>
             </div>
@@ -356,8 +363,8 @@
           <li class="partners-cards__item card">
             <div class="card__wrapper">
               <h3 class="card__name">Петя<br>Демин</h3>
-              <picture>
-                <img src="https://via.placeholder.com/70x70" width="70" height="70" alt="фото попутчика">
+              <picture class="card__pic-container">
+                <img class="card__pic" src="https://via.placeholder.com/70x70" width="70" height="70" alt="фото попутчика">
               </picture>
               <button class="card__like-button">1500</button>
               <p class="card__tags">#бургер #бар #футбол #концерт #крафт</p>
@@ -389,9 +396,15 @@
                   </li>
                 </ul>
               </div>
-              <div class="level-circle">
-                <p class="level-circle__number">80</p>
-                <p class="level-circle__text">level</p>
+              <div class="card__level-box">
+                <h4 class="card__countries-title card__countries-title--level">левел:</h4>
+                <div class="level-circle">
+                  <svg class="level-circle__pic level-circle__pic--catalog">
+                    <circle class="level-circle__ellipse level-circle__ellipse--catalog level-circle__ellipse--80" r="28" cx="50%" cy="50%"></circle>
+                  </svg>
+                  <p class="level-circle__text level-circle__text--number level-circle__text--number-catalog">80</p>
+                  <p class="level-circle__text level-circle__text--catalog">level</p>
+                </div>
               </div>
               <button class="button card__button">Позвать!</button>
             </div>
@@ -399,8 +412,8 @@
           <li class="partners-cards__item card">
             <div class="card__wrapper">
               <h3 class="card__name">Марк<br>Смолов</h3>
-              <picture>
-                <img src="https://via.placeholder.com/70x70" width="70" height="70" alt="фото попутчика">
+              <picture class="card__pic-container">
+                <img class="card__pic" src="https://via.placeholder.com/70x70" width="70" height="70" alt="фото попутчика">
               </picture>
               <button class="card__like-button">170</button>
               <p class="card__tags">#рэп #тату #хайпбист #кроссовки #суприм</p>
@@ -435,9 +448,15 @@
                   </li>
                 </ul>
               </div>
-              <div class="level-circle">
-                <p class="level-circle__number">25</p>
-                <p class="level-circle__text">level</p>
+              <div class="card__level-box">
+                <h4 class="card__countries-title card__countries-title--level">левел:</h4>
+                <div class="level-circle">
+                  <svg class="level-circle__pic level-circle__pic--catalog">
+                    <circle class="level-circle__ellipse level-circle__ellipse--catalog level-circle__ellipse--25" r="28" cx="50%" cy="50%"></circle>
+                  </svg>
+                  <p class="level-circle__text level-circle__text--number level-circle__text--number-catalog">25</p>
+                  <p class="level-circle__text level-circle__text--catalog">level</p>
+                </div>
               </div>
               <button class="button card__button">Позвать!</button>
             </div>
@@ -445,8 +464,8 @@
           <li class="partners-cards__item card">
             <div class="card__wrapper">
               <h3 class="card__name">Лариса<br>Роговая</h3>
-              <picture>
-                <img src="https://via.placeholder.com/70x70" width="70" height="70" alt="фото попутчика">
+              <picture class="card__pic-container">
+                <img class="card__pic" src="https://via.placeholder.com/70x70" width="70" height="70" alt="фото попутчика">
               </picture>
               <button class="card__like-button">23</button>
               <p class="card__tags">#образование #карьера #учеба #линкедин</p>
@@ -478,9 +497,15 @@
                   </li>
                 </ul>
               </div>
-              <div class="level-circle">
-                <p class="level-circle__number">80</p>
-                <p class="level-circle__text">level</p>
+              <div class="card__level-box">
+                <h4 class="card__countries-title card__countries-title--level">левел:</h4>
+                <div class="level-circle">
+                  <svg class="level-circle__pic level-circle__pic--catalog">
+                    <circle class="level-circle__ellipse level-circle__ellipse--catalog level-circle__ellipse--50" r="28" cx="50%" cy="50%"></circle>
+                  </svg>
+                  <p class="level-circle__text level-circle__text--number level-circle__text--number-catalog">50</p>
+                  <p class="level-circle__text level-circle__text--catalog">level</p>
+                </div>
               </div>
               <button class="button card__button">Позвать!</button>
             </div>
@@ -511,7 +536,7 @@
         </div>
       </section>
     </main>
-    <footer class="page-footer footer">
+    <footer class="page-footer footer footer--form">
       <ul class="footer__list">
         <li class="footer__item">
           <picture>
@@ -543,5 +568,6 @@
         </li>
       </ul>
     </footer>
+  <script src="js/script.js"></script>
   </body>
 </html>

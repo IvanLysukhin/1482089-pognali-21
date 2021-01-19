@@ -1,16 +1,43 @@
 .card {
   background-color: @basic-white;
   border-radius: 20px;
+  padding-top: 14px;
+  padding-bottom: 24px;
 
   &--show-more {
     background-color: transparent;
+    display: flex;
+    justify-content: center;
   }
+}
+
+.card__wrapper {
+  .wrapper(84%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(6, auto);
 }
 
 .card__name {
   font-weight: bold;
   font-size: 20px;
+  line-height: 20px;
   color: @basic-blue-light;
+  margin: 0;
+  grid-column-start: 2;
+  margin-left: -31px;
+  display: block;
+  width: 100px;
+}
+
+.card__pic-container {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.card__pic {
+  border-radius: 50%;
+  margin-left: -4px;
 }
 
 .card__like-button {
@@ -21,6 +48,13 @@
   font-size: 14px;
   color: @basic-blue;
   cursor: pointer;
+  text-transform: uppercase;
+  margin-left: -31px;
+  margin-top: -6px;
+  width: 80px;
+  height: 21px;
+  padding: 0;
+  text-align: left;
 }
 
 .card__tags {
@@ -28,12 +62,28 @@
   font-size: 15px;
   line-height: 18px;
   color: @special_grey;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  margin: 8px 0 0 0;
+  padding-right: 32px;
+}
+
+.card__countries {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  margin-top: 12px;
 }
 
 .card__countries-title {
   font-weight: normal;
   font-size: 15px;
   color: @special_grey;
+  margin: 0;
+  padding: 0 5px 0 5px;
+
+  &--level {
+    text-align: right;
+  }
 }
 
 .card__countries-list {
@@ -42,18 +92,45 @@
   font-size: 15px;
   color: @basic-blue-light;
   text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.card__countries-item {
+  margin-bottom: 10px;
+}
+
+.card__countries-text {
+  margin: 0;
+  padding-left: 43px;
 }
 
 .card__icons-list {
   .reset-list;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+  margin-left: 3px;
+}
+
+.card__level-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .card__button {
   color: @basic-blue;
   text-transform: uppercase;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  margin-top: 11px;
+  padding: 10px 10px;
 
   &--show-more {
     background-color: transparent;
     color: @basic-blue-light;
+    margin-top: -10px;
+    padding: 10px 29px 10px 58px;
   }
 }

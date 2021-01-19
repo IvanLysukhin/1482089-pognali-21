@@ -63,6 +63,15 @@
       color: @basic-white;
     }
   }
+
+  &--catalog {
+    display: none;
+  }
+
+  &--number-catalog {
+    text-align: right;
+    margin: 23px 9px 0 0;
+  }
 }
 
 .level-circle__pic {
@@ -79,6 +88,12 @@
     width: 105px;
     height: 105px;
     transform: rotate(-88deg);
+  }
+
+  &--catalog {
+    left: auto;
+    top: 22px;
+    right: -7px;
   }
 }
 
@@ -102,5 +117,23 @@
 
   &--eighty {
     stroke-dasharray: 138;
+  }
+
+  &--catalog {
+    fill: transparent;
+    r: 21px;
+    stroke-dasharray: 127;
+  }
+
+  &--80 {
+    stroke-dasharray: 100;
+  }
+
+  &--25 {
+    stroke-dasharray: 33 110;
+  }
+
+  &--50 {
+    stroke-dasharray: 65;
   }
 }

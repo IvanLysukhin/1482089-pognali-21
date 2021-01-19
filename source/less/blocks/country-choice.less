@@ -4,7 +4,7 @@
   top: 41px;
   background-color: @basic-white;
   z-index: 1;
-  display: none;
+  //display: none;
 
   @media (min-width: @tablet-width) {
     width: 104%;
@@ -23,6 +23,12 @@
       display: flex;
     }
   }
+
+  &--catalog {
+    position: initial;
+    background-color: transparent;
+    margin-top: 21px;
+  }
 }
 
 .country-choice__table {
@@ -34,6 +40,10 @@
 
   &--white {
     background-color: @basic-white;
+  }
+
+  &--catalog {
+    margin-left: 6px;
   }
 }
 
@@ -97,6 +107,11 @@
     padding: 0 12px;
     border: none;
   }
+
+  &--catalog {
+    border: none;
+    padding: 11px 0;
+  }
 }
 
 .country-choice__countries-item {
@@ -104,6 +119,10 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 8px;
+  }
+
+  &--catalog {
+    margin-bottom: 1px;
   }
 }
 
