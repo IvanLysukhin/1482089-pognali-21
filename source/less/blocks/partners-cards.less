@@ -1,8 +1,14 @@
 .partners-cards__list {
   .reset-list;
   .wrapper(84%);
-  margin-top: 26px;
+  margin-top: 28px;
   display: flex;
   flex-direction: column;
-  row-gap: 12px;
+  row-gap: 13px;
+
+  @media (min-width: @tablet-width) {
+    .wrapper(90%);
+    margin-top: 41px;
+    row-gap: 40px;
+  }
 }

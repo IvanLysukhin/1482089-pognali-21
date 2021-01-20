@@ -55,8 +55,9 @@
       </nav>
     </header>
     <main class="page-main page-main--catalog">
-      <div class="page-main__title-box">
+      <div class="page-main__title-box page-main__title-box--catalog">
         <h1 class="page-main__title page-main__title--white">Попутчики</h1>
+        <a class="page-main__return-link" href="index.html">На главную</a>
       </div>
       <section class="country-filter country-filter--closed">
         <h2 class="visually-hidden">Фильтры</h2>
@@ -76,94 +77,100 @@
               <li class="country-filter__world-item">
                 <button class="country-filter__world-button">острова</button>
               </li>
+              <li class="country-filter__world-item country-filter__world-item--show-all">
+                <button class="country-filter__world-button country-filter__world-button--active country-filter__world-button--show-all">
+                  <span class="country-filter__button-word country-filter__button-word--show country-filter__button-word--closed">Показать все</span>
+                  <span class="country-filter__button-word country-filter__button-word--collapse country-filter__button-word--opened">Свернуть</span>
+                </button>
+              </li>
             </ul>
           </li>
-          <li class="country-filter__item">
+          <li class="country-filter__item country-filter__item--closed">
             <div class="country-choice country-choice--catalog">
               <table class="country-choice__table country-choice__table--white country-choice__table--catalog">
                 <tr class="country-choice__row">
-                  <td class="country-choice__cell">
-                    <button class="country-choice__button" type="button">а</button>
+                  <td class="country-choice__cell country-choice__cell--catalog">
+                    <button class="country-choice__button country-choice__button--catalog country-choice__button--active" type="button">а</button>
                   </td>
-                  <td class="country-choice__cell">
-                    <button class="country-choice__button" type="button">б</button>
+                  <td class="country-choice__cell country-choice__cell--catalog">
+                    <button class="country-choice__button country-choice__button--catalog" type="button">б</button>
                   </td>
-                  <td class="country-choice__cell">
-                    <button class="country-choice__button" type="button">в</button>
+                  <td class="country-choice__cell country-choice__cell--catalog">
+                    <button class="country-choice__button country-choice__button--catalog" type="button">в</button>
                   </td>
-                  <td class="country-choice__cell">
-                    <button class="country-choice__button" type="button">г</button>
+                  <td class="country-choice__cell country-choice__cell--catalog">
+                    <button class="country-choice__button country-choice__button--catalog" type="button">г</button>
                   </td>
-                  <td class="country-choice__cell">
-                    <button class="country-choice__button" type="button">д</button>
-                  </td>
-                </tr>
-                <tr class="country-choice__row">
-                  <td class="country-choice__cell">
-                    <button class="country-choice__button" type="button">e</button>
-                  </td>
-                  <td class="country-choice__cell">
-                    <button class="country-choice__button" type="button">з</button>
-                  </td>
-                  <td class="country-choice__cell">
-                    <button class="country-choice__button" type="button">и</button>
-                  </td>
-                  <td class="country-choice__cell">
-                    <button class="country-choice__button" type="button">к</button>
-                  </td>
-                  <td class="country-choice__cell">
-                    <button class="country-choice__button" type="button">л</button>
+                  <td class="country-choice__cell country-choice__cell--catalog">
+                    <button class="country-choice__button country-choice__button--catalog" type="button">д</button>
                   </td>
                 </tr>
                 <tr class="country-choice__row">
-                  <td class="country-choice__cell">
-                    <button class="country-choice__button" type="button">м</button>
+                  <td class="country-choice__cell country-choice__cell--catalog">
+                    <button class="country-choice__button country-choice__button--catalog" type="button">e</button>
                   </td>
-                  <td class="country-choice__cell">
-                    <button class="country-choice__button" type="button">н</button>
+                  <td class="country-choice__cell country-choice__cell--catalog">
+                    <button class="country-choice__button country-choice__button--catalog" type="button">з</button>
                   </td>
-                  <td class="country-choice__cell">
-                    <button class="country-choice__button" type="button">о</button>
+                  <td class="country-choice__cell country-choice__cell--catalog">
+                    <button class="country-choice__button country-choice__button--catalog" type="button">и</button>
                   </td>
-                  <td class="country-choice__cell">
-                    <button class="country-choice__button" type="button">п</button>
+                  <td class="country-choice__cell country-choice__cell--catalog">
+                    <button class="country-choice__button country-choice__button--catalog" type="button">к</button>
                   </td>
-                  <td class="country-choice__cell">
-                    <button class="country-choice__button" type="button">р</button>
-                  </td>
-                </tr>
-                <tr class="country-choice__row">
-                  <td class="country-choice__cell">
-                    <button class="country-choice__button" type="button">с</button>
-                  </td>
-                  <td class="country-choice__cell">
-                    <button class="country-choice__button" type="button">т</button>
-                  </td>
-                  <td class="country-choice__cell">
-                    <button class="country-choice__button" type="button">у</button>
-                  </td>
-                  <td class="country-choice__cell">
-                    <button class="country-choice__button" type="button">ф</button>
-                  </td>
-                  <td class="country-choice__cell">
-                    <button class="country-choice__button" type="button">х</button>
+                  <td class="country-choice__cell country-choice__cell--catalog">
+                    <button class="country-choice__button country-choice__button--catalog" type="button">л</button>
                   </td>
                 </tr>
                 <tr class="country-choice__row">
-                  <td class="country-choice__cell">
-                    <button class="country-choice__button" type="button">ч</button>
+                  <td class="country-choice__cell country-choice__cell--catalog">
+                    <button class="country-choice__button country-choice__button--catalog" type="button">м</button>
                   </td>
-                  <td class="country-choice__cell">
-                    <button class="country-choice__button" type="button">ш</button>
+                  <td class="country-choice__cell country-choice__cell--catalog">
+                    <button class="country-choice__button country-choice__button--catalog" type="button">н</button>
                   </td>
-                  <td class="country-choice__cell">
-                    <button class="country-choice__button" type="button">э</button>
+                  <td class="country-choice__cell country-choice__cell--catalog">
+                    <button class="country-choice__button country-choice__button--catalog" type="button">о</button>
                   </td>
-                  <td class="country-choice__cell">
-                    <button class="country-choice__button" type="button">ю</button>
+                  <td class="country-choice__cell country-choice__cell--catalog">
+                    <button class="country-choice__button country-choice__button--catalog" type="button">п</button>
                   </td>
-                  <td class="country-choice__cell">
-                    <button class="country-choice__button" type="button">я</button>
+                  <td class="country-choice__cell country-choice__cell--catalog">
+                    <button class="country-choice__button country-choice__button--catalog" type="button">р</button>
+                  </td>
+                </tr>
+                <tr class="country-choice__row">
+                  <td class="country-choice__cell country-choice__cell--catalog">
+                    <button class="country-choice__button country-choice__button--catalog" type="button">с</button>
+                  </td>
+                  <td class="country-choice__cell country-choice__cell--catalog">
+                    <button class="country-choice__button country-choice__button--catalog" type="button">т</button>
+                  </td>
+                  <td class="country-choice__cell country-choice__cell--catalog">
+                    <button class="country-choice__button country-choice__button--catalog" type="button">у</button>
+                  </td>
+                  <td class="country-choice__cell country-choice__cell--catalog">
+                    <button class="country-choice__button country-choice__button--catalog" type="button">ф</button>
+                  </td>
+                  <td class="country-choice__cell country-choice__cell--catalog">
+                    <button class="country-choice__button country-choice__button--catalog" type="button">х</button>
+                  </td>
+                </tr>
+                <tr class="country-choice__row">
+                  <td class="country-choice__cell country-choice__cell--catalog">
+                    <button class="country-choice__button country-choice__button--catalog" type="button">ч</button>
+                  </td>
+                  <td class="country-choice__cell country-choice__cell--catalog">
+                    <button class="country-choice__button country-choice__button--catalog" type="button">ш</button>
+                  </td>
+                  <td class="country-choice__cell country-choice__cell--catalog">
+                    <button class="country-choice__button country-choice__button--catalog" type="button">э</button>
+                  </td>
+                  <td class="country-choice__cell country-choice__cell--catalog">
+                    <button class="country-choice__button country-choice__button--catalog" type="button">ю</button>
+                  </td>
+                  <td class="country-choice__cell country-choice__cell--catalog">
+                    <button class="country-choice__button country-choice__button--catalog" type="button">я</button>
                   </td>
                 </tr>
               </table>
@@ -310,7 +317,7 @@
         <ul class="partners-cards__list">
           <li class="partners-cards__item card">
             <div class="card__wrapper">
-              <h3 class="card__name">Таня<br>Фирсова</h3>
+              <h3 class="card__name">Таня<br class="card__shift"> Фирсова</h3>
               <picture class="card__pic-container">
                 <img class="card__pic" src="https://via.placeholder.com/70x70" width="70" height="70" alt="фото попутчика">
               </picture>
@@ -331,7 +338,7 @@
                 </ul>
               </div>
               <div class="card__transport">
-                <h4 class="card__countries-title">транспорт:</h4>
+                <h4 class="card__countries-title card__countries-title--transparent">транспорт:</h4>
                 <ul class="card__icons-list">
                   <li class="card__icons-item">
                     <img src="https://via.placeholder.com/20x20" width="20" height="20" alt="самалёт">
@@ -348,7 +355,7 @@
                 </ul>
               </div>
               <div class="card__level-box">
-                <h4 class="card__countries-title card__countries-title--level">левел:</h4>
+                <h4 class="card__countries-title card__countries-title--level card__countries-title--transparent">левел:</h4>
                 <div class="level-circle">
                   <svg class="level-circle__pic level-circle__pic--catalog">
                     <circle class="level-circle__ellipse level-circle__ellipse--catalog" r="28" cx="50%" cy="50%"></circle>
@@ -362,7 +369,7 @@
           </li>
           <li class="partners-cards__item card">
             <div class="card__wrapper">
-              <h3 class="card__name">Петя<br>Демин</h3>
+              <h3 class="card__name">Петя<br class="card__shift"> Демин</h3>
               <picture class="card__pic-container">
                 <img class="card__pic" src="https://via.placeholder.com/70x70" width="70" height="70" alt="фото попутчика">
               </picture>
@@ -380,7 +387,7 @@
                 </ul>
               </div>
               <div class="card__transport">
-                <h4 class="card__countries-title">транспорт:</h4>
+                <h4 class="card__countries-title card__countries-title--transparent">транспорт:</h4>
                 <ul class="card__icons-list">
                   <li class="card__icons-item">
                     <img src="https://via.placeholder.com/20x20" width="20" height="20" alt="самалёт">
@@ -397,7 +404,7 @@
                 </ul>
               </div>
               <div class="card__level-box">
-                <h4 class="card__countries-title card__countries-title--level">левел:</h4>
+                <h4 class="card__countries-title card__countries-title--level card__countries-title--transparent">левел:</h4>
                 <div class="level-circle">
                   <svg class="level-circle__pic level-circle__pic--catalog">
                     <circle class="level-circle__ellipse level-circle__ellipse--catalog level-circle__ellipse--80" r="28" cx="50%" cy="50%"></circle>
@@ -411,7 +418,7 @@
           </li>
           <li class="partners-cards__item card">
             <div class="card__wrapper">
-              <h3 class="card__name">Марк<br>Смолов</h3>
+              <h3 class="card__name">Марк<br class="card__shift"> Смолов</h3>
               <picture class="card__pic-container">
                 <img class="card__pic" src="https://via.placeholder.com/70x70" width="70" height="70" alt="фото попутчика">
               </picture>
@@ -432,7 +439,7 @@
                 </ul>
               </div>
               <div class="card__transport">
-                <h4 class="card__countries-title">транспорт:</h4>
+                <h4 class="card__countries-title card__countries-title--transparent">транспорт:</h4>
                 <ul class="card__icons-list">
                   <li class="card__icons-item">
                     <img src="https://via.placeholder.com/20x20" width="20" height="20" alt="самалёт">
@@ -449,7 +456,7 @@
                 </ul>
               </div>
               <div class="card__level-box">
-                <h4 class="card__countries-title card__countries-title--level">левел:</h4>
+                <h4 class="card__countries-title card__countries-title--level card__countries-title--transparent">левел:</h4>
                 <div class="level-circle">
                   <svg class="level-circle__pic level-circle__pic--catalog">
                     <circle class="level-circle__ellipse level-circle__ellipse--catalog level-circle__ellipse--25" r="28" cx="50%" cy="50%"></circle>
@@ -463,7 +470,7 @@
           </li>
           <li class="partners-cards__item card">
             <div class="card__wrapper">
-              <h3 class="card__name">Лариса<br>Роговая</h3>
+              <h3 class="card__name">Лариса<br class="card__shift"> Роговая</h3>
               <picture class="card__pic-container">
                 <img class="card__pic" src="https://via.placeholder.com/70x70" width="70" height="70" alt="фото попутчика">
               </picture>
@@ -481,7 +488,7 @@
                 </ul>
               </div>
               <div class="card__transport">
-                <h4 class="card__countries-title">транспорт:</h4>
+                <h4 class="card__countries-title card__countries-title--transparent">транспорт:</h4>
                 <ul class="card__icons-list">
                   <li class="card__icons-item">
                     <img src="https://via.placeholder.com/20x20" width="20" height="20" alt="самалёт">
@@ -498,7 +505,7 @@
                 </ul>
               </div>
               <div class="card__level-box">
-                <h4 class="card__countries-title card__countries-title--level">левел:</h4>
+                <h4 class="card__countries-title card__countries-title--level card__countries-title--transparent">левел:</h4>
                 <div class="level-circle">
                   <svg class="level-circle__pic level-circle__pic--catalog">
                     <circle class="level-circle__ellipse level-circle__ellipse--catalog level-circle__ellipse--50" r="28" cx="50%" cy="50%"></circle>
@@ -517,7 +524,7 @@
         <div class="pagination">
           <ul class="pagination__list">
             <li class="pagination__item">
-              <a class="pagination__link" href="#">1</a>
+              <a class="pagination__link pagination__link--current" href="#">1</a>
             </li>
             <li class="pagination__item">
               <a class="pagination__link" href="#">2</a>
@@ -536,7 +543,7 @@
         </div>
       </section>
     </main>
-    <footer class="page-footer footer footer--form">
+    <footer class="page-footer footer footer--catalog">
       <ul class="footer__list">
         <li class="footer__item">
           <picture>

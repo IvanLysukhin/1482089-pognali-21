@@ -3,6 +3,10 @@ let filterButton = document.querySelector(".country-filter__filter-button");
 let filterMenu = document.querySelector(".country-filter__list");
 let buttonMenuClosed = document.querySelector(".country-filter__button");
 let formBox = document.querySelector(".form-box");
+let showAllButton = document.querySelector(".country-filter__world-button--show-all");
+let countryTable = document.querySelector(".country-filter__item--closed");
+let showButtonWord = document.querySelector(".country-filter__button-word--show");
+let collapseButtonWord = document.querySelector(".country-filter__button-word--collapse");
 
 filterButton.addEventListener("click", function(event) {
   filterSection.classList.toggle('country-filter--closed')
@@ -13,7 +17,11 @@ filterButton.addEventListener("click", function(event) {
   buttonMenuClosed.classList.toggle('country-filter__button--opened')
   formBox.classList.toggle('form-box--filter-closed')
   formBox.classList.toggle('form-box--filter-opened')
+  countryTable.classList.toggle ('country-filter__item--closed')
+  countryTable.classList.toggle ('country-filter__item--opened')
 })
+
+
 
 buttonMenuClosed.addEventListener("click", function(event) {
   filterSection.classList.toggle('country-filter--closed')
@@ -24,8 +32,26 @@ buttonMenuClosed.addEventListener("click", function(event) {
   buttonMenuClosed.classList.toggle('country-filter__button--opened')
   formBox.classList.toggle('form-box--filter-closed')
   formBox.classList.toggle('form-box--filter-opened')
+  countryTable.classList.toggle ('country-filter__item--closed')
+  countryTable.classList.toggle ('country-filter__item--opened')
 })
 
+showAllButton.addEventListener("click", function(event) {
+  filterSection.classList.toggle('country-filter--closed')
+  filterSection.classList.toggle('country-filter--opened')
+  filterMenu.classList.toggle('country-filter__list--closed')
+  filterMenu.classList.toggle('country-filter__list--opened')
+  buttonMenuClosed.classList.toggle('country-filter__button--closed')
+  buttonMenuClosed.classList.toggle('country-filter__button--opened')
+  formBox.classList.toggle('form-box--filter-closed')
+  formBox.classList.toggle('form-box--filter-opened')
+  countryTable.classList.toggle ('country-filter__item--closed')
+  countryTable.classList.toggle ('country-filter__item--opened')
+  showButtonWord.classList.toggle ('country-filter__button-word--closed')
+  showButtonWord.classList.toggle ('country-filter__button-word--opened')
+  collapseButtonWord.classList.toggle ('country-filter__button-word--opened')
+  collapseButtonWord.classList.toggle ('country-filter__button-word--closed')
+})
 
 let hobbyButton = document.querySelector('.partners-filter__title--hobby');
 let musicButton = document.querySelector('.partners-filter__title--music');

@@ -5,13 +5,25 @@
   .wrapper(84%);
   padding-bottom: 22px;
 
+  @media (min-width: @tablet-width) {
+    .wrapper(90%);
+    padding-bottom: 38px;
+  }
 
   &--filter-opened {
     margin-top: 76px;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 179px;
+    }
   }
 
   &--filter-closed {
     margin-top: 21px;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 43px;
+    }
   }
 }
 
@@ -21,4 +33,10 @@
   line-height: 22px;
   letter-spacing: 0.02em;
   margin: 25px 20px 23px 24px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    letter-spacing: normal;
+    margin: 38px 20px 23px 35px;
+  }
 }

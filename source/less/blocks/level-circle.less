@@ -66,11 +66,22 @@
 
   &--catalog {
     display: none;
+
+    @media (min-width: @tablet-width) {
+      display: inline;
+      font-size: 14px;
+      color: fade(@basic-black, 40%);
+      margin-left: 13px;
+    }
   }
 
   &--number-catalog {
     text-align: right;
     margin: 23px 9px 0 0;
+
+    @media (min-width: @tablet-width) {
+      margin: 33px 9px 0 0;
+    }
   }
 }
 
@@ -94,6 +105,13 @@
     left: auto;
     top: 22px;
     right: -7px;
+
+    @media (min-width: @tablet-width) {
+      width: 65px;
+      height: 65px;
+      top: 19px;
+      right: -9px;
+    }
   }
 }
 
@@ -123,17 +141,34 @@
     fill: transparent;
     r: 21px;
     stroke-dasharray: 127;
+
+    @media (min-width: @tablet-width) {
+      r: 30px;
+      stroke-dasharray: 185;
+    }
   }
 
   &--80 {
     stroke-dasharray: 100;
+
+    @media (min-width: @tablet-width) {
+      stroke-dasharray: 151;
+    }
   }
 
   &--25 {
     stroke-dasharray: 33 110;
+
+    @media (min-width: @tablet-width) {
+      stroke-dasharray: 47 143;
+    }
   }
 
   &--50 {
     stroke-dasharray: 65;
+
+    @media (min-width: @tablet-width) {
+      stroke-dasharray: 92;
+    }
   }
 }

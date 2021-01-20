@@ -48,6 +48,11 @@
     padding-top: 119px;
     padding-bottom: 80px;
   }
+
+  &--catalog {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .page-main__title {
@@ -80,5 +85,21 @@
       .wrapper(1320px);
       padding-left: 124px;
     }
+  }
+}
+
+.page-main__return-link {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    .main-font;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+    color: @basic-white;
+    text-decoration: none;
+    text-transform: uppercase;
+    flex-basis: 366px;
   }
 }

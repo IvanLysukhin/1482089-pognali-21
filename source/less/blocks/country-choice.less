@@ -28,6 +28,14 @@
     position: initial;
     background-color: transparent;
     margin-top: 21px;
+
+    @media (min-width: @tablet-width) {
+      padding: 0;
+      box-shadow: none;
+      display: flex;
+      margin-top: 38px;
+      margin-left: 8px;
+    }
   }
 }
 
@@ -44,6 +52,12 @@
 
   &--catalog {
     margin-left: 6px;
+
+    @media (min-width: @tablet-width) {
+      background-color: transparent;
+      margin: 0;
+      margin-right: 52px;
+    }
   }
 }
 
@@ -64,6 +78,14 @@
   &--active {
     background-color: @basic-blue-light;
   }
+
+  &--catalog {
+    @media (min-width: @tablet-width) {
+      border: none;
+      width: 77px;
+      height: 83px;
+    }
+  }
 }
 
 .country-choice__button {
@@ -83,13 +105,34 @@
     line-height: 20px;
   }
 
-  &--active {
-    color: @basic-white;
-  }
-
   &:active {
     color: @basic-white;
     background-color: @basic-blue-light;
+  }
+
+  &--catalog {
+    @media (min-width: @tablet-width) {
+      font-size: 60px;
+      font-weight: bold;
+      color: fade(@dark-blue, 30%);
+      text-align: left;
+
+      &:active {
+        background-color: transparent;
+        color: @dark-blue;
+      }
+    }
+  }
+
+  &--active {
+    color: @basic-white;
+    background-color: @basic-blue-light;
+
+    @media (min-width: @tablet-width) {
+      font-size: 60px;
+      color: @dark-blue;
+      background-color: transparent;
+    }
   }
 }
 
@@ -111,6 +154,10 @@
   &--catalog {
     border: none;
     padding: 11px 0;
+
+    @media (min-width: @tablet-width) {
+      padding: 14px 0;
+    }
   }
 }
 
@@ -123,6 +170,10 @@
 
   &--catalog {
     margin-bottom: 1px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 8px;
+    }
   }
 }
 
