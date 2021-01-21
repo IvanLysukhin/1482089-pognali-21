@@ -36,6 +36,31 @@
 }
 
 .main-nav__menu-button {
+  background-color: transparent;
+  border: none;
+  width: 19px;
+  height: 19px;
+  position: relative;
+
+  &::after,
+  &::before {
+    content: " ";
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: @basic-grey;
+    top: 3px;
+    left: -6px;
+  }
+
+  &::after {
+    transform: rotate(45deg);
+  }
+
+  &::before {
+    transform: rotate(-45deg);
+  }
+
   @media (min-width: @desktop-width) {
     display: none;
   }
@@ -137,12 +162,26 @@
   &::before {
     content: "";
     position: absolute;
-    height: 50px;
-    width: 50px;
+    height: 45px;
+    width: 45px;
     border-radius: 50%;
-    background-color: @basic-yellow;
-    top: 0;
+    background-color: @darkest-blue;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    top: -14px;
     left: 0;
+  }
+
+  &--phone {
+    &::before {
+      background-image: url("../img/icons/telphone_icon.svg");
+    }
+  }
+
+  &--mail {
+    &::before {
+      background-image: url("../img/icons/mail_icon.svg");
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -164,8 +203,11 @@
   .reset-list;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  margin-top: 52px;
+  justify-content: space-between;
+  .wrapper(40%);
+  margin-top: 57px;
+  margin-bottom: 3px;
+
 
   @media (min-width: @tablet-width) {
     order: 5;
@@ -197,5 +239,17 @@
     font-weight: bold;
     order: 4;
     margin-left: 0;
+  }
+}
+
+.main-nav__logo-link {
+  width: 100px;
+  height: 15px;
+  background-image: url("../img/pognali-logo-dark.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/pognali-logo-dark@2x.png");
   }
 }

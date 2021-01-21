@@ -1,6 +1,14 @@
 .preview {
   background-color: @basic-blue;
   color: @basic-white;
+  background-image: url("../img/preveiw_back.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position-y: -40px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/preveiw_back@2x.png");
+  }
 
   @media (min-width: @tablet-width) {
     background-color: @dark-blue-2;

@@ -154,6 +154,8 @@
 }
 
 .direction__pic {
+  border-radius: 10px;
+
   @media (min-width: @tablet-width) {
     width: 189px;
     height: 100%;
@@ -188,6 +190,20 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
+  position: relative;
+  width: 42px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/icons/sub_icon.svg");
+    background-repeat: no-repeat;
+    width: 11px;
+    height: 12px;
+    top: 2px;
+    left: -18px;
+  }
+
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -212,6 +228,18 @@
   text-align: left;
   padding: 21px;
   font-size: 18px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/icons/triangle.svg");
+    background-repeat: no-repeat;
+    width: 13px;
+    height: 13px;
+    top: 25px;
+    right: 20px;
+  }
 
   @media (min-width: @tablet-width) {
     .wrapper(81%);
