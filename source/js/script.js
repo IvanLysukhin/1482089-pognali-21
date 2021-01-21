@@ -34,6 +34,10 @@ buttonMenuClosed.addEventListener("click", function(event) {
   formBox.classList.toggle('form-box--filter-opened')
   countryTable.classList.toggle ('country-filter__item--closed')
   countryTable.classList.toggle ('country-filter__item--opened')
+  showButtonWord.classList.toggle ('country-filter__button-word--closed')
+  showButtonWord.classList.toggle ('country-filter__button-word--opened')
+  collapseButtonWord.classList.toggle ('country-filter__button-word--opened')
+  collapseButtonWord.classList.toggle ('country-filter__button-word--closed')
 })
 
 showAllButton.addEventListener("click", function(event) {

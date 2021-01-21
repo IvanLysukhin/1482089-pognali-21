@@ -4,7 +4,7 @@
   top: 41px;
   background-color: @basic-white;
   z-index: 1;
-  //display: none;
+  display: none;
 
   @media (min-width: @tablet-width) {
     width: 104%;
@@ -36,6 +36,12 @@
       margin-top: 38px;
       margin-left: 8px;
     }
+
+    @media (min-width: @desktop-width) {
+      margin-top: 30px;
+      margin-left: -335px;
+      width: auto;
+    }
   }
 }
 
@@ -57,6 +63,12 @@
       background-color: transparent;
       margin: 0;
       margin-right: 52px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin: 0;
+      border-collapse: unset;
+      border-spacing: 37px 56px;
     }
   }
 }
@@ -84,6 +96,13 @@
       border: none;
       width: 77px;
       height: 83px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 212px;
+      height: auto;
+      text-align: left;
+      vertical-align: top;
     }
   }
 }
@@ -122,6 +141,11 @@
         color: @dark-blue;
       }
     }
+
+    @media (min-width: @desktop-width) {
+      width: auto;
+      height: auto;
+    }
   }
 
   &--active {
@@ -157,6 +181,21 @@
 
     @media (min-width: @tablet-width) {
       padding: 14px 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
+
+  &--table {
+    display: none;
+
+    @media (min-width: @desktop-width) {
+      display: block;
+      padding: 0;
+      margin-top: 42px;
+      margin-left: 0;
     }
   }
 }
