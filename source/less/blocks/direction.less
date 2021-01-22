@@ -24,6 +24,17 @@
   display: grid;
   grid-template-rows: repeat(3, auto);
 
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/flags-back.png");
+    background-repeat: no-repeat;
+    background-size: 288px 574px;
+    background-position: top 49px right 41px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/flags-back@2x.png");
+    }
+  }
+
   @media (min-width: @desktop-width) {
     grid-template-rows: auto auto;
     grid-template-columns: max-content auto;
@@ -90,6 +101,7 @@
   display: flex;
   flex-direction: column;
   margin-top: 45px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     .wrapper(81%);
@@ -102,6 +114,18 @@
     width: auto;
     margin: 32px 0 0 71px;
   }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -36px;
+    left: -33px;
+    width: 141px;
+    height: 141px;
+    background-color: #E2E5F2;
+    border-radius: 20px;
+    z-index: -1;
+  }
 }
 
 .direction__item {
@@ -112,6 +136,10 @@
   @media (min-width: @tablet-width) {
     flex-direction: row;
     margin-bottom: 9px;
+  }
+
+  &::before {
+    content: '';
   }
 }
 
@@ -134,8 +162,10 @@
     flex-grow: 1;
     border-radius: 25px 0 0 25px;
     padding-left: 32px;
-    padding-bottom: 3px;
+    padding-bottom: 0;
     margin-top: 0;
+    margin-right: -6px;
+    height: 140px;
   }
 
   @media (min-width: @desktop-width) {
@@ -157,8 +187,8 @@
   border-radius: 10px;
 
   @media (min-width: @tablet-width) {
-    width: 189px;
-    height: 100%;
+    width: 196px;
+    height: 140px;
   }
 }
 
@@ -170,6 +200,7 @@
   color: @basic-black;
   margin-top: 25px;
   margin-bottom: 0;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     font-size: 24px;
@@ -181,6 +212,55 @@
 
   @media (min-width: @desktop-width) {
     margin-top: 27px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 24px;
+    background-repeat: no-repeat;
+    border-radius: 2px;
+    top: -38px;
+    left: 3px;
+    background-size: 100%;
+
+    @media (min-width: @tablet-width) {
+      width: 70px;
+      height: 47px;
+      top: -11px;
+      left: 367px;
+    }
+  }
+
+  &--thailand {
+    &::before {
+      background-image: url("../img/flags/thailand-tablet.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/flags/thailand-tablet@2x.png");
+      }
+    }
+  }
+
+  &--france {
+    &::before {
+      background-image: url("../img/flags/france-tablet.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/flags/france-tablet@2x.png");
+      }
+    }
+  }
+
+  &--czech {
+    &::before {
+      background-image: url("../img/flags/czech-tablet.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/flags/czech-tablet@2x.png");
+      }
+    }
   }
 }
 
@@ -198,10 +278,17 @@
     position: absolute;
     background-image: url("../img/icons/sub_icon.svg");
     background-repeat: no-repeat;
+    background-size: 100%;
     width: 11px;
     height: 12px;
     top: 2px;
     left: -18px;
+
+    @media (min-width: @tablet-width) {
+      width: 18px;
+      height: 20px;
+      left: -1px;
+    }
   }
 
 
@@ -239,6 +326,11 @@
     height: 13px;
     top: 25px;
     right: 20px;
+
+    @media (min-width: @tablet-width) {
+      top: 34px;
+      right: 33px;
+    }
   }
 
   @media (min-width: @tablet-width) {

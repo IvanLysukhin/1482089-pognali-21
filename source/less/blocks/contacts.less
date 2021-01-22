@@ -49,6 +49,21 @@
   margin-top: 22px;
   padding-left: 86px;
   margin-bottom: 35px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    top: -1px;
+    left: 25px;
+    background-color: #121936;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-image: url("../img/icons/location.svg");
+  }
 
   @media (min-width: @tablet-width) {
     padding-left: 168px;
@@ -70,6 +85,18 @@
   .wrapper(84%);
   padding: 16px;
   cursor: pointer;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/icons/triangle.svg");
+    background-repeat: no-repeat;
+    width: 13px;
+    height: 13px;
+    top: 20px;
+    right: 20px;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 24px;

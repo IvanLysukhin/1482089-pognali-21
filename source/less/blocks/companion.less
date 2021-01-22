@@ -6,12 +6,49 @@
   margin-top: -40px;
   padding-top: 86px;
   padding-bottom: 30px;
+  background-image: url("../img/smolov-back-mobile.png");
+  background-repeat: no-repeat;
+  background-size: 143px 143px;
+  background-position: top 74px right 25px;
+  position: relative;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/smolov-back-mobile@2x.png");
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 113px;
+    height: 132px;
+    top: 73px;
+    left: 0;
+    border-radius: 0 20px 20px 0;
+    background-color: @darkest-blue-2;
+    z-index: -1;
+
+    @media (min-width: @tablet-width) {
+      width: 212px;
+      height: 212px;
+      border-radius: 20px;
+      top: 134px;
+      left: 40px;
+    }
+  }
+
 
   @media (min-width: @tablet-width) {
     margin-top: -65px;
     padding-top: 167px;
     padding-bottom: 87px;
     border-radius: 0 0 60px 60px;
+    background-image: url("../img/rogovaya-back-tablet.png");
+    background-size: 285px 285px;
+    background-position: top 144px right 75px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/rogovaya-back-tablet@2x.png");
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -23,6 +60,25 @@
 .companion__box {
   display: flex;
   flex-direction: column;
+
+  background-image: url("../img/rogovaya-back-mobile.png");
+  background-repeat: no-repeat;
+  background-size: 64px 71px;
+  background-position: top 260px left;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/rogovaya-back-mobile@2x.png");
+  }
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/smolov-back-tablet.png");
+    background-size: 143px 143px;
+    background-position: top 323px left 39px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/smolov-back-tablet@2x.png");
+    }
+  }
 
   @media (min-width: @desktop-width) {
     display: grid;
@@ -118,7 +174,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
   margin-bottom: 9px;
 
   @media (min-width: @tablet-width) {
@@ -157,6 +213,35 @@
   text-align: center;
   margin-top: 9px;
   margin-bottom: 10px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    top: 9px;
+    left: 52px;
+
+    @media (min-width: @tablet-width) {
+      height: 8px;
+      width: 8px;
+    }
+  }
+
+  &--online {
+    &::before {
+      background-color: @online-green;
+    }
+  }
+
+
+  &--offline {
+    &::before {
+      background-color: @offline-red;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 24px;
@@ -183,7 +268,8 @@
   .reset-list;
   display: flex;
   justify-content: center;
-  column-gap: 14px;
+  column-gap: 13px;
+  align-items: center;
 
   @media (min-width: @tablet-width) {
     margin-top: 26px;
@@ -197,6 +283,7 @@
   text-align: left;
   padding: 21px;
   font-size: 18px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     .wrapper(81%);
@@ -212,6 +299,22 @@
     margin: 17px 0 8px 72px;
     padding: 2px 33px;
   }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/icons/triangle.svg");
+    background-repeat: no-repeat;
+    width: 13px;
+    height: 13px;
+    top: 25px;
+    right: 20px;
+
+    @media (min-width: @tablet-width) {
+      top: 34px;
+      right: 38px;
+    }
+  }
 }
 
 .companion__shift {
@@ -219,5 +322,11 @@
 
   @media (min-width: @tablet-width) {
     display: block;
+  }
+}
+
+.companion__icon {
+  &--opacity {
+    opacity: 0.15;
   }
 }

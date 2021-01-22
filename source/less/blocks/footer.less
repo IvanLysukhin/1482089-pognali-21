@@ -56,9 +56,15 @@
     margin-bottom: 20px;
   }
 
-  &:last-of-type {
+  &--copyright {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    .wrapper(85%);
+    margin-top: 16px;
+    margin-bottom: 18px;
+    padding-top: 11px;
+    border-top: 1px solid @border-grey;
   }
 }
 
@@ -69,5 +75,12 @@
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
+  }
+}
+
+.footer__logo {
+  @media (min-width: @tablet-width) {
+    width: 164px;
+    height: 42px;
   }
 }
