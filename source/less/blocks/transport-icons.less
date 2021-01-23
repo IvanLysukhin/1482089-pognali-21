@@ -1,3 +1,81 @@
 .transport-icons {
   .reset-list;
+  display: flex;
+  justify-content: center;
+}
+
+.transport-icons__icon {
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-color: @basic-white;
+  border-radius: 50%;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    width: 43px;
+    height: 43px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 48%;
+    opacity: 0.15;
+  }
+
+  &--plane {
+    &::after {
+      background-image: url("../img/icons/plane_icon.svg");
+
+      @media (min-width: @tablet-width) {
+        background-position: top 9px right 3px;
+        background-size: 65%;
+      }
+    }
+  }
+
+  &--bus {
+    &::after {
+      background-image: url("../img/icons/bus_icon.svg");
+
+      @media (min-width: @tablet-width) {
+        background-position: top 7px right;
+        background-size: 71%;
+      }
+    }
+  }
+
+  &--bicycle {
+    &::after {
+      background-image: url("../img/icons/icon_bicycle.svg");
+
+      @media (min-width: @tablet-width) {
+        background-position: top 7px right -2px;
+        background-size: 80%;
+      }
+    }
+  }
+
+  &--walk {
+    &::after {
+      background-image: url("../img/icons/icon_run.svg");
+
+      @media (min-width: @tablet-width) {
+        background-position: top 9px right;
+        background-size: 73%;
+      }
+    }
+  }
+}
+
+
+.transport-icons__input:checked + .transport-icons__icon::after {
+  opacity: 1;
 }

@@ -27,8 +27,17 @@
   @media (min-width: @desktop-width) {
     .wrapper(1004px);
     padding-top: 74px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
+
+//.stay-dates__title {
+//  @media (min-width: @desktop-width) {
+//    grid-row-start: 1;
+//    grid-column-start: 1;
+//  }
+//}
 
 .stay-dates__text {
   font-weight: normal;
@@ -46,6 +55,8 @@
 
   @media (min-width: @desktop-width) {
     width: 589px;
+    grid-column-start: 1;
+    grid-column-end: 2;
   }
 }
 
@@ -66,11 +77,15 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 64px;
+    margin-top: 29px;
     letter-spacing: normal;
     display: grid;
     grid-template-columns: auto auto;
     margin-bottom: 0;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    padding-top: 34px;
+    border-top: 1px solid @border-grey;
   }
 }
 
@@ -123,11 +138,6 @@
     }
   }
 }
-
-//.stay-dates__label-box {
-//  display: flex;
-//  justify-content: space-between;
-//}
 
 .stay-dates__name {
   @media (min-width: @desktop-width) {
@@ -183,12 +193,39 @@
   padding-left: 39px;
   text-transform: none;
   letter-spacing: normal;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 26px;
+    height: 26px;
+    border: 1px solid @border-grey;
+    border-radius: 4px;
+
+    @media (min-width: @tablet-width) {
+      width: 36px;
+      height: 36px;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     padding-left: 56px;
+  }
+}
+
+.stay-dates__child-input:checked + .stay-dates__child-label&::before {
+  background-image: url("../img/icons/check.svg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+
+  @media (min-width: @tablet-width) {
+    background-size: 18px 17px;
   }
 }
 
@@ -211,6 +248,8 @@
     margin-top: 0;
     margin-bottom: 10px;
     padding: 21px 0;
+    grid-column-start: 1;
+    grid-column-end: -1;
   }
 }
 
@@ -226,23 +265,51 @@
 
 .stay-dates__calendar {
   margin-bottom: 21px;
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
 }
 
 .stay-dates__button {
   position: absolute;
-  top: 47px;
+  top: 50px;
+  background: transparent;
+  border: none;
+  width: 14px;
+  height: 14px;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 14px;
+    height: 2px;
+    background-color: @basic-grey;
+
+    @media (min-width: @tablet-width) {
+      width: 20px;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     top: 101px;
   }
 
   @media (min-width: @desktop-width) {
-    top: 29px;
+    top: 33px;
   }
 
   &--less {
     left: 0;
-    margin-left: 16px;
+    margin-left: 14px;
+
+    @media (min-width: @tablet-width) {
+      margin-left: 21px;
+    }
 
     @media (min-width: @desktop-width) {
       left: 226px;
@@ -252,10 +319,39 @@
 
   &--more {
     right: 0;
-    margin-right: 16px;
+    margin-right: 14px;
+
+    &::before {
+      transform: rotate(90deg);
+    }
+
+    @media (min-width: @tablet-width) {
+      margin-right: 29px;
+    }
 
     @media (min-width: @desktop-width) {
       right: 287px;
+      margin-right: 15px;
     }
+  }
+}
+
+.stay-dates__month-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  &--next {
+    transform: scale(-1, 1);
+  }
+}
+
+.stay-dates__svg {
+  @media (min-width: @tablet-width) {
+    width: 30px;
+    height: 36px;
   }
 }

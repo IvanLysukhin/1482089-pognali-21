@@ -23,6 +23,10 @@
     background-color: @dark-blue;
     background-size: 100%;
     background-position: 50% 0;
+
+    &--form {
+      background: @lightest-blue;
+    }
   }
 }
 
@@ -40,6 +44,20 @@
 
   @media (min-width: @desktop-width) {
     margin-top: -1px;
+  }
+
+  &--form {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 25px;
+      left: 0;
+      background-color: @basic-yellow;
+      width: 100%;
+      height: 50px;
+    }
   }
 
   &--catalog {
@@ -95,6 +113,24 @@
     color: @basic-white;
     width: 84%;
     margin-top: 27px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -23px;
+      left: 0;
+      width: 214px;
+      height: 5px;
+      border-radius: 4px;
+      background-color: @dark-orange;
+
+      @media (min-width: @tablet-width) {
+        width: 358px;
+        height: 8px;
+        bottom: -82px;
+      }
+    }
 
     @media (min-width: @tablet-width) {
       font-size: 60px;
@@ -104,8 +140,7 @@
     }
 
     @media (min-width: @desktop-width) {
-      .wrapper(1320px);
-      padding-left: 124px;
+      .wrapper(1190px);
     }
   }
 

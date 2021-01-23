@@ -26,6 +26,7 @@
 
   @media (min-width: @desktop-width) {
     .wrapper(1000px);
+    display: grid;
   }
 }
 
@@ -59,6 +60,27 @@
     margin-top: 13px;
     border-top: 1px solid @border-grey;
     padding-top: 42px;
+    position: relative;
+    z-index: 1;
+
+    &::after {
+
+      content: "";
+      position: absolute;
+      top: 184px;
+      right: -50px;
+      width: 373px;
+      height: 1px;
+      background-color: @border-grey-2;
+      transform: rotate(90deg);
+      z-index: -1;
+
+      @media (min-width: @desktop-width) {
+        top: 217px;
+        right: 8px;
+        width: 434px;
+      }
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -77,6 +99,52 @@
   &--choice {
     flex-direction: column;
   }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 45%;
+    right: 49px;
+    width: 8px;
+    height: 8px;
+    background-color: @basic-blue-light;
+    border-radius: 50%;
+
+    @media (min-width: @tablet-width) {
+      width: 14px;
+      height: 14px;
+      top: 34%;
+      right: 129px;
+    }
+
+    @media (min-width: @desktop-width) {
+      right: 217px;
+    }
+  }
+
+  &--not-active {
+    &::after {
+      background-color: @basic-white;
+      border: 1px solid @border-grey;
+    }
+  }
+
+  &:not(:last-of-type) {
+    &::before {
+      content: " ";
+      position: absolute;
+      top: 52px;
+      right: 47px;
+      width: 10px;
+      height: 10px;
+      background-image: url("../img/icons/arrow-down.svg");
+      background-repeat: no-repeat;
+
+      @media (min-width: @tablet-width) {
+        display: none;
+      }
+    }
+  }
 }
 
 .route__input {
@@ -89,10 +157,14 @@
   border: 1px solid @border-grey;
   border-radius: 4px;
   background-color: transparent;
-  padding: 11px 5px;
+  padding: 11px 9px;
   box-sizing: border-box;
   width: 76%;
   flex-grow: 1;
+  appearance: none;
+  background-image: url("../img/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: top 13px right 13px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -102,6 +174,8 @@
     width: 69%;
     flex-grow: 0;
     margin-right: 46px;
+    background-size: 17px 37px;
+    background-position: top 12px right 24px;
   }
 
   @media (min-width: @desktop-width) {
@@ -129,11 +203,18 @@
 
 .route__delete-button {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -5px;
+  right: -11px;
+  width: 21px;
+  height: 21px;
+  background-color: @lightest-blue;
+  border: none;
+  border-radius: 50%;
 
   @media (min-width: @tablet-width) {
-    top: 31px;
+    top: 19px;
+    right: 2px;
+    background-color: transparent;
   }
 }
 
@@ -168,6 +249,28 @@
   padding: 13px 12px;
   margin-top: 8px;
   text-align: left;
+  position: relative;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 14px;
+    width: 14px;
+    height: 2px;
+    background-color: @basic-grey;
+
+    @media (min-width: @tablet-width) {
+      top: 37px;
+      right: 24px;
+      width: 20px;
+    }
+  }
+
+  &::before {
+    transform: rotate(90deg);
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -180,5 +283,12 @@
 
   @media (min-width: @desktop-width) {
     width: 730px;
+  }
+}
+
+.route__svg {
+  @media (min-width: @tablet-width) {
+    width: 22px;
+    height: 24px;
   }
 }

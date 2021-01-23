@@ -24,6 +24,33 @@
   font-weight: bold;
   font-size: 24px;
   .wrapper(84%);
+  position: relative;
+
+  &::after {
+    content: " ";
+    position: absolute;
+    top: 14px;
+    right: 60px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: @basic-blue-light;
+    box-shadow: 20px 0 0 0 fade(@basic-blue-light, 30%),
+      40px 0 0 0 fade(@basic-blue-light, 30%);
+
+    @media (min-width: @tablet-width) {
+      top: 21px;
+      right: 70px;
+      width: 6px;
+      height: 6px;
+      box-shadow: 35px 0 0 0 fade(@basic-blue-light, 30%),
+        70px 0 0 0 fade(@basic-blue-light, 30%);
+    }
+
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
@@ -98,6 +125,8 @@
     @media (min-width: @desktop-width) {
       width: 1000px;
       margin: 37px 0 0 0;
+      grid-column-start: 1;
+      grid-column-end: -1;
     }
   }
 }
@@ -113,6 +142,18 @@
     text-align: left;
     text-transform: none;
     border-radius: 20px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../img/icons/triangle.svg");
+      background-repeat: no-repeat;
+      width: 13px;
+      height: 13px;
+      top: 34px;
+      right: 30px;
+    }
   }
 
   &--back {
@@ -124,6 +165,11 @@
       padding: 0;
       text-align: right;
       margin-top: 0;
+
+      &::after {
+        right: 170px;
+        transform: scale(-1, 1);
+      }
     }
   }
 
@@ -141,5 +187,50 @@
 
   @media (min-width: @desktop-width) {
     display: none;
+  }
+}
+
+
+.generating-plan__pagination-list {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    .reset-list;
+    display: block;
+    font-size: 20px;
+    line-height: 24px;
+    color: fade(@basic-black, 60%);
+    text-transform: uppercase;
+    letter-spacing: 0.11em;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    margin-left: auto;
+    margin-right: 45px;
+    margin-top: 7px;
+  }
+}
+
+.generating-plan__pagination-item {
+  margin-bottom: 20px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: -43px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: fade(@basic-blue-light, 30%);
+  }
+
+  &--current {
+    color: @basic-black;
+
+    &::before {
+      background-color: @basic-blue-light;
+    }
   }
 }

@@ -40,6 +40,16 @@
     font-size: 24px;
     line-height: 24px;
     margin-top: 13px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 54%;
+      height: 1px;
+      background-color: @border-grey;
+      top: 33px;
+      left: 22px;
+    }
   }
 
   &--big-number {
