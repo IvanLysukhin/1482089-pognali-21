@@ -42,10 +42,30 @@
 
   @media (min-width: @tablet-width) {
     .wrapper(90%);
+
+    &::after {
+      top: auto;
+      right: 48px;
+      bottom: -39px;
+      z-index: 1;
+    }
   }
 
   @media (min-width: @desktop-width) {
     .wrapper(1322px);
+
+    &::after {
+      width: 198px;
+      height: 198px;
+      right: 74px;
+      bottom: 80px;
+      background-image: url("../img/rates-desktop.png");
+      background-size: 198px 198px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/rates-desktop@2x.png");
+      }
+    }
   }
 }
 
@@ -203,6 +223,21 @@
     text-align: left;
     padding-left: 91px;
     margin-top: 48px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -21px;
+      left: 0;
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      background-color: @special-blue-light-3;
+      background-image: url("../img/icons/icon_businessman.svg");
+      background-repeat: no-repeat;
+      background-position: 50%;
+    }
   }
 
   @media (min-width: @desktop-width) {

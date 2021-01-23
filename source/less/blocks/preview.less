@@ -18,7 +18,10 @@
     @media (min-resolution: 2dppx) {
       background-image: url("../img/preveiw_back_tablet@2x.png");
     }
+  }
 
+  @media (min-width: @desktop-width) {
+    background: none;
   }
 }
 
@@ -28,6 +31,17 @@
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
+    padding-bottom: 126px;
+
+    background-color: transparent;
+    background-image: url("../img/traveller-illustration-desktop.png");
+    background-repeat: no-repeat;
+    background-position: bottom right 347px;
+    background-size: 431px 640px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/traveller-illustration-desktop@2x.png");
+    }
   }
 }
 
@@ -75,7 +89,11 @@
 }
 
 .preview__link {
-  padding: 11px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background-color: @dark-yellow;
 

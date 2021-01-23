@@ -63,6 +63,22 @@
     background-repeat: no-repeat;
     background-position: 50%;
     background-image: url("../img/icons/location.svg");
+
+    @media (min-width: @tablet-width) {
+      width: 68px;
+      height: 68px;
+      top: -26px;
+      left: 74px;
+      background-size: 32px 32px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 90px;
+      height: 90px;
+      top: -38px;
+      left: 45px;
+      background-size: 42px 42px;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -96,6 +112,11 @@
     height: 13px;
     top: 20px;
     right: 20px;
+
+    @media (min-width: @tablet-width) {
+      top: 30px;
+      right: 34px;
+    }
   }
 
   @media (min-width: @tablet-width) {

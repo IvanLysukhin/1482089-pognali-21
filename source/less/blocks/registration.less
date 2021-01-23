@@ -117,6 +117,11 @@
     height: 13px;
     top: 25px;
     right: 20px;
+
+    @media (min-width: @tablet-width) {
+      top: 32px;
+      right: 36px;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -172,17 +177,52 @@
     border-radius: 50%;
     background-repeat: no-repeat;
     background-position: 50%;
+
+    @media (min-width: @tablet-width) {
+      width: 68px;
+      height: 68px;
+      top: -21px;
+      left: 13px;
+    }
+
+    @media (min-width: @tablet-width) {
+      width: 90px;
+      height: 90px;
+      top: -32px;
+      left: -1px;
+    }
   }
 
   &--phone {
     &::before {
       background-image: url("../img/icons/telphone_icon.svg");
+
+      @media (min-width: @tablet-width) {
+        background-size: 24px 23px;
+      }
+
+      @media (min-width: @desktop-width) {
+        background-size: 31px 30px;
+      }
     }
   }
 
   &--mail {
     &::before {
       background-image: url("../img/icons/mail_icon.svg");
+
+      @media (min-width: @tablet-width) {
+        background-size: 28px 19px;
+      }
+
+      @media (min-width: @desktop-width) {
+        background-size: 37px 25px;
+        left: 112px;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-left: 229px;
     }
   }
 
@@ -194,12 +234,6 @@
 
   @media (min-width: @desktop-width) {
     padding-left: 122px;
-  }
-
-  &--mail {
-    @media (min-width: @desktop-width) {
-      padding-left: 229px;
-    }
   }
 }
 

@@ -34,6 +34,10 @@
       top: 134px;
       left: 40px;
     }
+
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
   }
 
 
@@ -54,6 +58,7 @@
   @media (min-width: @desktop-width) {
     padding-top: 154px;
     padding-bottom: 126px;
+    background-image: none;
   }
 }
 
@@ -86,6 +91,37 @@
     grid-template-columns: 1fr 1fr;
     .wrapper(1322px);
     column-gap: 59px;
+    background-position: top 47px left 489px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 212px;
+      height: 212px;
+      border-radius: 20px;
+      top: -18px;
+      left: -1px;
+      background-color: @darkest-blue-2;
+      z-index: -1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 285px;
+      height: 285px;
+      bottom: -43px;
+      left: 131px;
+      background-image: url("../img/rogovaya-back-tablet.png");
+      background-size: 285px 285px;
+      background-repeat: no-repeat;
+      z-index: -1;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/rogovaya-back-tablet@2x.png");
+      }
+    }
   }
 }
 

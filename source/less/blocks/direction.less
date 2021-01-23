@@ -15,8 +15,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 181px;
-    padding-bottom: 137px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
@@ -40,6 +40,9 @@
     grid-template-columns: max-content auto;
     .wrapper(1322px);
     column-gap: 168px;
+    padding-top: 179px;
+    padding-bottom: 133px;
+    background-position: top 144px right;
   }
 }
 
@@ -122,9 +125,14 @@
     left: -33px;
     width: 141px;
     height: 141px;
-    background-color: #E2E5F2;
+    background-color: @special-blue-light-3;
     border-radius: 20px;
     z-index: -1;
+
+    @media (min-width: @desktop-width) {
+      top: -67px;
+      left: -69px;
+    }
   }
 }
 
@@ -136,10 +144,6 @@
   @media (min-width: @tablet-width) {
     flex-direction: row;
     margin-bottom: 9px;
-  }
-
-  &::before {
-    content: '';
   }
 }
 
@@ -231,6 +235,11 @@
       top: -11px;
       left: 367px;
     }
+
+    @media (min-width: @desktop-width) {
+      top: 2px;
+      left: 306px;
+    }
   }
 
   &--thailand {
@@ -303,7 +312,7 @@
     margin-top: 0;
 
     @media (min-width: @desktop-width) {
-      margin-top: 25px;
+      margin-top: 0;
     }
   }
 }
