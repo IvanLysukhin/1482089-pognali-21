@@ -4,7 +4,6 @@
   top: 41px;
   background-color: @basic-white;
   z-index: 1;
-  //display: none;
 
   @media (min-width: @tablet-width) {
     width: 104%;
@@ -22,6 +21,10 @@
     @media (min-width: @tablet-width) {
       display: flex;
     }
+  }
+
+  &--closed {
+    display: none;
   }
 
   &--catalog {

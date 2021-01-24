@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
-    <header class="page-header page-header--form">
+    <header class="page-header page-header--form page-header--closed page-header--no-js">
       <nav class="main-nav">
-        <div class="main-nav__logo-box">
-          <a class="main-nav__logo-link" aria-label="Логотип"></a>
-          <button class="main-nav__menu-button" type="button" aria-label="Открыть закрыть меню"></button>
+        <div class="main-nav__logo-box main-nav__logo-box--no-js">
+          <a class="main-nav__logo-link main-nav__logo-link--closed main-nav__logo-link--no-js" href="index.html" aria-label="Логотип"></a>
+          <button class="main-nav__menu-button main-nav__menu-button--closed main-nav__menu-button--no-js" type="button" aria-label="Открыть закрыть меню"></button>
         </div>
-        <ul class="main-nav__list">
+        <ul class="main-nav__list main-nav__list--closed main-nav__list--no-js">
           <li class="main-nav__item">
             <a class="main-nav__link" href="index.html">о сервисе</a>
           </li>
@@ -24,8 +24,8 @@
             <a class="main-nav__link" href="catalog.html">попутчики</a>
           </li>
         </ul>
-        <button class="button main-nav__button" type="button">авторизация</button>
-        <ul class="main-nav__contact-list">
+        <button class="button main-nav__button main-nav__button--closed main-nav__button--no-js" type="button">авторизация</button>
+        <ul class="main-nav__contact-list main-nav__contact-list--closed main-nav__contact-list--no-js">
           <li class="main-nav__contact-item">
             <a class="main-nav__contact-link main-nav__contact-link--phone" href="tel:+78005558628">8 800 555-86-28</a>
           </li>
@@ -33,7 +33,7 @@
             <a class="main-nav__contact-link main-nav__contact-link--mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </li>
         </ul>
-        <ul class="main-nav__social-list">
+        <ul class="main-nav__social-list main-nav__social-list--closed main-nav__social-list--no-js">
           <li class="main-nav__social-item">
             <a class="main-nav__social-link" href="https://ru-ru.facebook.com" aria-label="facebook">
               <svg class="main-nav__social-svg main-nav__social-svg--facebook" width="11" height="21" viewBox="0 0 11 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -169,7 +169,7 @@
                 <div class="stay-dates__month">
                   <button class="stay-dates__month-button stay-dates__month-button--back" type="button" aria-label="предыдущий">
                     <svg class="stay-dates__svg" width="15" height="21" viewBox="0 0 15 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <g opacity="0.3">
+                      <g class="stay-dates__g" opacity="0.3">
                         <path d="M11.8116 1.40061C11.713 1.28894 11.5958 1.20035 11.4668 1.1399C11.3378 1.07945 11.1994 1.04834 11.0598 1.04834C10.9201 1.04834 10.7818 1.07945 10.6528 1.1399C10.5238 1.20035 10.4066 1.28894 10.3079 1.40061L3.24844 9.37194C3.16968 9.46069 3.1072 9.5661 3.06457 9.68214C3.02194 9.79818 3 9.92258 3 10.0482C3 10.1738 3.02194 10.2982 3.06457 10.4143C3.1072 10.5303 3.16968 10.6357 3.24844 10.7245L10.3079 18.6958C10.7242 19.1658 11.3953 19.1658 11.8116 18.6958C12.2279 18.2258 11.883 17.7322 11.4668 17.2622L7.74854 13.0836L5.12914 10.0172L11.8207 2.30298C11.8207 2.30298 12.2279 1.86105 11.8116 1.40061Z" fill="black"/>
                       </g>
                     </svg>
@@ -177,7 +177,7 @@
                   <p class="stay-dates__choose-month">Март 2019</p>
                   <button class="stay-dates__month-button stay-dates__month-button--next" type="button" aria-label="следующий">
                     <svg class="stay-dates__svg" width="15" height="21" viewBox="0 0 15 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <g opacity="0.3">
+                      <g class="stay-dates__g"  opacity="0.3">
                         <path d="M11.8116 1.40061C11.713 1.28894 11.5958 1.20035 11.4668 1.1399C11.3378 1.07945 11.1994 1.04834 11.0598 1.04834C10.9201 1.04834 10.7818 1.07945 10.6528 1.1399C10.5238 1.20035 10.4066 1.28894 10.3079 1.40061L3.24844 9.37194C3.16968 9.46069 3.1072 9.5661 3.06457 9.68214C3.02194 9.79818 3 9.92258 3 10.0482C3 10.1738 3.02194 10.2982 3.06457 10.4143C3.1072 10.5303 3.16968 10.6357 3.24844 10.7245L10.3079 18.6958C10.7242 19.1658 11.3953 19.1658 11.8116 18.6958C12.2279 18.2258 11.883 17.7322 11.4668 17.2622L7.74854 13.0836L5.12914 10.0172L11.8207 2.30298C11.8207 2.30298 12.2279 1.86105 11.8116 1.40061Z" fill="black"/>
                       </g>
                     </svg>
@@ -422,7 +422,7 @@
                 </li>
                 <li class="route__item route__item--choice route__item--not-active">
                   <button class="route__input route__input--choose-button" type="button">выберите страну</button>
-                  <div class="country-choice">
+                  <div class="country-choice country-choice--closed">
                     <table class="country-choice__table">
                       <tr class="country-choice__row">
                         <td class="country-choice__cell">
@@ -576,13 +576,13 @@
                 <ul class="plans__list">
                   <li class="plans__item">
                     <label class="plans__name plans__name--bosnia" for="plan-1">Босния и Герцеговина</label>
-                    <textarea class="plans__text" id="plan-1" rows="5" cols="10" name="plan-1"
-                              placeholder="План действий"></textarea>
+                    <textarea class="plans__text" id="plan-1" rows="5" cols="10" name="plan-1" placeholder="План действий" required></textarea>
+                    <p class="plans__invalid-text">Это поле должно быть заполнено</p>
                   </li>
                   <li class="plans__item">
                     <label class="plans__name plans__name--czech" for="plan-2">Чехия</label>
-                    <textarea class="plans__text" id="plan-2" rows="5" cols="10" name="plan-2"
-                              placeholder="План действий">Пить пиво и лазить по&nbsp;старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                    <textarea class="plans__text" id="plan-2" rows="5" cols="10" name="plan-2" placeholder="План действий">Пить пиво и лазить по&nbsp;старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                    <p class="plans__invalid-text">Это поле должно быть заполнено</p>
                   </li>
                 </ul>
                 <div class="generating-plan__button-box generating-plan__button-box--send">
@@ -643,5 +643,6 @@
         </li>
       </ul>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

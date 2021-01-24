@@ -146,6 +146,10 @@
   column-gap: 21px;
 }
 
+.companion__flags-item {
+  position: relative;
+}
+
 .companion__title {
   @media (min-width: @desktop-width) {
     padding-left: 71px;
@@ -212,6 +216,11 @@
   align-items: center;
   padding-bottom: 15px;
   margin-bottom: 9px;
+
+  &:hover {
+    box-shadow: 0 4px 9px rgba(0, 0, 0, 0.16);
+    transform: scale(1.05);
+  }
 
   @media (min-width: @tablet-width) {
     flex-basis: 285px;
@@ -361,8 +370,67 @@
   }
 }
 
+.companion__icons-item {
+  position: relative;
+}
+
 .companion__icon {
   &--opacity {
     opacity: 0.15;
   }
+}
+
+.companion__icon-text {
+  position: absolute;
+  display: none;
+  background-color: @tooltip-back;
+  color: @basic-white;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 20px;
+  width: 170px;
+  box-sizing: border-box;
+  padding: 18px 25px;
+  border-radius: 4px;
+  z-index: 100;
+  text-align: center;
+  top: 100%;
+  left: 50%;
+  margin-left: -85px;
+
+  //&--plane {
+  //  left: -74px;
+  //}
+  //
+  //&--bus {
+  //  left: -82px;
+  //}
+  //
+  //&--bicycle {
+  //  left: -61px;
+  //}
+  //
+  //&--run {
+  //  left: -50px;
+  //}
+  //
+  //&--sri-lanka {
+  //  left: 10px;
+  //}
+
+  &::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent @tooltip-back transparent;
+  }
+}
+
+.companion__icons-item:hover .companion__icon-text,
+.companion__flags-item:hover .companion__icon-text {
+  display: block;
 }

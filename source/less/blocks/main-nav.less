@@ -1,8 +1,8 @@
 .main-nav {
   .wrapper(85%);
   text-align: center;
-  margin-top: 27px;
-  padding-bottom: 30px;
+  margin-top: 20px;
+  padding-bottom: 0;
 
   @media (min-width: @tablet-width) {
     .wrapper(90%);
@@ -10,7 +10,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding-bottom: 86px;
+    padding-bottom: 32px;
   }
 
   @media (min-width: @desktop-width) {
@@ -33,6 +33,10 @@
   @media (min-width: @desktop-width) {
     flex-basis: 200px;
   }
+
+  &--no-js {
+    justify-content: center;
+  }
 }
 
 .main-nav__menu-button {
@@ -42,31 +46,55 @@
   height: 19px;
   position: relative;
 
-  &::after,
-  &::before {
-    content: " ";
-    position: absolute;
-    width: 24px;
-    height: 2px;
-    background-color: @basic-grey;
-    top: 3px;
-    left: -6px;
+  @media (min-width: @tablet-width) {
+    margin-top: 17px;
+  }
 
-    @media (min-width: @tablet-width) {
-      top: 19px;
-      left: 0;
+  &--closed {
+    &::after {
+      content: " ";
+      position: absolute;
+      top: 2px;
+      left: -8px;
+      width: 25px;
+      height: 3px;
+      border-radius: 2px;
+      background-color: @basic-white;
+      box-shadow: 0 9px 0 0 #ffffff;
     }
   }
 
-  &::after {
-    transform: rotate(45deg);
-  }
+  &--opened {
+    &::after,
+    &::before {
+      content: " ";
+      position: absolute;
+      width: 24px;
+      height: 2px;
+      background-color: @basic-grey;
+      top: 3px;
+      left: -6px;
 
-  &::before {
-    transform: rotate(-45deg);
+      @media (min-width: @tablet-width) {
+        top: 19px;
+        left: 0;
+      }
+    }
+
+    &::after {
+      transform: rotate(45deg);
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+    }
   }
 
   @media (min-width: @desktop-width) {
+    display: none;
+  }
+
+  &--no-js {
     display: none;
   }
 }
@@ -102,6 +130,20 @@
       background-color: @basic-white;
     }
   }
+
+  &--opened {
+    display: block;
+  }
+
+  &--closed {
+    @media (max-width: @tablet-width-only) {
+      display: none;
+    }
+  }
+
+  &--no-js {
+    display: block;
+  }
 }
 
 .main-nav__item {
@@ -130,6 +172,15 @@
     font-size: 20px;
     color: @basic-white;
   }
+
+  &:hover {
+    color: @basic-yellow;
+  }
+
+  &:active {
+    color: @basic-yellow;
+    opacity: 0.3;
+  }
 }
 
 .main-nav__contact-list {
@@ -150,6 +201,20 @@
     flex-basis: auto;
     margin-top: 0;
     margin-left: auto;
+  }
+
+  &--opened {
+    display: block;
+  }
+
+  &--closed {
+    @media (max-width: @tablet-width-only) {
+      display: none;
+    }
+  }
+
+  &--no-js {
+    display: block;
   }
 }
 
@@ -216,6 +281,12 @@
         background-size: 18px 18px;
       }
     }
+
+    &:hover {
+      &::before {
+        background-color: @hover-orange;
+      }
+    }
   }
 
   &--mail {
@@ -230,6 +301,12 @@
         background-color: @dark-yellow;
         background-image: url("../img/icons/mail-dark_icon.svg");
         background-size: 16px 14px;
+      }
+    }
+
+    &:hover {
+      &::before {
+        background-color: @dark-orange;
       }
     }
   }
@@ -256,7 +333,7 @@
   justify-content: space-between;
   .wrapper(40%);
   margin-top: 57px;
-  margin-bottom: 3px;
+  margin-bottom: 41px;
 
 
   @media (min-width: @tablet-width) {
@@ -270,6 +347,18 @@
 
   @media (min-width: @desktop-width) {
     display: none;
+  }
+
+  &--opened {
+    display: flex;
+  }
+
+  &--closed {
+    display: none;
+  }
+
+  &--no-js {
+    display: flex;
   }
 }
 
@@ -302,29 +391,27 @@
     order: 4;
     margin-left: 0;
   }
+
+  &--opened {
+    display: inline-block;
+  }
+
+  &--closed {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: inline-block;
+    }
+  }
+
+  &--no-js {
+    display: inline-block;
+  }
 }
 
 .main-nav__logo-link {
   width: 100px;
   height: 15px;
-  background-image: url("../img/pognali-logo-dark.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
-
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/pognali-logo-dark@2x.png");
-  }
-
-  @media (min-width: @tablet-width) {
-    width: 166px;
-    height: 42px;
-    background-size: 164px 42px;
-    background-image: url("../img/pognali-logo-tablet.png");
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/pognali-logo-tablet@2x.png");
-    }
-  }
 
   @media (min-width: @desktop-width) {
     width: 200px;
@@ -334,6 +421,58 @@
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/logo-desktop-white@2x.png");
+    }
+  }
+
+  &--opened {
+    background-image: url("../img/pognali-logo-dark.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/pognali-logo-dark@2x.png");
+    }
+
+    @media (min-width: @tablet-width) {
+      width: 166px;
+      height: 42px;
+      background-size: 164px 42px;
+      background-image: url("../img/pognali-logo-tablet.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/pognali-logo-tablet@2x.png");
+      }
+    }
+  }
+
+  &--closed {
+    background-image: url("../img/logo_mobile.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/logo_mobile@2x.png");
+    }
+
+    @media (min-width: @tablet-width) {
+      width: 166px;
+      height: 42px;
+      background-size: 164px 42px;
+      background-image: url("../img/logo-tablet-white.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/logo-tablet-white@2x.png");
+      }
+    }
+  }
+
+  &--no-js {
+    background-image: url("../img/pognali-logo-dark.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/pognali-logo-dark@2x.png");
     }
   }
 }

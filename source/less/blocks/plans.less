@@ -66,6 +66,8 @@
 }
 
 .plans__item {
+  position: relative;
+
   &:not(:last-of-type) {
     margin-bottom: 21px;
   }
@@ -178,6 +180,30 @@
   line-height: 22px;
   margin-top: 15px;
   padding: 10px 12px;
+  position: relative;
+
+  &:hover {
+    border-color: @hover-border;
+  }
+
+  &:active,
+  &:focus {
+    border-color: @basic-blue;
+  }
+
+  &:invalid {
+    border-color: @special-red;
+  }
+
+  &::after {
+    content: "Это поле должно быть заполнено";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: @back-red;
+    width: 100%;
+    height: 56px;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -207,4 +233,33 @@
   @media (min-width: @tablet-width) {
     width: 286px;
   }
+}
+
+.plans__invalid-text {
+  display: none;
+  align-items: center;
+  position: absolute;
+  bottom: -11px;
+  left: 1px;
+  width: 98.7%;
+  border-radius: 0 0 4px 4px;
+  height: 56px;
+  background-color: @back-red;
+  color: @basic-red;
+  padding-left: 24px;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    bottom: 13px;
+    width: 93.7%;
+  }
+
+  @media (min-width: @desktop-width) {
+    bottom: 9px;
+    width: 72.7%;
+  }
+}
+
+.plans__text:invalid + .plans__invalid-text {
+  display: flex;
 }

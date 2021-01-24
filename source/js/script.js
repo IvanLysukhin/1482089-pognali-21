@@ -1,3 +1,46 @@
+let header = document.querySelector(".page-header");
+let logo = document.querySelector(".main-nav__logo-link");
+let menuButton = document.querySelector(".main-nav__menu-button");
+let menuList = document.querySelector(".main-nav__list");
+let authorizationButton = document.querySelector(".main-nav__button");
+let contacts = document.querySelector(".main-nav__contact-list");
+let socialList = document.querySelector(".main-nav__social-list");
+let logoBox = document.querySelector(".main-nav__logo-box");
+
+header.classList.remove("page-header--no-js")
+logo.classList.remove("main-nav__logo-link--no-js")
+menuButton.classList.remove("main-nav__menu-button--no-js")
+menuList.classList.remove("main-nav__list--no-js")
+authorizationButton.classList.remove("main-nav__button--no-js")
+contacts.classList.remove("main-nav__contact-list--no-js")
+socialList.classList.remove("main-nav__social-list--no-js")
+logoBox.classList.remove("main-nav__logo-box--no-js")
+
+menuButton.addEventListener("click", function (event) {
+  header.classList.toggle("page-header--closed")
+  header.classList.toggle("page-header--opened")
+  logo.classList.toggle("main-nav__logo-link--closed")
+  logo.classList.toggle("main-nav__logo-link--opened")
+  menuButton.classList.toggle("main-nav__menu-button--closed")
+  menuButton.classList.toggle("main-nav__menu-button--opened")
+  menuList.classList.toggle("main-nav__list--closed")
+  menuList.classList.toggle("main-nav__list--opened")
+  authorizationButton.classList.toggle("main-nav__button--closed")
+  authorizationButton.classList.toggle("main-nav__button--opened")
+  contacts.classList.toggle("main-nav__contact-list--closed")
+  contacts.classList.toggle("main-nav__contact-list--opened")
+  socialList.classList.toggle("main-nav__social-list--closed")
+  socialList.classList.toggle("main-nav__social-list--opened")
+})
+
+let countryBox = document.querySelector(".country-choice")
+let addCountry = document.querySelector(".route__input--choose-button")
+
+addCountry.addEventListener("click", function () {
+  countryBox.classList.toggle("country-choice--closed")
+  countryBox.classList.toggle("country-choice--opened")
+})
+
 let filterSection = document.querySelector(".country-filter");
 let filterButton = document.querySelector(".country-filter__filter-button");
 let filterMenu = document.querySelector(".country-filter__list");

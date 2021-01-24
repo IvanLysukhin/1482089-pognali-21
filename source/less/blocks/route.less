@@ -96,6 +96,19 @@
   position: relative;
   margin-bottom: 16px;
 
+  &:hover {
+    &::after {
+      background-color: @lightest-blue;
+      border: 1px solid @border-grey;
+    }
+  }
+
+  &:active {
+    &::after {
+      background-color: @basic-blue-light;
+    }
+  }
+
   &--choice {
     flex-direction: column;
   }
@@ -166,6 +179,15 @@
   background-repeat: no-repeat;
   background-position: top 13px right 13px;
 
+  &:hover {
+    border-color: @hover-border;
+  }
+
+  &:active {
+    background-color: @basic-blue-light;
+    color: @basic-white;
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
@@ -210,6 +232,15 @@
   background-color: @lightest-blue;
   border: none;
   border-radius: 50%;
+  opacity: 0.4;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.2;
+  }
 
   @media (min-width: @tablet-width) {
     top: 19px;
@@ -250,6 +281,19 @@
   margin-top: 8px;
   text-align: left;
   position: relative;
+
+  &:hover {
+    background-color: @special-blue-light;
+  }
+
+  &:active {
+    background-color: @special-blue-light;
+
+    &::after,
+    &::before {
+      opacity: 0.3;
+    }
+  }
 
   &::after,
   &::before {

@@ -160,6 +160,24 @@
     background-color: transparent;
     margin-top: 6px;
 
+    &:hover {
+      background-color: transparent;
+      color: fade(@basic-blue-light, 70%);
+
+      &::after {
+        opacity: 0.7;
+      }
+    }
+
+    &:active {
+      background-color: transparent;
+      color: fade(@basic-blue-light, 30%);
+
+      &::after {
+        opacity: 0.3;
+      }
+    }
+
     @media (min-width: @tablet-width) {
       width: 200px;
       padding: 0;
