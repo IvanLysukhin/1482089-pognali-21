@@ -145,6 +145,13 @@
   }
 
   &--catalog {
+    @media (min-width: @tablet-width) {
+      &::after {
+        width: 288px;
+      }
+    }
+
+
     @media (min-width: @desktop-width) {
       width: auto;
       margin: 0;
@@ -166,6 +173,19 @@
     text-decoration: none;
     text-transform: uppercase;
     flex-basis: 366px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 1px;
+      left: 144px;
+      width: 35px;
+      height: 16px;
+      background-image: url("../img/icons/icon_arrow_bend.svg");
+      background-repeat: no-repeat;
+      background-size: 35px 16px;
+    }
   }
 
   @media (min-width: @desktop-width) {

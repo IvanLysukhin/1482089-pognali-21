@@ -3,6 +3,8 @@
   border-radius: 20px;
   padding-top: 14px;
   padding-bottom: 24px;
+  position: relative;
+  z-index: 1;
 
   @media (min-width: @tablet-width) {
     padding-bottom: 16px;
@@ -23,6 +25,37 @@
       height: auto;
       margin-top: 18px;
       margin-bottom: 27px;
+    }
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 154px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: @lightest-blue;
+    z-index: -1;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+
+  &::after {
+    top: auto;
+    bottom: 142px;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+      bottom: 77px;
     }
   }
 }
@@ -57,15 +90,16 @@
   color: @basic-blue-light;
   margin: 0;
   grid-column-start: 2;
-  margin-left: -31px;
+  margin-left: -46px;
   display: block;
   width: 100px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     grid-column-start: 2;
     grid-column-end: 4;
     font-size: 30px;
-    width: auto;
+    width: fit-content;
     margin-left: 33px;
     margin-top: 2px;
   }
@@ -74,6 +108,29 @@
     grid-row-start: 1;
     grid-row-end: 2;
     margin: 47px 20px 0 65px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    right: -44px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: @offline-red;
+
+    @media (min-width: @tablet-width) {
+      right: -34px;
+      width: 8px;
+      height: 8px;
+    }
+  }
+
+  &--online {
+    &::before {
+      background-color: @online-green;
+    }
   }
 }
 
@@ -118,12 +175,13 @@
   color: @basic-blue;
   cursor: pointer;
   text-transform: uppercase;
-  margin-left: -31px;
+  margin-left: -46px;
   margin-top: -6px;
   width: 80px;
   height: 21px;
   padding: 0;
   text-align: left;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -138,6 +196,35 @@
 
   @media (min-width: @desktop-width) {
     margin: 6px 0 0 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -37px;
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+    background-color: @special-blue-light-3;
+    background-image: url("../img/icons/icon_heart_not.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+
+    @media (min-width: @tablet-width) {
+      width: 50px;
+      height: 50px;
+      top: -15px;
+      left: 2px;
+      background-size: 20px 17px;
+    }
+  }
+
+  &--pressed {
+    &::before {
+      background-color: @pressed-bt;
+      background-image: url("../img/icons/heart.svg");
+    }
   }
 }
 
@@ -186,6 +273,8 @@
   color: @special_grey;
   margin: 0;
   padding: 0 5px 0 5px;
+  background-color: @basic-white;
+  width: fit-content;
 
   &--level {
     text-align: right;
@@ -245,19 +334,143 @@
 .card__countries-text {
   margin: 0;
   padding-left: 43px;
+  position: relative;
+
+  @media (min-width: @desktop-width) {
+    padding-left: 53px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 3px;
+    width: 26px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-size: 26px 18px;
+
+    @media (min-width: @tablet-width) {
+      top: -4px;
+      left: -2px;
+      width: 35px;
+      height: 24px;
+      background-size: 35px 24px;
+    }
+  }
+
+  &--sri-lanka {
+    &::before {
+      background-image: url("../img/flags/sri-lanka-tablet.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/flags/sri-lanka-tablet@2x.png");
+      }
+    }
+  }
+
+  &--thailand {
+    &::before {
+      background-image: url("../img/flags/thailand-tablet.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/flags/thailand-tablet@2x.png");
+      }
+    }
+  }
+
+  &--seychelles {
+    &::before {
+      background-image: url("../img/flags/seychelles-tablet.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/flags/seychelles-tablet@2x.png");
+      }
+    }
+  }
+
+  &--belgium {
+    &::before {
+      background-image: url("../img/flags/belgium-tablet.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/flags/belgium-tablet@2x.png");
+      }
+    }
+  }
+
+  &--czech {
+    &::before {
+      background-image: url("../img/flags/czech-tablet.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/flags/czech-tablet@2x.png");
+      }
+    }
+  }
+
+  &--usa {
+    &::before {
+      background-image: url("../img/flags/usa-tablet.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/flags/usa-tablet@2x.png");
+      }
+    }
+  }
+
+  &--australia {
+    &::before {
+      background-image: url("../img/flags/australia-tablet.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/flags/australia-tablet@2x.png");
+      }
+    }
+  }
+
+  &--dominica {
+    &::before {
+      background-image: url("../img/flags/dominica-tablet.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/flags/dominica-tablet@2x.png");
+      }
+    }
+  }
+
+  &--united-kingdom {
+    &::before {
+      background-image: url("../img/flags/united-kingdom-tablet.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/flags/united-kingdom-tablet@2x.png");
+      }
+    }
+  }
+
+  &--germany {
+    &::before {
+      background-image: url("../img/flags/germany-tablet.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/flags/germany-tablet@2x.png");
+      }
+    }
+  }
 }
 
 .card__icons-list {
   .reset-list;
   display: flex;
   justify-content: space-between;
-  margin-top: 24px;
-  margin-left: 3px;
+  margin-top: 18px;
+  margin-left: 0;
 
   @media (min-width: @tablet-width) {
     flex-direction: column;
     align-items: flex-end;
-    margin: 4px 38px 0 0;
+    margin: 4px 30px 0 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -267,8 +480,33 @@
 }
 
 .card__icons-item {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: @lightest-blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   @media (min-width: @tablet-width) {
     margin-bottom: 8px;
+    width: 34px;
+    height: 24px;
+    background-color: transparent;
+  }
+}
+
+.card__icons-pic {
+  width: 63%;
+  height: 58%;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    height: 100%;
+  }
+
+  &--opacity {
+    opacity: 0.15;
   }
 }
 
@@ -321,6 +559,7 @@
     color: @basic-blue-light;
     margin-top: -10px;
     padding: 10px 29px 10px 58px;
+    position: relative;
 
     @media (min-width: @tablet-width) {
       margin-top: -17px;
@@ -332,6 +571,29 @@
     @media (min-width: @desktop-width) {
       margin-top: 0;
       margin-left: -41px;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 25px;
+      top: 19px;
+      width: 18px;
+      height: 2px;
+      border-radius: 2px;
+      background-color: @basic-blue-light;
+
+      @media (min-width: @tablet-width) {
+        left: -6px;
+        top: 23px;
+        width: 24px;
+        height: 2px;
+      }
+    }
+
+    &::after {
+      transform: rotate(90deg);
     }
   }
 }

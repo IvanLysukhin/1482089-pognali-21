@@ -19,6 +19,8 @@ filterButton.addEventListener("click", function(event) {
   formBox.classList.toggle('form-box--filter-opened')
   countryTable.classList.toggle ('country-filter__item--closed')
   countryTable.classList.toggle ('country-filter__item--opened')
+  showAllButton.classList.toggle ('country-filter__world-button--opened');
+  showAllButton.classList.toggle ('country-filter__world-button--closed');
 })
 
 
@@ -38,6 +40,8 @@ buttonMenuClosed.addEventListener("click", function(event) {
   showButtonWord.classList.toggle ('country-filter__button-word--opened')
   collapseButtonWord.classList.toggle ('country-filter__button-word--opened')
   collapseButtonWord.classList.toggle ('country-filter__button-word--closed')
+  showAllButton.classList.toggle ('country-filter__world-button--opened');
+  showAllButton.classList.toggle ('country-filter__world-button--closed');
 })
 
 showAllButton.addEventListener("click", function(event) {
@@ -55,6 +59,8 @@ showAllButton.addEventListener("click", function(event) {
   showButtonWord.classList.toggle ('country-filter__button-word--opened')
   collapseButtonWord.classList.toggle ('country-filter__button-word--opened')
   collapseButtonWord.classList.toggle ('country-filter__button-word--closed')
+  showAllButton.classList.toggle ('country-filter__world-button--opened');
+  showAllButton.classList.toggle ('country-filter__world-button--closed');
 })
 
 let hobbyButton = document.querySelector('.partners-filter__title--hobby');

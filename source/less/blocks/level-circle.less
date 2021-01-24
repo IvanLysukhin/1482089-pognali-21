@@ -90,8 +90,18 @@
     text-align: right;
     margin: 23px 9px 0 0;
 
+    &::after {
+      @media (max-width: @mobile-width-only) {
+        display: none;
+      }
+    }
+
     @media (min-width: @tablet-width) {
       margin: 33px 9px 0 0;
+
+      &::after {
+        top: 25px;
+      }
     }
   }
 }
