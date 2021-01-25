@@ -215,6 +215,22 @@
       border-radius: 0;
     }
   }
+
+  &:hover {
+    color: fade(@dark-blue, 60%);
+
+    &::after {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    color: fade(@dark-blue, 30%);
+
+    &::after {
+      opacity: 0.3;
+    }
+  }
 }
 
 .country-filter__button {
@@ -271,6 +287,18 @@
     @media (min-width: @desktop-width) {
       top: 43px;
       left: 595px;
+    }
+  }
+
+  &:hover {
+    background-color: @button-hover-back;
+  }
+
+  &:active {
+    color: fade(@dark-blue, 30%);
+
+    &::after {
+      opacity: 0.3;
     }
   }
 }

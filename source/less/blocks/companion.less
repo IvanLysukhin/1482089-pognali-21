@@ -259,6 +259,16 @@
   margin-top: 9px;
   margin-bottom: 10px;
   position: relative;
+  display: block;
+  cursor: pointer;
+
+  &:hover {
+    color: fade(@basic-blue-light, 70%);
+  }
+
+  &:active {
+    color: fade(@basic-blue-light, 30%);
+  }
 
   &::before {
     content: "";
@@ -397,26 +407,6 @@
   top: 100%;
   left: 50%;
   margin-left: -85px;
-
-  //&--plane {
-  //  left: -74px;
-  //}
-  //
-  //&--bus {
-  //  left: -82px;
-  //}
-  //
-  //&--bicycle {
-  //  left: -61px;
-  //}
-  //
-  //&--run {
-  //  left: -50px;
-  //}
-  //
-  //&--sri-lanka {
-  //  left: 10px;
-  //}
 
   &::after {
     content: " ";

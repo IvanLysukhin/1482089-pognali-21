@@ -7,7 +7,6 @@
   top: 63px;
   left: 9%;
   box-shadow: 0 2px 8px @shadow-color;
-  display: none;
 
   @media (min-width: @tablet-width) {
     .wrapper(90%);
@@ -23,6 +22,10 @@
 
   &--opened {
     display: block;
+  }
+
+  &--closed {
+    display: none;
   }
 }
 
@@ -100,6 +103,14 @@
   color: @basic-blue-light;
   width: 100%;
   padding: 17px;
+
+  &:hover {
+    background-color: @lightest-blue;
+  }
+
+  &:active {
+    color: fade(@basic-blue-light, 30%);
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 24px;

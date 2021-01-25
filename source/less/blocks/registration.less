@@ -56,6 +56,14 @@
 
 .registration__link {
   color: @basic-yellow;
+
+  &:hover {
+    color: @special-orange;
+  }
+
+  &:active {
+    color: fade(@special-orange, 30%);
+  }
 }
 
 .registration__from {
@@ -89,6 +97,23 @@
   width: auto;
   padding: 21px;
   flex-grow: 1;
+  box-sizing: border-box;
+
+  &:hover {
+    color: @special_grey;
+  }
+
+  &:active,
+  &:focus {
+    color: @basic-white;
+    background-color: transparent;
+    box-shadow: inset 0 0 0 4px @basic-white;
+  }
+
+  &:invalid {
+    color: @basic-red;
+    background-color: @basic-white;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 24px;
@@ -174,6 +199,14 @@
   padding-left: 61px;
   position: relative;
 
+  &:hover {
+    color: @dark-yellow;
+  }
+
+  &:active {
+    color: fade(@basic-yellow, 30%);
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -183,8 +216,6 @@
     left: 0;
     background-color: @darkest-blue;
     border-radius: 50%;
-    background-repeat: no-repeat;
-    background-position: 50%;
 
     @media (min-width: @tablet-width) {
       width: 68px;
@@ -193,7 +224,7 @@
       left: 13px;
     }
 
-    @media (min-width: @tablet-width) {
+    @media (min-width: @desktop-width) {
       width: 90px;
       height: 90px;
       top: -32px;
@@ -203,8 +234,6 @@
 
   &--phone {
     &::before {
-      background-image: url("../img/icons/telphone_icon.svg");
-
       @media (min-width: @tablet-width) {
         background-size: 24px 23px;
       }
@@ -217,20 +246,19 @@
 
   &--mail {
     &::before {
-      background-image: url("../img/icons/mail_icon.svg");
-
       @media (min-width: @tablet-width) {
         background-size: 28px 19px;
       }
 
       @media (min-width: @desktop-width) {
         background-size: 37px 25px;
-        left: 112px;
+        left: 2px;
       }
     }
 
     @media (min-width: @desktop-width) {
       padding-left: 229px;
+      margin-left: 106px;
     }
   }
 
@@ -243,6 +271,37 @@
   @media (min-width: @desktop-width) {
     padding-left: 122px;
   }
+}
+
+.registration__icon {
+  position: absolute;
+  top: 2px;
+  left: 21px;
+  margin-left: -7px;
+
+  @media (min-width: @tablet-width) {
+    top: 0;
+    left: 44px;
+    margin-left: -10px;
+    width: 27px;
+    height: 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -4px;
+    left: 45px;
+    margin-left: -15px;
+    width: 34px;
+    height: 34px;
+  }
+}
+
+.registration__contact:hover .registration__path {
+  fill: @dark-yellow;
+}
+
+.registration__contact:active .registration__path {
+  opacity: 0.3;
 }
 
 .registration__item {

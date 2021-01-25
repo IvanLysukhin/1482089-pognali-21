@@ -129,6 +129,15 @@
   @media (min-width: @desktop-width) {
     width: 324px;
   }
+
+  &:hover {
+    color: @basic-white;
+    background-color: @dark-blue;
+
+    &::after {
+      background-image: url("../img/icons/triangle-white.svg");
+    }
+  }
 }
 
 .contacts__map {

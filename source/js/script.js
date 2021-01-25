@@ -33,13 +33,27 @@ menuButton.addEventListener("click", function (event) {
   socialList.classList.toggle("main-nav__social-list--opened")
 })
 
-let countryBox = document.querySelector(".country-choice")
-let addCountry = document.querySelector(".route__input--choose-button")
+// let businessButton = document.querySelector(".profile__button")
+// let businessModal = document.querySelector(".business-rates")
+// let closeModal = businessModal.querySelector(".business-rates__button")
+//
+// businessButton.addEventListener("click", function (event) {
+//   businessModal.classList.toggle("business-rates--closed")
+//   businessModal.classList.toggle("business-rates--opened")
+// })
+//
+// closeModal.addEventListener("click", function (event) {
+//   businessModal.classList.toggle("business-rates--closed")
+//   businessModal.classList.toggle("business-rates--opened")
+// })
 
-addCountry.addEventListener("click", function () {
-  countryBox.classList.toggle("country-choice--closed")
-  countryBox.classList.toggle("country-choice--opened")
-})
+// let countryBox = document.querySelector(".country-choice")
+// let addCountry = document.querySelector(".route__input--choose-button")
+//
+// addCountry.addEventListener("click", function () {
+//   countryBox.classList.toggle("country-choice--closed")
+//   countryBox.classList.toggle("country-choice--opened")
+// })
 
 let filterSection = document.querySelector(".country-filter");
 let filterButton = document.querySelector(".country-filter__filter-button");
@@ -106,6 +120,7 @@ showAllButton.addEventListener("click", function(event) {
   showAllButton.classList.toggle ('country-filter__world-button--closed');
 })
 
+let filterCompanionButton = document.querySelector('.partners-filter__title');
 let hobbyButton = document.querySelector('.partners-filter__title--hobby');
 let musicButton = document.querySelector('.partners-filter__title--music');
 let foodButton = document.querySelector('.partners-filter__title--food');
@@ -121,24 +136,29 @@ let levelBar = document.querySelector('.partners-filter__level-box');
 hobbyButton.addEventListener('click', function () {
   hobbyList.classList.toggle('partners-filter__check-list--closed')
   hobbyList.classList.toggle('partners-filter__check-list--opened')
+  hobbyButton.classList.toggle('partners-filter__title--opened')
 })
 
 musicButton.addEventListener('click', function () {
   musicList.classList.toggle('partners-filter__check-list--closed')
   musicList.classList.toggle('partners-filter__check-list--opened')
+  musicButton.classList.toggle('partners-filter__title--opened')
 })
 
 foodButton.addEventListener('click', function () {
   foodList.classList.toggle('partners-filter__check-list--closed')
   foodList.classList.toggle('partners-filter__check-list--opened')
+  foodButton.classList.toggle('partners-filter__title--opened')
 })
 
 transportButton.addEventListener('click', function () {
   transportList.classList.toggle('partners-filter__check-list--closed')
   transportList.classList.toggle('partners-filter__check-list--opened')
+  transportButton.classList.toggle('partners-filter__title--opened')
 })
 
 levelButton.addEventListener('click', function () {
   levelBar.classList.toggle('partners-filter__level-box--closed')
   levelBar.classList.toggle('partners-filter__level-box--opened')
+  levelButton.classList.toggle('partners-filter__title--opened')
 })

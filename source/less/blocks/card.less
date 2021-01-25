@@ -6,6 +6,11 @@
   position: relative;
   z-index: 1;
 
+  &:hover {
+    transform: scale(1.01);
+    box-shadow: 0 4px 9px rgba(0, 0, 0, 0.16);
+  }
+
   @media (min-width: @tablet-width) {
     padding-bottom: 16px;
   }
@@ -30,6 +35,11 @@
     &::before,
     &::after {
       display: none;
+    }
+
+    &:hover {
+      transform: none;
+      box-shadow: none;
     }
   }
 
@@ -136,6 +146,14 @@
       background-color: @online-green;
     }
   }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .card__pic-container {
@@ -211,9 +229,6 @@
     height: 31px;
     border-radius: 50%;
     background-color: @special-blue-light-3;
-    background-image: url("../img/icons/icon_heart_not.svg");
-    background-repeat: no-repeat;
-    background-position: 50%;
 
     @media (min-width: @tablet-width) {
       width: 50px;
@@ -227,9 +242,53 @@
   &--pressed {
     &::before {
       background-color: @pressed-bt;
-      background-image: url("../img/icons/heart.svg");
+    }
+
+    &:hover {
+      &::before {
+        background-color: @opacity-red;
+      }
     }
   }
+}
+
+.card__heart {
+  position: absolute;
+  left: -28px;
+  top: 6px;
+
+  @media (min-width: @tablet-width) {
+    left: 18px;
+    top: 2px;
+    width: 20px;
+    height: 17px;
+  }
+}
+
+.card__icon {
+  fill: none;
+  stroke: fade(@basic-blue, 30%);
+
+  &--liked {
+    fill: @basic-red;
+    stroke: none;
+  }
+}
+
+.card__like-button:hover .card__icon {
+  stroke: @basic-blue;
+}
+
+.card__like-button:active .card__heart {
+  opacity: 0.6;
+}
+
+.card__like-button--pressed:hover .card__icon {
+  stroke: none;
+}
+
+.card__like-button--pressed:active .card__heart {
+  opacity: 0.3;
 }
 
 .card__tags {
@@ -491,6 +550,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 8px;
@@ -599,6 +659,24 @@
     &::after {
       transform: rotate(90deg);
     }
+
+    &:hover {
+      background-color: transparent;
+
+      &::before,
+      &::after {
+        opacity: 0.6;
+      }
+    }
+
+    &:active {
+      background-color: transparent;
+
+      &::before,
+      &::after {
+        opacity: 0.3;
+      }
+    }
   }
 }
 
@@ -621,4 +699,38 @@
     grid-row-start: 3;
     margin: 10px 0 0 33px;
   }
+}
+
+.card__tooltip {
+  position: absolute;
+  display: none;
+  background-color: @tooltip-back;
+  color: @basic-white;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 20px;
+  width: 170px;
+  box-sizing: border-box;
+  padding: 18px 25px;
+  border-radius: 4px;
+  z-index: 100;
+  text-align: center;
+  top: 100%;
+  left: 50%;
+  margin-left: -86px;
+
+  &::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent @tooltip-back transparent;
+  }
+}
+
+.card__icons-item:hover .card__tooltip {
+  display: block;
 }

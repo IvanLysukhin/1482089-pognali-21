@@ -63,6 +63,7 @@
   margin: 0;
   padding: 0;
   cursor: pointer;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -73,6 +74,34 @@
 
   @media (min-width: @desktop-width) {
     flex-basis: auto;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 6px;
+    background-image: url("../img/icons/triangle.svg");
+    background-repeat: no-repeat;
+    background-size: 10px 6px;
+    transform: rotate(90deg);
+  }
+
+  &--opened {
+    &::after {
+      transform: rotate(-90deg);
+      top: 5px;
+    }
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -182,6 +211,14 @@
       left: -9px;
     }
   }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .partners-filter__check-input:checked + .partners-filter__check-name::before {
@@ -243,6 +280,7 @@
   font-size: 14px;
   line-height: 13px;
   color: @basic-blue-light;
+  appearance: none;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -255,6 +293,15 @@
 
   &--max {
     border-radius: 0 4px 4px 0;
+  }
+
+  &:hover {
+    box-shadow: inset 0 0 0 2px @border-grey;
+  }
+
+  &:active,
+  &:focus {
+    box-shadow: inset 0 0 0 2px @basic-blue;
   }
 }
 
@@ -279,6 +326,16 @@
   @media (min-width: @desktop-width) {
     margin-top: 17px;
     margin-bottom: 10px;
+  }
+
+  &:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.14);
+  }
+
+  &:active {
+    background-color: @border-yellow;
+    color: fade(@basic-blue, 30%);
+    box-shadow: none;
   }
 }
 
@@ -345,6 +402,7 @@
   height: 100%;
   background-color: @basic-blue-light;
   position: relative;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     width: 62%;
@@ -381,6 +439,21 @@
       width: 14px;
       height: 14px;
       top: -6px;
+    }
+  }
+
+  &:hover {
+    &::before,
+    &::after {
+      transform: scale(1.1);
+    }
+  }
+
+  &:active {
+    &::before,
+    &::after {
+      transform: scale(1.1);
+      box-shadow: 0 3px 7px rgba(0, 0, 0, 0.24);
     }
   }
 }
