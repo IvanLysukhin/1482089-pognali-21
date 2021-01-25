@@ -378,9 +378,18 @@
   cursor: pointer;
   margin-left: 10px;
   margin-right: 10px;
+  opacity: 0.3;
 
   &--next {
     transform: scale(-1, 1);
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.1;
   }
 }
 
@@ -389,12 +398,4 @@
     width: 30px;
     height: 36px;
   }
-}
-
-.stay-dates__svg:hover .stay-dates__g {
-  opacity: 0.5;
-}
-
-.stay-dates__svg:active .stay-dates__g {
-  opacity: 0.1;
 }
